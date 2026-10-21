@@ -6,6 +6,7 @@ abstract final class AppRoutes {
   static const String onboarding = '/onboarding';
   static const String language = '/onboarding/language';
   static const String eligibility = '/onboarding/eligibility';
+  static const String auth = '/auth';
   static const String home = '/home';
   static const String moodCheckin = '/mood/checkin';
   static const String moodHistory = '/mood/history';

@@ -1,210 +1,326 @@
 import 'package:flutter/material.dart';
-import 'package:app/core/constants/app_constants.dart';
 import 'package:app/core/localization/app_languages.dart';
-import 'package:app/core/theme/app_colors.dart';
-import 'package:app/core/theme/app_radius.dart';
-import 'package:app/core/theme/app_spacing.dart';
-import 'package:app/core/theme/app_text_styles.dart';
-import 'package:app/core/widgets/custom_button.dart';
+import 'package:app/core/localization/language_scope.dart';
 
-/// Screen 1: Welcome Screen centered with Language Selection (English, Hindi, Hinglish)
-class WelcomeScreen extends StatefulWidget {
-  final ValueChanged<AppLanguage>? onLanguageSelected;
+/// Screen 1: Welcome Screen (Matches exact Navsanjivini visual aesthetic)
+class WelcomeScreen extends StatelessWidget {
   final VoidCallback onContinue;
 
   const WelcomeScreen({
     super.key,
-    this.onLanguageSelected,
     required this.onContinue,
   });
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
-}
-
-class _WelcomeScreenState extends State<WelcomeScreen> {
-  AppLanguage _selectedLanguage = AppLanguage.english;
-
-  @override
   Widget build(BuildContext context) {
+    final strings = context.tr;
+    final currentLang = context.currentLanguage;
+
     return Scaffold(
-      backgroundColor: AppColors.background,
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            padding: AppSpacing.dialogPadding,
+      backgroundColor: const Color(0xFFF7FCF9),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Watercolor Background Art with leaves & waves
+          Image.asset(
+            'assets/images/welcome_bg.png',
+            fit: BoxFit.cover,
+            errorBuilder: (context, error, stackTrace) {
+              return Container(color: const Color(0xFFF7FCF9));
+            },
+          ),
+
+          SafeArea(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Branded Logo Container
+                // Subtle Language Switch Pill at Top Right
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: _LanguagePill(
+                      currentLang: currentLang,
+                      onChanged: (lang) => context.setLanguage(lang),
+                    ),
+                  ),
+                ),
+
+                const Spacer(flex: 2),
+
+                // Centered Logo Emblem
                 Container(
-                  width: 80,
-                  height: 80,
+                  width: 210,
+                  height: 210,
                   decoration: BoxDecoration(
-                    color: AppColors.primaryContainer,
-                    borderRadius: BorderRadius.circular(24),
+                    shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        color: AppColors.primary.withAlpha(25),
-                        blurRadius: 20,
-                        offset: const Offset(0, 8),
+                        color: const Color(0xFF135A45).withAlpha(35),
+                        blurRadius: 30,
+                        offset: const Offset(0, 10),
                       ),
                     ],
                   ),
-                  child: const Icon(
-                    Icons.spa_rounded,
-                    color: AppColors.primary,
-                    size: 44,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/images/navsanjivini_logo.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-                const SizedBox(height: AppSpacing.lg),
+                const SizedBox(height: 22),
 
-                // Title
+                // Brand Name: Navsanjivini
                 Text(
-                  AppConstants.appName,
-                  style: AppTextStyles.displayMedium.copyWith(
-                    color: AppColors.primaryDark,
+                  strings.appName,
+                  style: const TextStyle(
+                    fontSize: 34,
                     fontWeight: FontWeight.w800,
+                    color: Color(0xFF0C4D38),
+                    letterSpacing: -0.5,
                   ),
-                  textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: AppSpacing.xs),
+                const SizedBox(height: 6),
 
-                // Tagline / Subtitle
+                // Tagline / Subtitle: A gentle space to feel better
                 Text(
-                  'A calm, safe space for your emotional well-being & personal growth.',
-                  style: AppTextStyles.bodyMedium.copyWith(
-                    color: AppColors.textSecondary,
+                  strings.welcomeSubtitle,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF2B6050),
+                    letterSpacing: 1.0,
                   ),
-                  textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: AppSpacing.xxl),
+                const SizedBox(height: 18),
 
-                // Language Section Prompt
-                Text(
-                  'Choose your language / भाषा चुनें',
-                  style: AppTextStyles.labelLarge.copyWith(
-                    color: AppColors.textPrimary,
-                    fontWeight: FontWeight.w600,
+                // Decorative Divider with Leaf Icon
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 48,
+                      height: 1,
+                      color: const Color(0xFFA5CBBF),
+                    ),
+                    const SizedBox(width: 10),
+                    const Icon(
+                      Icons.eco_rounded,
+                      size: 18,
+                      color: Color(0xFF438E75),
+                    ),
+                    const SizedBox(width: 10),
+                    Container(
+                      width: 48,
+                      height: 1,
+                      color: const Color(0xFFA5CBBF),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 18),
+
+                // Body Description: Your companion for everyday emotional well-being.
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Text(
+                    strings.welcomeDescription,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xFF386457),
+                      height: 1.45,
+                    ),
                   ),
-                  textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: AppSpacing.md),
 
-                // 3 Language Selection Options (English, Hindi, Hinglish)
-                ...AppLanguage.values.map((lang) {
-                  final isSelected = _selectedLanguage == lang;
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: AppSpacing.sm),
-                    child: Material(
-                      color: isSelected
-                          ? AppColors.primaryContainer
-                          : AppColors.surface,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: AppRadius.radiusLg,
-                        side: BorderSide(
-                          color: isSelected
-                              ? AppColors.primary
-                              : AppColors.border,
-                          width: isSelected ? 2 : 1,
-                        ),
+                const Spacer(flex: 3),
+
+                // 3 Page Indicator Dots
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 8,
+                      height: 8,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF0F5A44),
+                        shape: BoxShape.circle,
                       ),
+                    ),
+                    const SizedBox(width: 8),
+                    Container(
+                      width: 8,
+                      height: 8,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFB3D9CA),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Container(
+                      width: 8,
+                      height: 8,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFB3D9CA),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 28),
+
+                // Pill Button: "Get Started  →"
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Container(
+                    width: double.infinity,
+                    height: 54,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF0F5B46),
+                      borderRadius: BorderRadius.circular(28),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFF0F5B46).withAlpha(60),
+                          blurRadius: 18,
+                          offset: const Offset(0, 8),
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
                       child: InkWell(
-                        onTap: () {
-                          setState(() {
-                            _selectedLanguage = lang;
-                          });
-                          widget.onLanguageSelected?.call(lang);
-                        },
-                        borderRadius: AppRadius.radiusLg,
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: AppSpacing.md,
-                            vertical: AppSpacing.sm,
-                          ),
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 36,
-                                height: 36,
-                                decoration: BoxDecoration(
-                                  color: isSelected
-                                      ? AppColors.primary
-                                      : AppColors.surfaceVariant,
-                                  shape: BoxShape.circle,
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(
-                                  lang.code == 'hi'
-                                      ? 'अ'
-                                      : (lang.code == 'hi_en' ? 'ह' : 'A'),
-                                  style: TextStyle(
-                                    color: isSelected
-                                        ? Colors.white
-                                        : AppColors.textPrimary,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                ),
+                        onTap: onContinue,
+                        borderRadius: BorderRadius.circular(28),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              strings.getStartedBtn,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                                letterSpacing: 0.3,
                               ),
-                              const SizedBox(width: AppSpacing.md),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      lang.nativeName,
-                                      style: AppTextStyles.titleMedium.copyWith(
-                                        color: isSelected
-                                            ? AppColors.primaryDark
-                                            : AppColors.textPrimary,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                    Text(
-                                      lang.displayName,
-                                      style: AppTextStyles.bodySmall.copyWith(
-                                        color: AppColors.textSecondary,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              if (isSelected)
-                                const Icon(
-                                  Icons.check_circle_rounded,
-                                  color: AppColors.primary,
-                                  size: 24,
-                                ),
-                            ],
-                          ),
+                            ),
+                            const SizedBox(width: 12),
+                            const Icon(
+                              Icons.arrow_forward_rounded,
+                              color: Colors.white,
+                              size: 20,
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                  );
-                }),
-
-                const SizedBox(height: AppSpacing.xl),
-
-                // Continue Button
-                CustomButton(
-                  text: _getContinueButtonLabel(_selectedLanguage),
-                  onPressed: widget.onContinue,
+                  ),
                 ),
+                const SizedBox(height: 24),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _LanguagePill extends StatelessWidget {
+  final AppLanguage currentLang;
+  final ValueChanged<AppLanguage> onChanged;
+
+  const _LanguagePill({
+    required this.currentLang,
+    required this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.white.withAlpha(220),
+      borderRadius: BorderRadius.circular(20),
+      elevation: 2,
+      shadowColor: Colors.black.withAlpha(20),
+      child: InkWell(
+        onTap: () => _showLanguageModal(context),
+        borderRadius: BorderRadius.circular(20),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.language_rounded, size: 16, color: Color(0xFF0F5B46)),
+              const SizedBox(width: 6),
+              Text(
+                currentLang.nativeName,
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF0F5B46),
+                ),
+              ),
+              const SizedBox(width: 2),
+              const Icon(Icons.arrow_drop_down_rounded, size: 18, color: Color(0xFF0F5B46)),
+            ],
           ),
         ),
       ),
     );
   }
 
-  String _getContinueButtonLabel(AppLanguage lang) {
-    return switch (lang) {
-      AppLanguage.english => 'Continue',
-      AppLanguage.hindi => 'आगे बढ़ें',
-      AppLanguage.hinglish => 'Continue / Aage Badhein',
-    };
+  void _showLanguageModal(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+      builder: (sheetCtx) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Center(
+                child: Container(
+                  width: 40,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade300,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                context.tr.chooseLanguageTitle,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF0F5B46),
+                ),
+              ),
+              const SizedBox(height: 16),
+              ...AppLanguage.values.map((lang) {
+                final isSelected = lang == currentLang;
+                return ListTile(
+                  title: Text(lang.nativeName, style: const TextStyle(fontWeight: FontWeight.w600)),
+                  subtitle: Text(lang.displayName),
+                  trailing: isSelected
+                      ? const Icon(Icons.check_circle_rounded, color: Color(0xFF0F5B46))
+                      : null,
+                  onTap: () {
+                    onChanged(lang);
+                    Navigator.of(sheetCtx).pop();
+                  },
+                );
+              }),
+            ],
+          ),
+        );
+      },
+    );
   }
 }

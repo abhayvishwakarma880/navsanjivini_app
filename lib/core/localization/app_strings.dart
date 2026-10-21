@@ -1,0 +1,139 @@
+/// Contract for all localized strings across Navsanjivini.
+abstract class AppStrings {
+  // App General
+  String get appName;
+  String get namasteGreeting;
+  String get continueBtn;
+  String get backBtn;
+  String get cancelBtn;
+  String get saveBtn;
+
+  // Welcome Screen
+  String get welcomeTagline;
+  String get welcomeSubtitle;
+  String get welcomeDescription;
+  String get getStartedBtn;
+  String get chooseLanguageTitle;
+  String get continueToSafety;
+
+  // Eligibility & Safety Screen
+  String get safetyConsentTitle;
+  String get trustAndEligibilityHeader;
+  String get trustAndEligibilitySubtitle;
+  String get ageConfirmationTitle;
+  String get ageConfirmationSubtitle;
+  String get consentTitle;
+  String get consentSubtitle;
+  String get clinicalDisclaimer;
+  String get agreeAndContinue;
+
+  // Auth Screen (Login / Register)
+  String get loginTab;
+  String get registerTab;
+  String get loginTitle;
+  String get loginSubtitle;
+  String get registerTitle;
+  String get registerSubtitle;
+  String get mobileNumberLabel;
+  String get mobileNumberHint;
+  String get passwordLabel;
+  String get passwordHint;
+  String get confirmPasswordLabel;
+  String get confirmPasswordHint;
+  String get nameLabel;
+  String get nameHint;
+  String get loginBtn;
+  String get sendOtpBtn;
+  String get verifyOtpBtn;
+  String get resendOtpBtn;
+  String get otpScreenTitle;
+  String get otpScreenSubtitle;
+  String get enterOtpHint;
+  String get createPasswordTitle;
+  String get createPasswordSubtitle;
+  String get completeRegistrationBtn;
+  String get dontHaveAccount;
+  String get registerNow;
+  String get alreadyHaveAccount;
+  String get loginNow;
+  String get invalidPhoneError;
+  String get invalidPasswordError;
+  String get invalidOtpError;
+  String get passwordMismatchError;
+  String get loginSuccessMsg;
+  String get registerSuccessMsg;
+  String get demoOtpNotice;
+
+  // Navigation Bottom Tabs (5 Tabs)
+  String get todayTab;
+  String get talkTab;
+  String get pauseTab;
+  String get journalTab;
+  String get helpTab;
+
+  // Home / Today Screen Layout
+  String get appSubtitleTagline;
+  String get helloThere;
+  String get howAreYouFeeling;
+  String get takeMomentForYourself;
+  String get noRightOrWrongWay;
+  String get checkInWithMood;
+  String get whatWouldHelpRightNow;
+  String get talkItOutTitle;
+  String get talkItOutSubtitle;
+  String get takePauseTitle;
+  String get takePauseSubtitle;
+  String get exploreTitle;
+  String get exploreSubtitle;
+  String get findSupportTitle;
+  String get findSupportSubtitle;
+  String get gentleThoughtTitle;
+  String get gentleThoughtQuote;
+
+  // Features Cards
+  String get homeGreeting;
+  String get homeSubtitle;
+  String get quickCheckinTitle;
+  String get quickCheckinPrompt;
+  String get checkinActionBtn;
+  String get dailyThoughtTitle;
+  String get exploreFeaturesTitle;
+  String get talkFeatureTitle;
+  String get talkFeatureDesc;
+  String get pauseFeatureTitle;
+  String get pauseFeatureDesc;
+  String get moodFeatureTitle;
+  String get moodFeatureDesc;
+  String get exploreFeatureTitle;
+  String get exploreFeatureDesc;
+  String get helpFeatureTitle;
+  String get helpFeatureDesc;
+
+  // Profile Screen
+  String get yourProfileTitle;
+  String get manageAccountSubtitle;
+  String get personalInfoTitle;
+  String get personalInfoSubtitle;
+  String get preferencesTitle;
+  String get preferencesSubtitle;
+  String get notificationsTitle;
+  String get notificationsSubtitle;
+  String get privacyConsentTitle;
+  String get privacyConsentSubtitle;
+  String get downloadDataTitle;
+  String get downloadDataSubtitle;
+  String get deleteAccountTitle;
+  String get deleteAccountSubtitle;
+  String get helpAboutTitle;
+  String get helpAboutSubtitle;
+  String get logOutTitle;
+  String get logOutSubtitle;
+  String get editProfileTitle;
+  String get confirmLogOutDialog;
+  String get confirmDeleteAccountDialog;
+
+  // Settings & Profile
+  String get settingsTitle;
+  String get languageSettingTitle;
+  String get privacyPolicyTitle;
+}

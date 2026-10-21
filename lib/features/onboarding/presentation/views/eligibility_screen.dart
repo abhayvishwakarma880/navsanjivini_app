@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app/core/constants/app_constants.dart';
+import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -23,11 +23,12 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
   @override
   Widget build(BuildContext context) {
     final canProceed = _is18Plus && _consentGiven;
+    final strings = context.tr;
 
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text('Safety & Consent'),
+        title: Text(strings.safetyConsentTitle),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_rounded),
           onPressed: () => Navigator.of(context).pop(),
@@ -41,12 +42,12 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
             children: [
               const SizedBox(height: AppSpacing.sm),
               Text(
-                'Trust & Eligibility',
+                strings.trustAndEligibilityHeader,
                 style: AppTextStyles.headlineMedium,
               ),
               const SizedBox(height: AppSpacing.xs),
               Text(
-                'Before we begin, please confirm the following to ensure a safe, supportive, and mindful space for you.',
+                strings.trustAndEligibilitySubtitle,
                 style: AppTextStyles.bodyMedium.copyWith(
                   color: AppColors.textSecondary,
                 ),
@@ -71,13 +72,13 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
                   value: _is18Plus,
                   activeColor: AppColors.primary,
                   title: Text(
-                    'I am 18 years of age or older',
+                    strings.ageConfirmationTitle,
                     style: AppTextStyles.titleMedium.copyWith(
                       color: _is18Plus ? AppColors.primaryDark : AppColors.textPrimary,
                     ),
                   ),
                   subtitle: Text(
-                    'Navsanjivini is exclusively designed for adults (18+).',
+                    strings.ageConfirmationSubtitle,
                     style: AppTextStyles.bodySmall,
                   ),
                   onChanged: (val) {
@@ -105,13 +106,13 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
                   value: _consentGiven,
                   activeColor: AppColors.primary,
                   title: Text(
-                    'Terms & AI Limitations Consent',
+                    strings.consentTitle,
                     style: AppTextStyles.titleMedium.copyWith(
                       color: _consentGiven ? AppColors.primaryDark : AppColors.textPrimary,
                     ),
                   ),
                   subtitle: Text(
-                    'I understand this is an AI supportive tool, not a clinical doctor or emergency helpline.',
+                    strings.consentSubtitle,
                     style: AppTextStyles.bodySmall,
                   ),
                   onChanged: (val) {
@@ -140,7 +141,7 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
                     const SizedBox(width: AppSpacing.sm),
                     Expanded(
                       child: Text(
-                        AppConstants.clinicalDisclaimer,
+                        strings.clinicalDisclaimer,
                         style: AppTextStyles.bodySmall.copyWith(
                           color: AppColors.textSecondary,
                           height: 1.45,
@@ -155,7 +156,7 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
 
               // Continue Button
               CustomButton(
-                text: 'Agree & Continue / Aage Badhein',
+                text: strings.agreeAndContinue,
                 onPressed: canProceed ? widget.onContinue : null,
               ),
               const SizedBox(height: AppSpacing.xs),

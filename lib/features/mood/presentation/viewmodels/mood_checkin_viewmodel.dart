@@ -3,9 +3,9 @@ import '../../domain/entities/mood_entry.dart';
 import '../../domain/repositories/mood_repository.dart';
 
 class MoodCheckinViewModel extends ChangeNotifier {
-  final MoodRepository? _repository;
+  final MoodRepository? repository;
 
-  MoodCheckinViewModel({MoodRepository? repository}) : _repository = repository;
+  MoodCheckinViewModel({this.repository});
 
   MoodType? _selectedMood;
   int _intensity = 3; // 1 to 5
@@ -66,8 +66,8 @@ class MoodCheckinViewModel extends ChangeNotifier {
         timestamp: DateTime.now(),
       );
 
-      if (_repository != null) {
-        await _repository.saveMoodEntry(entry);
+      if (repository != null) {
+        await repository!.saveMoodEntry(entry);
       }
 
       _isSaving = false;

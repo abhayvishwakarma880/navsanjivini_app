@@ -26,7 +26,7 @@ class SettingsSwitchTile extends StatelessWidget {
           ? Text(subtitle!, style: AppTextStyles.bodySmall)
           : null,
       value: value,
-      activeColor: AppColors.primary,
+      activeThumbColor: AppColors.primary,
       onChanged: onChanged,
     );
   }

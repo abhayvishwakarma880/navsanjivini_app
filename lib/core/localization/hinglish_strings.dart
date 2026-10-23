@@ -199,19 +199,55 @@ class HinglishStrings extends EnStrings {
   String get appSubtitleTagline => 'A little space for yourself';
 
   @override
-  String get helloThere => 'Hello, there. 🌿';
+  String get helloThere => 'Good morning 🌿';
 
   @override
   String get howAreYouFeeling => 'Aaj aap kaisa feel kar rahe hain?';
 
   @override
-  String get takeMomentForYourself => 'Apne liye ek moment nikalein';
+  String get goodMorningGreeting => 'Good morning 🌿';
+
+  @override
+  String get goodAfternoonGreeting => 'Good afternoon 🌿';
+
+  @override
+  String get goodEveningGreeting => 'Good evening 🌿';
+
+  @override
+  String get aMomentForYourself => 'Apne liye ek moment';
+
+  @override
+  String get howAreYouFeelingRightNow => 'Aap abhi kaisa feel kar rahe hain?';
+
+  @override
+  String get takeMomentForYourself => 'Apne liye ek moment';
 
   @override
   String get noRightOrWrongWay => 'Feelings sahi ya galat nahi hoti.';
 
   @override
   String get checkInWithMood => 'Check in with your mood →';
+
+  @override
+  String get moodGreat => 'Great';
+
+  @override
+  String get moodOkay => 'Okay';
+
+  @override
+  String get moodLow => 'Low';
+
+  @override
+  String get moodAnxious => 'Anxious';
+
+  @override
+  String get moodOverwhelmed => 'Overwhelmed';
+
+  @override
+  String get takeSmallPauseTitle => 'Take a small pause';
+
+  @override
+  String get takeSmallPauseSubtitle => 'Saans lene aur reset hone ke liye ek minute.';
 
   @override
   String get whatWouldHelpRightNow => 'Abhi kya help kar sakta hai?';
@@ -223,28 +259,313 @@ class HinglishStrings extends EnStrings {
   String get talkItOutSubtitle => "Jo mind me hai, share karein";
 
   @override
-  String get takePauseTitle => 'Take a pause';
+  String get takePauseTitle => 'Take a small pause';
 
   @override
-  String get takePauseSubtitle => 'Ek short calming exercise try karein';
+  String get takePauseSubtitle => 'Saans lene aur reset hone ke liye ek minute.';
 
   @override
   String get exploreTitle => 'Explore';
 
   @override
-  String get exploreSubtitle => 'Helpful resources discover karein';
+  String get exploreSubtitle => 'Helpful resources';
+
+  @override
+  String get myJournalTitle => 'My Journal';
+
+  @override
+  String get myJournalSubtitle => 'Privately likhein';
 
   @override
   String get findSupportTitle => 'Find support';
 
   @override
-  String get findSupportSubtitle => 'Trusted help options dekhein';
+  String get findSupportSubtitle => 'Trusted help options';
 
   @override
-  String get gentleThoughtTitle => 'A gentle thought';
+  String get gentleThoughtTitle => 'A gentle thought 🌱';
 
   @override
   String get gentleThoughtQuote => 'Difficult days par bhi small steps bohot count hote hain.';
+
+  // Talk Screen
+  @override
+  String get talkHeaderSubtitle => "Apne mann ki baat share karne ke liye ek safe space.";
+
+  @override
+  String get talkBannerEyebrow => 'YOUR PERSONAL WELL-BEING SPACE';
+
+  @override
+  String get talkBannerTitle => 'Aap jahan bhi hain, wahin se start kar sakte hain.';
+
+  @override
+  String get talkBannerSubtitle => 'Perfect words dhoondhne ka koi pressure nahi hai.';
+
+  @override
+  String get talkPromptLabel => 'Aap inse bhi shuru kar sakte hain:';
+
+  @override
+  String get talkPromptWork => 'Work ya studies';
+
+  @override
+  String get talkPromptFeelings => 'My feelings';
+
+  @override
+  String get talkPromptVent => 'I just need to vent';
+
+  @override
+  String get talkInputHint => "Type what's on your mind...";
+
+  @override
+  String get talkDisclaimer => 'A supportive space, not a substitute for professional care.';
+
+  @override
+  String get talkInitialGreeting => "Hi there 🌿 Main sunne ke liye yahan hoon. Aaj aapke mind mein kya chal raha hai?";
+
+  @override
+  String get talkInitialUser => "Main thoda overwhelmed feel kar raha hoon.";
+
+  @override
+  String get talkInitialAiReply => "Yeh sach mein heavy lag sakta hai. Kya aap batana chahenge ki kya cheez heavy feel ho rahi hai?";
+
+  // Pause Screen
+  @override
+  String get pauseHeaderTitle => 'Take a pause 🌿';
+
+  @override
+  String get pauseHeaderSubtitle => 'A little space just for you.';
+
+  @override
+  String get pauseMomentOfCalm => 'YOUR MOMENT OF CALM';
+
+  @override
+  String get pauseSlowDownTitle => "Let's slow things down.";
+
+  @override
+  String get pauseSlowDownSubtitle => "Abhi sab kuch solve karna zaroori nahi hai.";
+
+  @override
+  String get pauseMindfulBreathingTitle => 'Mindful breathing';
+
+  @override
+  String get pauseMindfulBreathingSubtitle => '1 minute • Gentle breathing';
+
+  @override
+  String get pauseStartBreathingButton => 'Start breathing exercise →';
+
+  @override
+  String get pauseChooseTitle => 'Choose your pause';
+
+  @override
+  String get pauseBreatheCardTitle => 'Breathe';
+
+  @override
+  String get pauseBreatheCardSubtitle => 'Slow, gentle breaths';
+
+  @override
+  String get pauseGroundCardTitle => 'Ground';
+
+  @override
+  String get pauseGroundCardSubtitle => 'Reconnect with now';
+
+  @override
+  String get pauseRelaxCardTitle => 'Relax';
+
+  @override
+  String get pauseRelaxCardSubtitle => 'Release some tension';
+
+  @override
+  String get pauseReminderTitle => 'A gentle reminder';
+
+  @override
+  String get pauseReminderBody => "It's okay to take things one moment at a time.";
+
+  @override
+  String get pauseBreatheIn => 'Breathe in...';
+
+  @override
+  String get pauseHold => 'Hold gently...';
+
+  @override
+  String get pauseBreatheOut => 'Breathe out slowly...';
+
+  @override
+  String get pauseRest => 'Rest and settle...';
+
+  @override
+  String get pauseReset => 'Reset';
+
+  @override
+  String get pausePause => 'Pause';
+
+  @override
+  String get pauseResume => 'Resume';
+
+  @override
+  String get pauseDone => 'Well done! Is shaanti ko apne saath carry karein.';
+
+  // Journal Screen Blueprint
+  @override
+  String get journalHeaderTitle => 'My Journal 🌿';
+
+  @override
+  String get journalHeaderSubtitle => 'A little space for your thoughts.';
+
+  @override
+  String get journalHowFeelingToday => 'How are you feeling today?';
+
+  @override
+  String get journalCheckInSubtitle => 'Ek moment nikaal kar khud se judiye.';
+
+  @override
+  String get journalWriteNewEntryButton => '+ Write a new entry';
+
+  @override
+  String get journalMoodGood => 'Good';
+
+  @override
+  String get journalMoodCalm => 'Calm';
+
+  @override
+  String get journalMoodLow => 'Low';
+
+  @override
+  String get journalMoodAnxious => 'Anxious';
+
+  @override
+  String get journalYourReflections => 'Your reflections';
+
+  @override
+  String get journalViewAll => 'View all';
+
+  @override
+  String get journalPrivateBadge => 'Private entry';
+
+  @override
+  String get journalEmptyTitle => 'No reflections yet';
+
+  @override
+  String get journalEmptySubtitle =>
+      'Khulkar likhein. Yeh space aapka hai aur bilkul private hai.';
+
+  @override
+  String get journalNewEntryTitle => 'New journal entry';
+
+  @override
+  String get journalEditEntryTitle => 'Edit journal entry';
+
+  @override
+  String get journalSave => 'Save';
+
+  @override
+  String get journalTitleLabel => 'Give your entry a title';
+
+  @override
+  String get journalTitleHint => 'e.g. A little reflection...';
+
+  @override
+  String get journalBodyLabel => "What's on your mind?";
+
+  @override
+  String get journalBodyHint => 'Write freely. Yeh space aapka hai...';
+
+  @override
+  String get journalMoodOptionalLabel => 'How are you feeling? (Optional)';
+
+  @override
+  String get journalSaveEntryButton => 'Save entry';
+
+  @override
+  String get journalPrivacyFootnote => 'Your reflections deserve privacy.';
+
+  @override
+  String get journalReadEntry => 'Read reflection';
+
+  @override
+  String get journalEdit => 'Edit';
+
+  @override
+  String get journalDelete => 'Delete';
+
+  @override
+  String get journalDeleteConfirmTitle => 'Delete entry?';
+
+  @override
+  String get journalDeleteConfirmMessage =>
+      'Kya aap sach me yeh reflection delete karna chahte hain? Yeh wapas nahi aayegi.';
+
+  @override
+  String get journalCancel => 'Cancel';
+
+  @override
+  String get journalSavedToast => 'Journal entry privately save ho gayi.';
+
+  @override
+  String get journalDeletedToast => 'Journal entry delete ho gayi.';
+
+  // Help Screen Blueprint
+  @override
+  String get helpHeaderTitle => "You're not alone 🌿";
+
+  @override
+  String get helpHeaderSubtitle => 'Support available hai jab bhi aapko zaroorat ho.';
+
+  @override
+  String get helpHeroTitle => 'Aapko kis tarah ka support chahiye?';
+
+  @override
+  String get helpHeroSubtitle => 'Woh option chuniye jo aapke liye sahi lage.';
+
+  @override
+  String get helpExploreSupportTitle => 'Explore support';
+
+  @override
+  String get helpTalkSomeoneTitle => 'Talk to someone';
+
+  @override
+  String get helpTalkSomeoneSubtitle =>
+      'Find trusted support services and contact options.';
+
+  @override
+  String get helpResourcesTitle => 'Helpful resources';
+
+  @override
+  String get helpResourcesSubtitle =>
+      'Wellbeing guides aur practical information explore karein.';
+
+  @override
+  String get helpFaqsTitle => 'App FAQs';
+
+  @override
+  String get helpFaqsSubtitle =>
+      'Privacy, journal entries aur app features ke baare me jaanein.';
+
+  @override
+  String get helpUrgentCardTitle => 'Need urgent help?';
+
+  @override
+  String get helpUrgentCardSubtitle =>
+      'Agar aap ya koi aur immediate danger me hai, toh local emergency services ya trusted person se contact karein.';
+
+  @override
+  String get helpUrgentButton => 'View urgent support options →';
+
+  @override
+  String get helpUrgentModalTitle => 'Urgent Support & Crisis Lines';
+
+  @override
+  String get helpUrgentModalSubtitle =>
+      'Free, confidential, aur 24/7 across India available. Directly call karne ke liye tap karein.';
+
+  @override
+  String get helpDisclaimer =>
+      'Navsanjivini self-care aur emotional companion support tool hai. Yeh medical diagnosis ya psychiatric treatment ka substitute nahi hai.';
+
+  @override
+  String get helpCallAction => 'Call now';
+
+  @override
+  String get helpTollFree => 'Toll-free • 24/7';
 
   // Profile Screen
   @override

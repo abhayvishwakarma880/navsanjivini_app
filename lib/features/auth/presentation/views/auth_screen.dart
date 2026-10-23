@@ -80,15 +80,19 @@ class _AuthScreenState extends State<AuthScreen> {
                     ),
                     const SizedBox(height: AppSpacing.xs),
 
-                    // Subtitle based on mode
-                    Text(
-                      vm.authMode == AuthMode.login
-                          ? strings.loginSubtitle
-                          : strings.registerSubtitle,
-                      style: AppTextStyles.bodySmall.copyWith(
-                        color: AppColors.textSecondary,
+                    // Subtitle based on mode with smooth cross-fade
+                    AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 250),
+                      child: Text(
+                        vm.authMode == AuthMode.login
+                            ? strings.loginSubtitle
+                            : strings.registerSubtitle,
+                        key: ValueKey<AuthMode>(vm.authMode),
+                        style: AppTextStyles.bodySmall.copyWith(
+                          color: AppColors.textSecondary,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: AppSpacing.lg),
 
@@ -166,11 +170,47 @@ class _AuthScreenState extends State<AuthScreen> {
                       const SizedBox(height: AppSpacing.md),
                     ],
 
-                    // Mode Form
-                    if (vm.authMode == AuthMode.login)
-                      _buildLoginForm(strings)
-                    else
-                      _buildRegisterFlow(strings),
+                    // Mode Form with smooth animated transitions
+                    AnimatedSize(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOutCubic,
+                      alignment: Alignment.topCenter,
+                      child: AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 280),
+                        switchInCurve: Curves.easeOutCubic,
+                        switchOutCurve: Curves.easeInCubic,
+                        layoutBuilder: (Widget? currentChild, List<Widget> previousChildren) {
+                          return Stack(
+                            alignment: Alignment.topCenter,
+                            children: <Widget>[
+                              ...previousChildren,
+                              ?currentChild,
+                            ],
+                          );
+                        },
+                        transitionBuilder: (Widget child, Animation<double> animation) {
+                          final isLoginChild = (child.key as ValueKey<AuthMode>?)?.value == AuthMode.login;
+                          final offset = Tween<Offset>(
+                            begin: Offset(isLoginChild ? -0.06 : 0.06, 0.0),
+                            end: Offset.zero,
+                          ).animate(animation);
+
+                          return FadeTransition(
+                            opacity: animation,
+                            child: SlideTransition(
+                              position: offset,
+                              child: child,
+                            ),
+                          );
+                        },
+                        child: KeyedSubtree(
+                          key: ValueKey<AuthMode>(vm.authMode),
+                          child: vm.authMode == AuthMode.login
+                              ? _buildLoginForm(strings)
+                              : _buildRegisterFlow(strings),
+                        ),
+                      ),
+                    ),
 
                     const SizedBox(height: AppSpacing.xl),
 
@@ -186,31 +226,101 @@ class _AuthScreenState extends State<AuthScreen> {
     );
   }
 
-  /// Segmented Tab Switcher
+  /// Segmented Tab Switcher with Silky Smooth Sliding Indicator
   Widget _buildModeTabs(dynamic strings) {
+    final isLogin = vm.authMode == AuthMode.login;
     return Container(
+      height: 48,
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
         color: AppColors.surfaceVariant,
-        borderRadius: AppRadius.radiusLg,
+        borderRadius: BorderRadius.circular(14),
       ),
-      child: Row(
-        children: [
-          Expanded(
-            child: _TabButton(
-              title: strings.loginTab,
-              isSelected: vm.authMode == AuthMode.login,
-              onTap: () => vm.toggleAuthMode(AuthMode.login),
-            ),
-          ),
-          Expanded(
-            child: _TabButton(
-              title: strings.registerTab,
-              isSelected: vm.authMode == AuthMode.register,
-              onTap: () => vm.toggleAuthMode(AuthMode.register),
-            ),
-          ),
-        ],
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final tabWidth = constraints.maxWidth / 2;
+          return Stack(
+            children: [
+              // Gliding pill indicator
+              AnimatedPositioned(
+                duration: const Duration(milliseconds: 280),
+                curve: Curves.easeInOutCubic,
+                left: isLogin ? 0 : tabWidth,
+                top: 0,
+                bottom: 0,
+                width: tabWidth,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.surface,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppColors.primaryDark.withAlpha(20),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              // Tab labels
+              Row(
+                children: [
+                  Expanded(
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(10),
+                        onTap: () {
+                          HapticFeedback.selectionClick();
+                          vm.toggleAuthMode(AuthMode.login);
+                        },
+                        child: Center(
+                          child: AnimatedDefaultTextStyle(
+                            duration: const Duration(milliseconds: 220),
+                            style: AppTextStyles.titleMedium.copyWith(
+                              color: isLogin
+                                  ? AppColors.primaryDark
+                                  : AppColors.textSecondary,
+                              fontWeight:
+                                  isLogin ? FontWeight.w700 : FontWeight.w500,
+                            ),
+                            child: Text(strings.loginTab),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(10),
+                        onTap: () {
+                          HapticFeedback.selectionClick();
+                          vm.toggleAuthMode(AuthMode.register);
+                        },
+                        child: Center(
+                          child: AnimatedDefaultTextStyle(
+                            duration: const Duration(milliseconds: 220),
+                            style: AppTextStyles.titleMedium.copyWith(
+                              color: !isLogin
+                                  ? AppColors.primaryDark
+                                  : AppColors.textSecondary,
+                              fontWeight:
+                                  !isLogin ? FontWeight.w700 : FontWeight.w500,
+                            ),
+                            child: Text(strings.registerTab),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          );
+        },
       ),
     );
   }
@@ -264,11 +374,31 @@ class _AuthScreenState extends State<AuthScreen> {
 
   /// New User Register Flow (Step 1 -> Step 2 -> Step 3)
   Widget _buildRegisterFlow(dynamic strings) {
-    return switch (vm.registerStep) {
-      RegisterStep.enterPhone => _buildRegisterPhoneStep(strings),
-      RegisterStep.verifyOtp => _buildRegisterOtpStep(strings),
-      RegisterStep.createPassword => _buildRegisterPasswordStep(strings),
-    };
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 250),
+      switchInCurve: Curves.easeOutCubic,
+      switchOutCurve: Curves.easeInCubic,
+      transitionBuilder: (child, animation) {
+        return FadeTransition(
+          opacity: animation,
+          child: SlideTransition(
+            position: Tween<Offset>(
+              begin: const Offset(0.04, 0.0),
+              end: Offset.zero,
+            ).animate(animation),
+            child: child,
+          ),
+        );
+      },
+      child: KeyedSubtree(
+        key: ValueKey<RegisterStep>(vm.registerStep),
+        child: switch (vm.registerStep) {
+          RegisterStep.enterPhone => _buildRegisterPhoneStep(strings),
+          RegisterStep.verifyOtp => _buildRegisterOtpStep(strings),
+          RegisterStep.createPassword => _buildRegisterPasswordStep(strings),
+        },
+      ),
+    );
   }
 
   /// Register Step 1: Name & Phone Number
@@ -479,46 +609,3 @@ class _AuthScreenState extends State<AuthScreen> {
   }
 }
 
-class _TabButton extends StatelessWidget {
-  final String title;
-  final bool isSelected;
-  final VoidCallback onTap;
-
-  const _TabButton({
-    required this.title,
-    required this.isSelected,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.symmetric(vertical: AppSpacing.sm),
-        decoration: BoxDecoration(
-          color: isSelected ? AppColors.surface : Colors.transparent,
-          borderRadius: AppRadius.radiusMd,
-          boxShadow: isSelected
-              ? [
-                  BoxShadow(
-                    color: Colors.black.withAlpha(12),
-                    blurRadius: 4,
-                    offset: const Offset(0, 2),
-                  ),
-                ]
-              : null,
-        ),
-        alignment: Alignment.center,
-        child: Text(
-          title,
-          style: AppTextStyles.titleMedium.copyWith(
-            color: isSelected ? AppColors.primaryDark : AppColors.textSecondary,
-            fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}

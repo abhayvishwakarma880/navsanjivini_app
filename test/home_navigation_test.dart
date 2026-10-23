@@ -66,7 +66,7 @@ void main() {
       await tester.pumpAndSettle();
 
       // Starts on Today (HomeScreen is child index 0)
-      expect(find.text('Hello, there. 🌿'), findsOneWidget);
+      expect(find.text('How are you feeling today?'), findsOneWidget);
 
       // Tap on Talk tab
       await tester.tap(find.text('Talk'));
@@ -113,6 +113,7 @@ void main() {
       bool moodTapped = false;
       bool profileTapped = false;
       bool talkTapped = false;
+      bool journalTapped = false;
 
       await tester.pumpWidget(
         buildTestableWidget(
@@ -121,6 +122,7 @@ void main() {
             onNavigateToTalk: () => talkTapped = true,
             onNavigateToPause: () {},
             onNavigateToExplore: () {},
+            onNavigateToJournal: () => journalTapped = true,
             onNavigateToHelp: () {},
             onNavigateToProfile: () => profileTapped = true,
           ),
@@ -129,24 +131,39 @@ void main() {
       await tester.pumpAndSettle();
 
       // Top Greeting & Subtitle
-      expect(find.text('Hello, there. 🌿'), findsOneWidget);
       expect(find.text('How are you feeling today?'), findsOneWidget);
+      expect(find.textContaining('🌿'), findsWidgets);
 
-      // Mood Check-in Card
-      expect(find.text('Take a moment for yourself'), findsOneWidget);
-      expect(find.text('There is no right or wrong way to feel.'), findsOneWidget);
+      // Mood Check-in Card (5 Moods)
+      expect(find.text('A moment for yourself'), findsOneWidget);
+      expect(find.text('How are you feeling right now?'), findsOneWidget);
+      expect(find.text('Great'), findsOneWidget);
+      expect(find.text('Okay'), findsOneWidget);
+      expect(find.text('Low'), findsOneWidget);
+      expect(find.text('Anxious'), findsOneWidget);
+      expect(find.text('Overwhelmed'), findsOneWidget);
       expect(find.text('Check in with your mood →'), findsOneWidget);
 
-      // "What would help right now?" section
+      // Select 'Great' mood -> shows supportive response
+      await tester.tap(find.text('Great'));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('Wonderful to hear'), findsOneWidget);
+
+      // Take a small pause card
+      expect(find.text('Take a small pause'), findsOneWidget);
+      expect(find.text('A minute to breathe and reset.'), findsOneWidget);
+
+      // "What would help right now?" section (4 cards)
       expect(find.text('What would help right now?'), findsOneWidget);
       expect(find.text('Talk it out'), findsOneWidget);
       expect(find.text("Share what's on your mind"), findsOneWidget);
-      expect(find.text('Take a pause'), findsOneWidget);
       expect(find.text('Explore'), findsOneWidget);
+      expect(find.text('My Journal'), findsOneWidget);
+      expect(find.text('Write privately'), findsOneWidget);
       expect(find.text('Find support'), findsOneWidget);
 
       // A gentle thought
-      expect(find.text('A gentle thought'), findsOneWidget);
+      expect(find.text('A gentle thought 🌱'), findsOneWidget);
       expect(find.text('Small steps count, even on difficult days.'), findsOneWidget);
 
       // Test Mood Checkin tap
@@ -160,6 +177,10 @@ void main() {
       // Test Talk it out card tap
       await tester.tap(find.text('Talk it out'));
       expect(talkTapped, isTrue);
+
+      // Test My Journal card tap
+      await tester.tap(find.text('My Journal'));
+      expect(journalTapped, isTrue);
     });
   });
 

@@ -30,28 +30,27 @@ void main() {
     await tester.pumpWidget(NavsanjiviniApp(languageController: controller));
     await tester.pumpAndSettle();
 
-    // Default starts on WelcomeScreen -> Tap Get Started to go to Language Selection
+    // WelcomeScreen renders Language Selection and Safety consent directly on screen
     expect(find.text('Get Started'), findsOneWidget);
-    await tester.tap(find.text('Get Started'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('Continue'), findsOneWidget);
     expect(find.text('Choose your language'), findsOneWidget);
+    expect(find.text('Safety & Consent'), findsOneWidget);
 
-    // Tap Hindi option
+    // Tap Hindi option directly on WelcomeScreen
     await tester.tap(find.text('हिंदी'));
     await tester.pumpAndSettle();
 
     // UI should reactively update to Hindi immediately!
-    expect(find.text('आगे बढ़ें'), findsOneWidget);
     expect(find.text('अपनी भाषा चुनें'), findsOneWidget);
+    expect(find.text('शुरू करें'), findsOneWidget);
+    expect(find.text('सुरक्षा एवं सहमति'), findsOneWidget);
 
-    // Tap Hinglish option
+    // Tap Hinglish option directly on WelcomeScreen
     await tester.tap(find.text('Hinglish').first);
     await tester.pumpAndSettle();
 
     // UI should reactively update to Hinglish immediately!
-    expect(find.text('Aage Badhein'), findsOneWidget);
     expect(find.text('Apni language choose karein'), findsOneWidget);
+    expect(find.text('Safety aur Consent'), findsOneWidget);
+    expect(find.text('Get Started'), findsOneWidget);
   });
 }

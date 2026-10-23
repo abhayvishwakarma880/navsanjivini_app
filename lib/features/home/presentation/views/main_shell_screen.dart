@@ -74,6 +74,7 @@ class _MainShellScreenState extends State<MainShellScreen> {
                 MaterialPageRoute(builder: (_) => const ExploreScreen()),
               );
             },
+            onNavigateToJournal: () => _onTabSelected(3),
             onNavigateToHelp: () => _onTabSelected(4),
             onNavigateToProfile: () {
               Navigator.of(context).push(

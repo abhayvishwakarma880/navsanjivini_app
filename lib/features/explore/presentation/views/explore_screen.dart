@@ -20,7 +20,7 @@ class ExploreScreen extends StatelessWidget {
         child: ListView.separated(
           padding: AppSpacing.screenPadding,
           itemCount: viewModel.articles.length,
-          separatorBuilder: (_, __) => const SizedBox(height: AppSpacing.md),
+          separatorBuilder: (_, _) => const SizedBox(height: AppSpacing.md),
           itemBuilder: (context, index) {
             final article = viewModel.articles[index];
             return GuideCard(

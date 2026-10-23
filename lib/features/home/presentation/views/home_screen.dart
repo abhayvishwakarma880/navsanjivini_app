@@ -1,19 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
-import 'package:app/core/theme/app_colors.dart';
-import 'package:app/core/theme/app_radius.dart';
-import 'package:app/core/theme/app_spacing.dart';
-import 'package:app/core/theme/app_text_styles.dart';
+
+enum TodayMood {
+  great(label: 'Great', emoji: '😊'),
+  okay(label: 'Okay', emoji: '😐'),
+  low(label: 'Low', emoji: '😔'),
+  anxious(label: 'Anxious', emoji: '😰'),
+  overwhelmed(label: 'Overwhelmed', emoji: '😫');
+
+  final String label;
+  final String emoji;
+
+  const TodayMood({required this.label, required this.emoji});
+}
 
 /// Screen: Home / Today Dashboard (Tab 1)
-/// Follows the Navsanjivini Blueprint layout.
-class HomeScreen extends StatelessWidget {
+/// Exact layout matching the Navsanjivini design blueprint and visual reference:
+/// 1. Top Header: Time-of-day greeting ("Good morning 🌿"), subtitle, circular profile button.
+/// 2. Daily Mood Check-in Card (Primary Action): 5 Mood options (Great, Okay, Low, Anxious, Overwhelmed) + supportive response flow.
+/// 3. Take a small pause shortcut: "A minute to breathe and reset."
+/// 4. "What would help right now?": 4 clean cards (Talk it out, Explore, My Journal, Find support).
+/// 5. A gentle thought: Non-judgmental supportive reflection quote.
+class HomeScreen extends StatefulWidget {
   final VoidCallback onNavigateToMood;
   final VoidCallback onNavigateToTalk;
   final VoidCallback onNavigateToPause;
   final VoidCallback onNavigateToExplore;
   final VoidCallback onNavigateToHelp;
   final VoidCallback onNavigateToProfile;
+  final VoidCallback? onNavigateToJournal;
 
   const HomeScreen({
     super.key,
@@ -23,23 +39,82 @@ class HomeScreen extends StatelessWidget {
     required this.onNavigateToExplore,
     required this.onNavigateToHelp,
     required this.onNavigateToProfile,
+    this.onNavigateToJournal,
   });
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  TodayMood? _selectedMood;
+  String? _supportiveResponse;
+
+  String _getTimeGreeting(dynamic strings) {
+    final hour = DateTime.now().hour;
+    if (hour >= 5 && hour < 12) {
+      return strings.goodMorningGreeting;
+    } else if (hour >= 12 && hour < 17) {
+      return strings.goodAfternoonGreeting;
+    } else {
+      return strings.goodEveningGreeting;
+    }
+  }
+
+  void _onSelectMood(TodayMood mood) {
+    HapticFeedback.selectionClick();
+    setState(() {
+      _selectedMood = mood;
+      _supportiveResponse = _getSupportiveMessage(mood);
+    });
+  }
+
+  String _getSupportiveMessage(TodayMood mood) {
+    return switch (mood) {
+      TodayMood.great =>
+        'Wonderful to hear. Savor this positive feeling and take it with you today. 🌿',
+      TodayMood.okay =>
+        'Thank you for checking in. Steady, quiet days are just as meaningful. 🌿',
+      TodayMood.low =>
+        'We hear you. Be gentle with yourself today. You don\'t have to carry everything all at once. 🌿',
+      TodayMood.anxious =>
+        'Take a slow breath. You are safe in this moment, and it\'s okay to pause right now. 🌿',
+      TodayMood.overwhelmed =>
+        'It is completely okay to slow down. One small step at a time is more than enough. 🌿',
+    };
+  }
+
+  void _submitMoodCheckin() {
+    if (_selectedMood == null) {
+      // Default to Okay if user taps without selecting
+      setState(() {
+        _selectedMood = TodayMood.okay;
+        _supportiveResponse = _getSupportiveMessage(TodayMood.okay);
+      });
+    }
+
+    widget.onNavigateToMood();
+  }
 
   @override
   Widget build(BuildContext context) {
     final strings = context.tr;
+    final greeting = _getTimeGreeting(strings);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: const Color(0xFFF7FCF9),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: AppSpacing.screenPadding,
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: AppSpacing.xs),
+              const SizedBox(height: 4),
 
-              // Top Bar: Greeting & How are you feeling + Top-Right Circular Profile Button
+              // ==========================================
+              // ① TOP HEADER
+              // ==========================================
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,79 +124,90 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          strings.helloThere,
-                          style: AppTextStyles.headlineMedium.copyWith(
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.textPrimary,
-                            letterSpacing: -0.3,
+                          greeting,
+                          style: const TextStyle(
+                            fontSize: 23,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xFF1D3C33),
+                            letterSpacing: -0.4,
                           ),
                         ),
-                        const SizedBox(height: 2),
+                        const SizedBox(height: 3),
                         Text(
                           strings.howAreYouFeeling,
-                          style: AppTextStyles.bodyMedium.copyWith(
-                            color: AppColors.textSecondary,
+                          style: const TextStyle(
+                            fontSize: 13.5,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xFF5E7369),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(width: AppSpacing.sm),
                   // Top-Right Circular Profile Button
-                  InkWell(
-                    onTap: onNavigateToProfile,
-                    borderRadius: BorderRadius.circular(24),
-                    child: Container(
-                      width: 44,
-                      height: 44,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryContainer,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: AppColors.primary.withAlpha(40),
-                          width: 1.5,
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: AppColors.primary.withAlpha(20),
-                            blurRadius: 8,
-                            offset: const Offset(0, 2),
+                  Material(
+                    color: const Color(0xFFE2EFE9),
+                    shape: const CircleBorder(),
+                    child: InkWell(
+                      customBorder: const CircleBorder(),
+                      onTap: widget.onNavigateToProfile,
+                      child: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: const Color(0xFF0F5B46).withAlpha(35),
+                            width: 1.2,
                           ),
-                        ],
-                      ),
-                      child: const Center(
-                        child: Icon(
-                          Icons.person_outline_rounded,
-                          color: AppColors.primary,
-                          size: 24,
+                        ),
+                        child: const Center(
+                          child: Icon(
+                            Icons.person_outline_rounded,
+                            color: Color(0xFF0F5B46),
+                            size: 22,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: AppSpacing.lg),
+              const SizedBox(height: 16),
 
-              // Mood Check-in Card (Take a moment for yourself)
+              // ==========================================
+              // ② DAILY MOOD CHECK-IN CARD (Primary Action)
+              // ==========================================
               _buildMoodCheckinCard(strings),
-              const SizedBox(height: AppSpacing.xl),
+              const SizedBox(height: 14),
 
-              // Section: What would help right now?
+              // ==========================================
+              // ③ TAKE A SMALL PAUSE CARD
+              // ==========================================
+              _buildTakePauseCard(strings),
+              const SizedBox(height: 18),
+
+              // ==========================================
+              // ④ WHAT WOULD HELP RIGHT NOW?
+              // ==========================================
               Text(
                 strings.whatWouldHelpRightNow,
-                style: AppTextStyles.headlineSmall.copyWith(
+                style: const TextStyle(
+                  fontSize: 16,
                   fontWeight: FontWeight.w700,
+                  color: Color(0xFF0C4D38),
+                  letterSpacing: -0.2,
                 ),
               ),
-              const SizedBox(height: AppSpacing.md),
+              const SizedBox(height: 12),
+              _buildHelpActionGrid(strings),
+              const SizedBox(height: 16),
 
-              // 4 Action Prompt Cards (Talk, Pause, Explore, Find Support)
-              _buildActionGrid(strings),
-              const SizedBox(height: AppSpacing.xl),
-
-              // A gentle thought (Reflection Card)
+              // ==========================================
+              // ⑤ A GENTLE THOUGHT
+              // ==========================================
               _buildGentleThoughtCard(strings),
-              const SizedBox(height: AppSpacing.md),
+              const SizedBox(height: 16),
             ],
           ),
         ),
@@ -129,83 +215,176 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  /// Mood Check-in Card
+  /// ② Daily Mood Check-in Card
   Widget _buildMoodCheckinCard(dynamic strings) {
     return Container(
       width: double.infinity,
-      padding: AppSpacing.cardPadding,
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.primaryContainer,
-        borderRadius: AppRadius.radiusLg,
-        border: Border.all(color: AppColors.primary.withAlpha(40)),
+        color: const Color(0xFFEBF5F0), // Soft mint container
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: const Color(0xFFD6EAE0),
+          width: 1.2,
+        ),
         boxShadow: [
           BoxShadow(
-            color: AppColors.primary.withAlpha(15),
+            color: const Color(0xFF0F5B46).withAlpha(12),
             blurRadius: 16,
-            offset: const Offset(0, 6),
+            offset: const Offset(0, 4),
           ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(6),
-                decoration: BoxDecoration(
-                  color: AppColors.surface,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.favorite_rounded,
-                  color: AppColors.primary,
-                  size: 20,
-                ),
-              ),
-              const SizedBox(width: AppSpacing.sm),
-              Expanded(
-                child: Text(
-                  strings.takeMomentForYourself,
-                  style: AppTextStyles.titleMedium.copyWith(
-                    color: AppColors.primaryDark,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: AppSpacing.xs),
           Text(
-            strings.noRightOrWrongWay,
-            style: AppTextStyles.bodySmall.copyWith(
-              color: AppColors.primaryDark.withAlpha(200),
+            strings.aMomentForYourself,
+            style: const TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.w600,
+              color: Color(0xFF247D6B),
             ),
           ),
-          const SizedBox(height: AppSpacing.md),
-          InkWell(
-            onTap: onNavigateToMood,
-            borderRadius: AppRadius.radiusMd,
-            child: Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSpacing.md,
-                vertical: AppSpacing.sm,
-              ),
+          const SizedBox(height: 4),
+          Text(
+            strings.howAreYouFeelingRightNow,
+            style: const TextStyle(
+              fontSize: 16.5,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF0C4D38),
+            ),
+          ),
+          const SizedBox(height: 14),
+
+          // 5 Mood Options (Great, Okay, Low, Anxious, Overwhelmed)
+          Row(
+            children: TodayMood.values.map((mood) {
+              final isSelected = _selectedMood == mood;
+              final localizedLabel = switch (mood) {
+                TodayMood.great => strings.moodGreat,
+                TodayMood.okay => strings.moodOkay,
+                TodayMood.low => strings.moodLow,
+                TodayMood.anxious => strings.moodAnxious,
+                TodayMood.overwhelmed => strings.moodOverwhelmed,
+              };
+
+              return Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 3),
+                  child: Material(
+                    color: isSelected ? const Color(0xFFD5ECE0) : Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      side: BorderSide(
+                        color: isSelected
+                            ? const Color(0xFF0F5B46)
+                            : const Color(0xFFDCECE4),
+                        width: isSelected ? 2 : 1,
+                      ),
+                    ),
+                    elevation: isSelected ? 1 : 0,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(12),
+                      onTap: () => _onSelectMood(mood),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 2),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              mood.emoji,
+                              style: const TextStyle(fontSize: 22),
+                            ),
+                            const SizedBox(height: 5),
+                            Text(
+                              localizedLabel,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+                                color: isSelected
+                                    ? const Color(0xFF0C4D38)
+                                    : const Color(0xFF1D3C33),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            }).toList(),
+          ),
+          const SizedBox(height: 14),
+
+          // Supportive Response Preview if mood selected
+          if (_supportiveResponse != null) ...[
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
-                color: AppColors.primary,
-                borderRadius: AppRadius.radiusMd,
+                color: Colors.white.withAlpha(200),
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color(0xFF0F5B46).withAlpha(35)),
               ),
               child: Row(
-                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    strings.checkInWithMood,
-                    style: AppTextStyles.labelLarge.copyWith(
-                      color: AppColors.onPrimary,
-                      fontWeight: FontWeight.w600,
+                  const Icon(
+                    Icons.favorite_rounded,
+                    size: 14,
+                    color: Color(0xFF0F5B46),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      _supportiveResponse!,
+                      style: const TextStyle(
+                        fontSize: 11.5,
+                        color: Color(0xFF1D3C33),
+                        height: 1.35,
+                      ),
                     ),
                   ),
                 ],
+              ),
+            ),
+            const SizedBox(height: 12),
+          ],
+
+          // Action Button: "Check in with your mood →"
+          Container(
+            width: double.infinity,
+            height: 48,
+            decoration: BoxDecoration(
+              color: const Color(0xFF0F5B46),
+              borderRadius: BorderRadius.circular(24),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFF0F5B46).withAlpha(45),
+                  blurRadius: 14,
+                  offset: const Offset(0, 6),
+                ),
+              ],
+            ),
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(24),
+                onTap: _submitMoodCheckin,
+                child: Center(
+                  child: Text(
+                    strings.checkInWithMood,
+                    style: const TextStyle(
+                      fontSize: 14.5,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
@@ -214,94 +393,165 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  /// 4 Action Grid Cards
-  Widget _buildActionGrid(dynamic strings) {
-    return GridView.count(
-      crossAxisCount: 2,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      mainAxisSpacing: AppSpacing.sm,
-      crossAxisSpacing: AppSpacing.sm,
-      childAspectRatio: 1.15,
+  /// ③ Take a small pause Card
+  Widget _buildTakePauseCard(dynamic strings) {
+    return Material(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(18),
+        side: const BorderSide(color: Color(0xFFE4EDE7), width: 1.2),
+      ),
+      elevation: 0,
+      shadowColor: Colors.black.withAlpha(8),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(18),
+        onTap: widget.onNavigateToPause,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          child: Row(
+            children: [
+              Container(
+                width: 42,
+                height: 42,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFE2F0EA),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Center(
+                  child: Icon(
+                    Icons.air_rounded,
+                    color: Color(0xFF0F5B46),
+                    size: 22,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      strings.takeSmallPauseTitle,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF1D3C33),
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      strings.takeSmallPauseSubtitle,
+                      style: const TextStyle(
+                        fontSize: 12,
+                        color: Color(0xFF5E7369),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Icon(
+                Icons.chevron_right_rounded,
+                color: Color(0xFF7A9489),
+                size: 22,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// ④ 4 Action Prompt Cards (2x2 Grid)
+  Widget _buildHelpActionGrid(dynamic strings) {
+    return Column(
       children: [
-        _ActionPromptCard(
-          title: strings.talkItOutTitle,
-          subtitle: strings.talkItOutSubtitle,
-          icon: Icons.chat_bubble_outline_rounded,
-          iconColor: AppColors.primary,
-          onTap: onNavigateToTalk,
+        Row(
+          children: [
+            Expanded(
+              child: _HelpActionCard(
+                icon: Icons.chat_bubble_outline_rounded,
+                title: strings.talkItOutTitle,
+                subtitle: strings.talkItOutSubtitle,
+                onTap: widget.onNavigateToTalk,
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _HelpActionCard(
+                icon: Icons.menu_book_outlined,
+                title: strings.exploreTitle,
+                subtitle: strings.exploreSubtitle,
+                onTap: widget.onNavigateToExplore,
+              ),
+            ),
+          ],
         ),
-        _ActionPromptCard(
-          title: strings.takePauseTitle,
-          subtitle: strings.takePauseSubtitle,
-          icon: Icons.air_rounded,
-          iconColor: AppColors.info,
-          onTap: onNavigateToPause,
-        ),
-        _ActionPromptCard(
-          title: strings.exploreTitle,
-          subtitle: strings.exploreSubtitle,
-          icon: Icons.menu_book_rounded,
-          iconColor: AppColors.warning,
-          onTap: onNavigateToExplore,
-        ),
-        _ActionPromptCard(
-          title: strings.findSupportTitle,
-          subtitle: strings.findSupportSubtitle,
-          icon: Icons.support_agent_rounded,
-          iconColor: AppColors.error,
-          onTap: onNavigateToHelp,
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            Expanded(
+              child: _HelpActionCard(
+                icon: Icons.edit_note_rounded,
+                title: strings.myJournalTitle,
+                subtitle: strings.myJournalSubtitle,
+                onTap: () {
+                  if (widget.onNavigateToJournal != null) {
+                    widget.onNavigateToJournal!();
+                  }
+                },
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _HelpActionCard(
+                icon: Icons.favorite_border_rounded,
+                title: strings.findSupportTitle,
+                subtitle: strings.findSupportSubtitle,
+                onTap: widget.onNavigateToHelp,
+              ),
+            ),
+          ],
         ),
       ],
     );
   }
 
-  /// A gentle thought card
+  /// ⑤ A gentle thought Card
   Widget _buildGentleThoughtCard(dynamic strings) {
     return Container(
-      padding: AppSpacing.cardPadding,
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(
-        color: AppColors.surface,
-        borderRadius: AppRadius.radiusLg,
-        border: Border.all(color: AppColors.border),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: const Color(0xFFE5EDE8), width: 1.2),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withAlpha(5),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
       ),
-      child: Row(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: AppColors.surfaceVariant,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: const Icon(
-              Icons.format_quote_rounded,
-              color: AppColors.primary,
-              size: 24,
+          Text(
+            strings.gentleThoughtTitle,
+            style: const TextStyle(
+              fontSize: 12.5,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF247D6B),
             ),
           ),
-          const SizedBox(width: AppSpacing.sm),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  strings.gentleThoughtTitle,
-                  style: AppTextStyles.labelMedium.copyWith(
-                    color: AppColors.primary,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  strings.gentleThoughtQuote,
-                  style: AppTextStyles.bodyMedium.copyWith(
-                    fontStyle: FontStyle.italic,
-                    height: 1.45,
-                    color: AppColors.textPrimary,
-                  ),
-                ),
-              ],
+          const SizedBox(height: 6),
+          Text(
+            strings.gentleThoughtQuote,
+            style: const TextStyle(
+              fontSize: 13.5,
+              fontWeight: FontWeight.w500,
+              color: Color(0xFF1D3C33),
+              height: 1.4,
             ),
           ),
         ],
@@ -310,69 +560,60 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class _ActionPromptCard extends StatelessWidget {
+class _HelpActionCard extends StatelessWidget {
+  final IconData icon;
   final String title;
   final String subtitle;
-  final IconData icon;
-  final Color iconColor;
   final VoidCallback onTap;
 
-  const _ActionPromptCard({
+  const _HelpActionCard({
+    required this.icon,
     required this.title,
     required this.subtitle,
-    required this.icon,
-    required this.iconColor,
     required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.surface,
+      color: Colors.white,
       shape: RoundedRectangleBorder(
-        borderRadius: AppRadius.radiusLg,
-        side: const BorderSide(color: AppColors.border),
+        borderRadius: BorderRadius.circular(16),
+        side: const BorderSide(color: Color(0xFFE5EDE8), width: 1.2),
       ),
       child: InkWell(
+        borderRadius: BorderRadius.circular(16),
         onTap: onTap,
-        borderRadius: AppRadius.radiusLg,
         child: Padding(
-          padding: const EdgeInsets.all(AppSpacing.md),
+          padding: const EdgeInsets.all(14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                width: 38,
-                height: 38,
-                decoration: BoxDecoration(
-                  color: iconColor.withAlpha(25),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Icon(icon, color: iconColor, size: 22),
+              Icon(
+                icon,
+                color: const Color(0xFF0F5B46),
+                size: 22,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: AppTextStyles.titleMedium.copyWith(
-                      fontWeight: FontWeight.w700,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    subtitle,
-                    style: AppTextStyles.bodySmall.copyWith(
-                      color: AppColors.textSecondary,
-                      fontSize: 11,
-                    ),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
+              const SizedBox(height: 10),
+              Text(
+                title,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 14.5,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF1D3C33),
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                subtitle,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 11.5,
+                  color: Color(0xFF5E7369),
+                ),
               ),
             ],
           ),

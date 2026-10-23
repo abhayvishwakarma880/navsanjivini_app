@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:app/core/theme/app_colors.dart';
-import 'package:app/core/theme/app_spacing.dart';
-import 'package:app/core/theme/app_text_styles.dart';
-import 'package:app/core/widgets/custom_button.dart';
+import 'package:flutter/services.dart';
+import 'package:app/core/localization/language_scope.dart';
 import '../viewmodels/pause_viewmodel.dart';
-import '../widgets/breathing_circle.dart';
+import '../widgets/breathing_session_modal.dart';
+import '../widgets/concentric_breathing_visual.dart';
+import '../widgets/grounding_exercise_sheet.dart';
+import '../widgets/relax_activity_sheet.dart';
 
+/// Screen: Take a Pause (Tab 3)
+/// Exact layout and design matching the reference image:
+/// 1. Top Header: "Take a pause 🌿", "A little space just for you.", sprout avatar badge.
+/// 2. Featured Mint Card:
+///    - Eyebrow: "YOUR MOMENT OF CALM"
+///    - Heading: "Let's slow things down."
+///    - Subtitle: "You don't have to solve everything right now."
+///    - Concentric ripple breathing rings with central leaf
+///    - "Mindful breathing" & "1 minute • Gentle breathing"
+///    - Pill button: "Start breathing exercise →"
+/// 3. Choose your pause:
+///    - 3 Cards Row: Breathe, Ground, Relax
+/// 4. A gentle reminder card:
+///    - "It's okay to take things one moment at a time."
 class PauseScreen extends StatefulWidget {
   const PauseScreen({super.key});
 
@@ -22,52 +37,361 @@ class _PauseScreenState extends State<PauseScreen> {
     super.dispose();
   }
 
+  void _startBreathing() {
+    HapticFeedback.lightImpact();
+    BreathingSessionModal.show(context, _viewModel);
+  }
+
+  void _startGrounding() {
+    HapticFeedback.lightImpact();
+    GroundingExerciseSheet.show(context);
+  }
+
+  void _startRelaxing() {
+    HapticFeedback.lightImpact();
+    RelaxActivitySheet.show(context);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return ListenableBuilder(
-      listenable: _viewModel,
-      builder: (context, _) {
-        return Scaffold(
-          backgroundColor: AppColors.background,
-          appBar: AppBar(
-            title: const Text('Pause & Relax'),
-          ),
-          body: SafeArea(
-            child: Padding(
-              padding: AppSpacing.screenPadding,
-              child: Column(
+    final strings = context.tr;
+
+    return Scaffold(
+      backgroundColor: const Color(0xFFF7FCF9),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // ==========================================
+              // 1. TOP HEADER
+              // ==========================================
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    'Box Breathing (4-4-4-4)',
-                    style: AppTextStyles.headlineSmall,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          strings.pauseHeaderTitle,
+                          style: const TextStyle(
+                            fontSize: 19,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFF123C32),
+                            letterSpacing: -0.2,
+                          ),
+                        ),
+                        const SizedBox(height: 3),
+                        Text(
+                          strings.pauseHeaderSubtitle,
+                          style: const TextStyle(
+                            fontSize: 13,
+                            color: Color(0xFF5E7369),
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(height: AppSpacing.xs),
-                  Text(
-                    'Regulate your nervous system with equal rhythm breathing.',
-                    style: AppTextStyles.bodyMedium.copyWith(color: AppColors.textSecondary),
-                    textAlign: TextAlign.center,
-                  ),
-                  const Spacer(),
-                  BreathingCircle(
-                    phase: _viewModel.currentPhase,
-                    isActive: _viewModel.isActive,
-                  ),
-                  const Spacer(),
-                  CustomButton(
-                    text: _viewModel.isActive ? 'Pause Exercise' : 'Begin Breathing',
-                    onPressed: () {
-                      _viewModel.toggleActive();
-                    },
-                    variant: _viewModel.isActive
-                        ? ButtonVariant.secondary
-                        : ButtonVariant.primary,
+                  Container(
+                    width: 38,
+                    height: 38,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFE2EFE9),
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: const Color(0xFF165A47).withAlpha(25),
+                        width: 1,
+                      ),
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        Icons.eco_rounded,
+                        color: Color(0xFF165A47),
+                        size: 20,
+                      ),
+                    ),
                   ),
                 ],
               ),
-            ),
+              const SizedBox(height: 16),
+
+              // ==========================================
+              // 2. FEATURED HERO MINT CARD
+              // ==========================================
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFE5F2EC),
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(
+                    color: const Color(0xFFD2E6DC),
+                    width: 1.1,
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    // Eyebrow
+                    Text(
+                      strings.pauseMomentOfCalm,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 0.8,
+                        color: Color(0xFF165A47),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+
+                    // Heading
+                    Text(
+                      strings.pauseSlowDownTitle,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 18.5,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF123C32),
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+
+                    // Subtitle
+                    Text(
+                      strings.pauseSlowDownSubtitle,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 12.8,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF4D6D63),
+                      ),
+                    ),
+                    const SizedBox(height: 22),
+
+                    // Concentric Breathing Visual Rings
+                    const ConcentricBreathingVisual(
+                      size: 146,
+                      scale: 1.0,
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Exercise Title
+                    Text(
+                      strings.pauseMindfulBreathingTitle,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF123C32),
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+
+                    // Exercise Duration
+                    Text(
+                      strings.pauseMindfulBreathingSubtitle,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 12.5,
+                        color: Color(0xFF5E7369),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    const SizedBox(height: 18),
+
+                    // Start Breathing Pill Button
+                    SizedBox(
+                      width: double.infinity,
+                      height: 48,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF165A47),
+                          foregroundColor: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(26),
+                          ),
+                        ),
+                        onPressed: _startBreathing,
+                        child: Text(
+                          strings.pauseStartBreathingButton,
+                          style: const TextStyle(
+                            fontSize: 14.5,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 22),
+
+              // ==========================================
+              // 3. CHOOSE YOUR PAUSE SECTION
+              // ==========================================
+              Text(
+                strings.pauseChooseTitle,
+                style: const TextStyle(
+                  fontSize: 16.5,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF123C32),
+                ),
+              ),
+              const SizedBox(height: 12),
+
+              // 3 Cards Row (Breathe | Ground | Relax)
+              Row(
+                children: [
+                  // Breathe Card
+                  Expanded(
+                    child: _PauseOptionCard(
+                      icon: Icons.air_rounded,
+                      title: strings.pauseBreatheCardTitle,
+                      subtitle: strings.pauseBreatheCardSubtitle,
+                      onTap: _startBreathing,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+
+                  // Ground Card
+                  Expanded(
+                    child: _PauseOptionCard(
+                      icon: Icons.eco_outlined,
+                      title: strings.pauseGroundCardTitle,
+                      subtitle: strings.pauseGroundCardSubtitle,
+                      onTap: _startGrounding,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+
+                  // Relax Card
+                  Expanded(
+                    child: _PauseOptionCard(
+                      icon: Icons.favorite_border_rounded,
+                      title: strings.pauseRelaxCardTitle,
+                      subtitle: strings.pauseRelaxCardSubtitle,
+                      onTap: _startRelaxing,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+
+              // ==========================================
+              // 4. A GENTLE REMINDER CARD
+              // ==========================================
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: const Color(0xFFE4EDE7),
+                    width: 1.1,
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      strings.pauseReminderTitle,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF165A47),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      strings.pauseReminderBody,
+                      style: const TextStyle(
+                        fontSize: 12.8,
+                        color: Color(0xFF4D6D63),
+                        height: 1.35,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
           ),
-        );
-      },
+        ),
+      ),
+    );
+  }
+}
+
+class _PauseOptionCard extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final VoidCallback onTap;
+
+  const _PauseOptionCard({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: const BorderSide(
+          color: Color(0xFFE4EDE7),
+          width: 1.1,
+        ),
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(
+                icon,
+                color: const Color(0xFF165A47),
+                size: 22,
+              ),
+              const SizedBox(height: 10),
+              Text(
+                title,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF123C32),
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                subtitle,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 11,
+                  color: Color(0xFF6E8078),
+                  height: 1.25,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

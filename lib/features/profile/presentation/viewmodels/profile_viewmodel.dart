@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 class ProfileViewModel extends ChangeNotifier {
   String _displayName = 'Abhay';
-  String _language = 'English / Hinglish';
+  final String _language = 'English / Hinglish';
 
   String get displayName => _displayName;
   String get language => _language;

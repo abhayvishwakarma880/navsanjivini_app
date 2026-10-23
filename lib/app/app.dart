@@ -10,7 +10,6 @@ import '../features/auth/presentation/viewmodels/auth_viewmodel.dart';
 import '../features/auth/presentation/views/auth_screen.dart';
 import '../features/explore/presentation/views/explore_screen.dart';
 import '../features/help/presentation/views/help_screen.dart';
-import '../features/home/presentation/views/home_screen.dart';
 import '../features/home/presentation/views/main_shell_screen.dart';
 import '../features/mood/presentation/views/mood_checkin_screen.dart';
 import '../features/onboarding/presentation/views/eligibility_screen.dart';
@@ -65,7 +64,7 @@ class _NavsanjiviniAppState extends State<NavsanjiviniApp> {
             routes: {
               AppRoutes.initial: (context) => WelcomeScreen(
                     onContinue: () {
-                      Navigator.of(context).pushNamed(AppRoutes.language);
+                      Navigator.of(context).pushReplacementNamed(AppRoutes.auth);
                     },
                   ),
               AppRoutes.language: (context) => LanguageSelectionScreen(

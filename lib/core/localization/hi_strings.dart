@@ -199,19 +199,55 @@ class HiStrings extends EnStrings {
   String get appSubtitleTagline => 'आपके लिए एक शांत स्थान';
 
   @override
-  String get helloThere => 'नमस्ते 🌿';
+  String get helloThere => 'शुभ प्रभात 🌿';
 
   @override
   String get howAreYouFeeling => 'आज आप कैसा महसूस कर रहे हैं?';
 
   @override
-  String get takeMomentForYourself => 'अपने लिए एक पल निकालें';
+  String get goodMorningGreeting => 'शुभ प्रभात 🌿';
+
+  @override
+  String get goodAfternoonGreeting => 'शुभ दोपहर 🌿';
+
+  @override
+  String get goodEveningGreeting => 'शुभ संध्या 🌿';
+
+  @override
+  String get aMomentForYourself => 'खुद के लिए एक पल';
+
+  @override
+  String get howAreYouFeelingRightNow => 'आप अभी कैसा महसूस कर रहे हैं?';
+
+  @override
+  String get takeMomentForYourself => 'खुद के लिए एक पल';
 
   @override
   String get noRightOrWrongWay => 'भावनाएं कभी सही या गलत नहीं होतीं।';
 
   @override
   String get checkInWithMood => 'अपने मूड की जांच करें →';
+
+  @override
+  String get moodGreat => 'उत्कृष्ट';
+
+  @override
+  String get moodOkay => 'ठीक है';
+
+  @override
+  String get moodLow => 'उदास';
+
+  @override
+  String get moodAnxious => 'चिंतित';
+
+  @override
+  String get moodOverwhelmed => 'अभिभूत';
+
+  @override
+  String get takeSmallPauseTitle => 'एक छोटा विराम लें';
+
+  @override
+  String get takeSmallPauseSubtitle => 'सांस लेने और तरोताजा होने के लिए एक मिनट।';
 
   @override
   String get whatWouldHelpRightNow => 'अभी क्या मदद कर सकता है?';
@@ -223,28 +259,313 @@ class HiStrings extends EnStrings {
   String get talkItOutSubtitle => 'जो मन में है, साझा करें';
 
   @override
-  String get takePauseTitle => 'एक ठहराव लें';
+  String get takePauseTitle => 'एक छोटा विराम लें';
 
   @override
-  String get takePauseSubtitle => 'मन को शांत करने का अभ्यास करें';
+  String get takePauseSubtitle => 'सांस लेने और तरोताजा होने के लिए एक मिनट।';
 
   @override
   String get exploreTitle => 'खोजें';
 
   @override
-  String get exploreSubtitle => 'उपयोगी संसाधन और लेख देखें';
+  String get exploreSubtitle => 'मददगार संसाधन';
+
+  @override
+  String get myJournalTitle => 'मेरी डायरी';
+
+  @override
+  String get myJournalSubtitle => 'निजी तौर पर लिखें';
 
   @override
   String get findSupportTitle => 'सहयोग प्राप्त करें';
 
   @override
-  String get findSupportSubtitle => 'सत्यापित सहायता विकल्प देखें';
+  String get findSupportSubtitle => 'विश्वसनीय सहायता विकल्प';
 
   @override
-  String get gentleThoughtTitle => 'एक प्रेरक विचार';
+  String get gentleThoughtTitle => 'एक प्रेरक विचार 🌱';
 
   @override
   String get gentleThoughtQuote => 'मुश्किल दिनों में भी छोटे कदम मायने रखते हैं।';
+
+  // Talk Screen
+  @override
+  String get talkHeaderSubtitle => 'अपने मन की बात साझा करने के लिए एक सुरक्षित स्थान।';
+
+  @override
+  String get talkBannerEyebrow => 'आपका व्यक्तिगत मानसिक स्वास्थ्य स्थान';
+
+  @override
+  String get talkBannerTitle => 'आप जहां भी हैं, वहीं से शुरुआत कर सकते हैं।';
+
+  @override
+  String get talkBannerSubtitle => 'सही शब्दों को खोजने का कोई दबाव नहीं है।';
+
+  @override
+  String get talkPromptLabel => 'आप इनसे भी शुरुआत कर सकते हैं:';
+
+  @override
+  String get talkPromptWork => 'काम या पढ़ाई';
+
+  @override
+  String get talkPromptFeelings => 'मेरी भावनाएं';
+
+  @override
+  String get talkPromptVent => 'मुझे बस मन की बात कहनी है';
+
+  @override
+  String get talkInputHint => 'जो मन में है, यहां लिखें...';
+
+  @override
+  String get talkDisclaimer => 'एक सहयोगी स्थान, पेशेवर चिकित्सा देखभाल का विकल्प नहीं।';
+
+  @override
+  String get talkInitialGreeting => 'नमस्ते 🌿 मैं सुनने के लिए यहां हूं। आज आपके मन में क्या चल रहा है?';
+
+  @override
+  String get talkInitialUser => 'मैं पिछले कुछ समय से थोड़ा अभिभूत महसूस कर रहा हूं।';
+
+  @override
+  String get talkInitialAiReply => 'यह वाकई भारी लग सकता है। क्या आप बताना चाहेंगे कि कौन सी बात भारी लग रही है?';
+
+  // Pause Screen
+  @override
+  String get pauseHeaderTitle => 'थोड़ा ठहरिए 🌿';
+
+  @override
+  String get pauseHeaderSubtitle => 'खास आपके लिए थोड़ा सा शांत समय।';
+
+  @override
+  String get pauseMomentOfCalm => 'आपके सुकून का पल';
+
+  @override
+  String get pauseSlowDownTitle => 'चलिए सब कुछ थोड़ा धीमा करते हैं।';
+
+  @override
+  String get pauseSlowDownSubtitle => 'अभी सब कुछ सुलझाना ज़रूरी नहीं है।';
+
+  @override
+  String get pauseMindfulBreathingTitle => 'सजग श्वास (माइंडफुल ब्रीदिंग)';
+
+  @override
+  String get pauseMindfulBreathingSubtitle => '1 मिनट • सहज और गहरी सांस';
+
+  @override
+  String get pauseStartBreathingButton => 'श्वास अभ्यास शुरू करें →';
+
+  @override
+  String get pauseChooseTitle => 'अपनी पसंद का ठहराव चुनें';
+
+  @override
+  String get pauseBreatheCardTitle => 'सांसें';
+
+  @override
+  String get pauseBreatheCardSubtitle => 'धीमी, शांत सांसें';
+
+  @override
+  String get pauseGroundCardTitle => 'स्थिरता';
+
+  @override
+  String get pauseGroundCardSubtitle => 'वर्तमान से जुड़ें';
+
+  @override
+  String get pauseRelaxCardTitle => 'रिलैक्स';
+
+  @override
+  String get pauseRelaxCardSubtitle => 'तनाव को दूर करें';
+
+  @override
+  String get pauseReminderTitle => 'एक कोमल याद';
+
+  @override
+  String get pauseReminderBody => 'हर चीज़ को एक-एक पल करके जीना बिल्कुल ठीक है।';
+
+  @override
+  String get pauseBreatheIn => 'गहरी सांस अंदर लें...';
+
+  @override
+  String get pauseHold => 'सहजता से रोकें...';
+
+  @override
+  String get pauseBreatheOut => 'धीरे से सांस छोड़ें...';
+
+  @override
+  String get pauseRest => 'विश्राम करें...';
+
+  @override
+  String get pauseReset => 'रीसेट';
+
+  @override
+  String get pausePause => 'रोकें';
+
+  @override
+  String get pauseResume => 'जारी रखें';
+
+  @override
+  String get pauseDone => 'बहुत बढ़िया! इस शांति को अपने साथ रखें।';
+
+  // Journal Screen Blueprint
+  @override
+  String get journalHeaderTitle => 'मेरी डायरी 🌿';
+
+  @override
+  String get journalHeaderSubtitle => 'आपके विचारों के लिए एक शांत जगह।';
+
+  @override
+  String get journalHowFeelingToday => 'आज आप कैसा महसूस कर रहे हैं?';
+
+  @override
+  String get journalCheckInSubtitle => 'एक पल निकालकर खुद से जुड़ें।';
+
+  @override
+  String get journalWriteNewEntryButton => '+ नई डायरी लिखें';
+
+  @override
+  String get journalMoodGood => 'अच्छा';
+
+  @override
+  String get journalMoodCalm => 'शांत';
+
+  @override
+  String get journalMoodLow => 'उदास';
+
+  @override
+  String get journalMoodAnxious => 'चिंतित';
+
+  @override
+  String get journalYourReflections => 'आपके विचार और डायरी';
+
+  @override
+  String get journalViewAll => 'सभी देखें';
+
+  @override
+  String get journalPrivateBadge => 'निजी डायरी';
+
+  @override
+  String get journalEmptyTitle => 'अभी तक कोई डायरी नहीं';
+
+  @override
+  String get journalEmptySubtitle =>
+      'खुलकर लिखें। यह कोना पूरी तरह आपका है और केवल आपके डिवाइस पर सुरक्षित है।';
+
+  @override
+  String get journalNewEntryTitle => 'नई डायरी प्रविष्टि';
+
+  @override
+  String get journalEditEntryTitle => 'डायरी संपादित करें';
+
+  @override
+  String get journalSave => 'सहेजें';
+
+  @override
+  String get journalTitleLabel => 'अपनी डायरी को एक शीर्षक दें';
+
+  @override
+  String get journalTitleHint => 'उदा. आज का एक छोटा अनुभव...';
+
+  @override
+  String get journalBodyLabel => 'आपके मन में क्या चल रहा है?';
+
+  @override
+  String get journalBodyHint => 'खुलकर लिखें। यह स्थान सिर्फ आपका है...';
+
+  @override
+  String get journalMoodOptionalLabel => 'आप कैसा महसूस कर रहे हैं? (वैकल्पिक)';
+
+  @override
+  String get journalSaveEntryButton => 'डायरी सहेजें';
+
+  @override
+  String get journalPrivacyFootnote => 'आपकी डायरी पूरी तरह निजी और सुरक्षित है।';
+
+  @override
+  String get journalReadEntry => 'डायरी पढ़ें';
+
+  @override
+  String get journalEdit => 'संपादित करें';
+
+  @override
+  String get journalDelete => 'हटाएं';
+
+  @override
+  String get journalDeleteConfirmTitle => 'क्या यह डायरी हटाएं?';
+
+  @override
+  String get journalDeleteConfirmMessage =>
+      'क्या आप वाकई इस डायरी को हटाना चाहते हैं? यह वापस नहीं आएगी।';
+
+  @override
+  String get journalCancel => 'रद्द करें';
+
+  @override
+  String get journalSavedToast => 'डायरी सुरक्षित रूप से सहेज ली गई।';
+
+  @override
+  String get journalDeletedToast => 'डायरी हटा दी गई।';
+
+  // Help Screen Blueprint
+  @override
+  String get helpHeaderTitle => 'आप अकेले नहीं हैं 🌿';
+
+  @override
+  String get helpHeaderSubtitle => 'जब भी आपको जरूरत हो, सहायता उपलब्ध है।';
+
+  @override
+  String get helpHeroTitle => 'आपको किस प्रकार की सहायता चाहिए?';
+
+  @override
+  String get helpHeroSubtitle => 'वह विकल्प चुनें जो आपके लिए सही लगे।';
+
+  @override
+  String get helpExploreSupportTitle => 'सहायता विकल्प';
+
+  @override
+  String get helpTalkSomeoneTitle => 'किसी से बात करें';
+
+  @override
+  String get helpTalkSomeoneSubtitle =>
+      'विश्वसनीय सहायता सेवाओं और संपर्क विकल्पों को खोजें।';
+
+  @override
+  String get helpResourcesTitle => 'उपयोगी सामग्री';
+
+  @override
+  String get helpResourcesSubtitle =>
+      'मानसिक स्वास्थ्य गाइड और उपयोगी जानकारी पढ़ें।';
+
+  @override
+  String get helpFaqsTitle => 'अक्सर पूछे जाने वाले सवाल';
+
+  @override
+  String get helpFaqsSubtitle =>
+      'गोपनीयता, डायरी और ऐप सुविधाओं के बारे में जानें।';
+
+  @override
+  String get helpUrgentCardTitle => 'तुरंत सहायता चाहिए?';
+
+  @override
+  String get helpUrgentCardSubtitle =>
+      'यदि आप या कोई अन्य तत्काल खतरे में है, तो स्थानीय आपातकालीन सेवाओं या किसी भरोसेमंद व्यक्ति से संपर्क करें।';
+
+  @override
+  String get helpUrgentButton => 'आपातकालीन सहायता विकल्प देखें →';
+
+  @override
+  String get helpUrgentModalTitle => 'आपातकालीन सहायता और हेल्पलाइन';
+
+  @override
+  String get helpUrgentModalSubtitle =>
+      'पूरे भारत में 24/7 मुफ़्त और गोपनीय सहायता। सीधे कॉल करने के लिए टैप करें।';
+
+  @override
+  String get helpDisclaimer =>
+      'नवसंजीवनी भावनात्मक भलाई और आत्म-देखभाल के साधन प्रदान करती है। यह चिकित्सीय उपचार, नैदानिक निदान या आपातकालीन सेवा का विकल्प नहीं है।';
+
+  @override
+  String get helpCallAction => 'अभी कॉल करें';
+
+  @override
+  String get helpTollFree => 'टोल-फ्री • 24/7';
 
   // Profile Screen
   @override

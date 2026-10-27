@@ -1,4 +1,4 @@
-import 'package:shared_preferences/shared_preferences.dart';
+﻿import 'package:shared_preferences/shared_preferences.dart';
 import 'storage_service.dart';
 
 /// Implementation of [StorageService] backed by [SharedPreferences].
@@ -52,3 +52,4 @@ class SharedPreferencesStorageService implements StorageService {
     await _prefs.clear();
   }
 }
+

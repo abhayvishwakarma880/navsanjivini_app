@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
 import 'package:app/core/theme/app_theme.dart';
-import 'package:app/features/journal/presentation/viewmodels/journal_viewmodel.dart';
-import 'package:app/features/journal/presentation/views/journal_list_screen.dart';
+import 'package:app/user/viewmodels/journal_viewmodel.dart';
+import 'package:app/user/views/journal_list_screen.dart';
 
 void main() {
   late InMemoryStorageService storage;
@@ -41,7 +41,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // 1. Header
-    expect(find.text('My Journal 🌿'), findsOneWidget);
+    expect(find.text('My Journal ðŸŒ¿'), findsOneWidget);
     expect(find.text('A little space for your thoughts.'), findsOneWidget);
     expect(find.byIcon(Icons.menu_book_rounded), findsWidgets);
 
@@ -242,3 +242,4 @@ void main() {
     expect(localVm.entries.length, countBefore);
   });
 }
+

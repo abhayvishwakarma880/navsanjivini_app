@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -25,7 +25,7 @@ class IntensitySelector extends StatelessWidget {
             Text('Intensity', style: AppTextStyles.titleMedium),
             Text(
               _getIntensityLabel(intensity),
-              style: AppTextStyles.labelMedium.copyWith(color: AppColors.primary),
+              style: AppTextStyles.labelMedium.copyWith(color: Appcolors.primary),
             ),
           ],
         ),
@@ -44,14 +44,14 @@ class IntensitySelector extends StatelessWidget {
                     right: index < 4 ? AppSpacing.xs : 0,
                   ),
                   decoration: BoxDecoration(
-                    color: isSelected ? AppColors.primary : AppColors.surfaceVariant,
+                    color: isSelected ? Appcolors.primary : Appcolors.surfaceVariant,
                     borderRadius: AppRadius.radiusSm,
                   ),
                   alignment: Alignment.center,
                   child: Text(
                     '$level',
                     style: TextStyle(
-                      color: isSelected ? Colors.white : AppColors.textSecondary,
+                      color: isSelected ? colors.white : Appcolors.textSecondary,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -75,3 +75,4 @@ class IntensitySelector extends StatelessWidget {
     };
   }
 }
+

@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 
 class ProfileViewModel extends ChangeNotifier {
   String _displayName = 'Abhay';
@@ -12,3 +12,4 @@ class ProfileViewModel extends ChangeNotifier {
     notifyListeners();
   }
 }
+

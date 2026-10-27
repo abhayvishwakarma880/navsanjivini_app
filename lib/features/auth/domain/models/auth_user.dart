@@ -1,4 +1,4 @@
-/// Represents an authenticated user in Navsanjivini.
+﻿/// Represents an authenticated user in Navsanjivini.
 class AuthUser {
   final String id;
   final String phone;
@@ -26,3 +26,4 @@ class AuthUser {
         token: json['token'] as String?,
       );
 }
+

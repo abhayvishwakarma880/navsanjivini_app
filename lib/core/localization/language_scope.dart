@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+﻿import 'package:flutter/widgets.dart';
 import 'app_languages.dart';
 import 'app_strings.dart';
 import 'language_controller.dart';
@@ -33,3 +33,4 @@ extension LocalizationExtension on BuildContext {
     LanguageScope.of(this).setLanguage(language);
   }
 }
+

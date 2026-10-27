@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/app_languages.dart';
 import 'package:app/core/localization/language_scope.dart';
 
@@ -26,7 +26,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     final canProceed = _is18Plus && _consentGiven;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -35,7 +35,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             'assets/images/welcome_bg.png',
             fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) {
-              return Container(color: const Color(0xFFF7FCF9));
+              return Container(color: const color(0xFFF7FCF9));
             },
           ),
 
@@ -54,7 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             const Spacer(flex: 3),
 
                             // ==========================================
-                            // 🌟 CENTER CONTENT: Logo & Brand Description
+                            // ðŸŒŸ CENTER CONTENT: Logo & Brand Description
                             // ==========================================
                             Center(
                               child: Column(
@@ -69,7 +69,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       shape: BoxShape.circle,
                                       boxShadow: [
                                         BoxShadow(
-                                          color: const Color(0xFF135A45).withAlpha(35),
+                                          color: const color(0xFF135A45).withAlpha(35),
                                           blurRadius: 26,
                                           offset: const Offset(0, 8),
                                         ),
@@ -91,7 +91,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                     style: const TextStyle(
                                       fontSize: 31,
                                       fontWeight: FontWeight.w800,
-                                      color: Color(0xFF0C4D38),
+                                      color: color(0xFF0C4D38),
                                       letterSpacing: -0.5,
                                     ),
                                   ),
@@ -104,7 +104,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                     style: const TextStyle(
                                       fontSize: 13.5,
                                       fontWeight: FontWeight.w500,
-                                      color: Color(0xFF2B6050),
+                                      color: color(0xFF2B6050),
                                       letterSpacing: 0.6,
                                     ),
                                   ),
@@ -117,19 +117,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       Container(
                                         width: 40,
                                         height: 1,
-                                        color: const Color(0xFFA5CBBF),
+                                        color: const color(0xFFA5CBBF),
                                       ),
                                       const SizedBox(width: 8),
                                       const Icon(
                                         Icons.eco_rounded,
                                         size: 16,
-                                        color: Color(0xFF438E75),
+                                        color: color(0xFF438E75),
                                       ),
                                       const SizedBox(width: 8),
                                       Container(
                                         width: 40,
                                         height: 1,
-                                        color: const Color(0xFFA5CBBF),
+                                        color: const color(0xFFA5CBBF),
                                       ),
                                     ],
                                   ),
@@ -144,7 +144,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       style: const TextStyle(
                                         fontSize: 13.5,
                                         fontWeight: FontWeight.w400,
-                                        color: Color(0xFF386457),
+                                        color: color(0xFF386457),
                                         height: 1.4,
                                       ),
                                     ),
@@ -156,7 +156,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             const Spacer(flex: 4),
 
                             // ==========================================
-                            // 🌟 BOTTOM SECTION: Language + Safety + Button
+                            // ðŸŒŸ BOTTOM SECTION: Language + Safety + Button
                             // Seamlessly merged with background image
                             // ==========================================
 
@@ -164,15 +164,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                               decoration: BoxDecoration(
-                                color: Colors.white.withAlpha(55),
+                                color: colors.white.withAlpha(55),
                                 borderRadius: BorderRadius.circular(16),
                                 border: Border.all(
-                                  color: const Color(0xFF247D6B).withAlpha(50),
+                                  color: const color(0xFF247D6B).withAlpha(50),
                                   width: 1,
                                 ),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: const Color(0xFF0F5B46).withAlpha(8),
+                                    color: const color(0xFF0F5B46).withAlpha(8),
                                     blurRadius: 12,
                                     offset: const Offset(0, 3),
                                   ),
@@ -186,13 +186,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       Container(
                                         padding: const EdgeInsets.all(4),
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFF0F5B46).withAlpha(25),
+                                          color: const color(0xFF0F5B46).withAlpha(25),
                                           borderRadius: BorderRadius.circular(6),
                                         ),
                                         child: const Icon(
                                           Icons.translate_rounded,
                                           size: 14,
-                                          color: Color(0xFF0F5B46),
+                                          color: color(0xFF0F5B46),
                                         ),
                                       ),
                                       const SizedBox(width: 6),
@@ -201,7 +201,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                         style: const TextStyle(
                                           fontSize: 12,
                                           fontWeight: FontWeight.w700,
-                                          color: Color(0xFF0C4D38),
+                                          color: color(0xFF0C4D38),
                                           letterSpacing: 0.2,
                                         ),
                                       ),
@@ -213,21 +213,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       final isSelected = lang == currentLang;
                                       final scriptSymbol = lang == AppLanguage.english
                                           ? 'A'
-                                          : (lang == AppLanguage.hindi ? 'अ' : 'Aa');
+                                          : (lang == AppLanguage.hindi ? 'à¤…' : 'Aa');
 
                                       return Expanded(
                                         child: Padding(
                                           padding: const EdgeInsets.symmetric(horizontal: 3),
                                           child: Material(
                                             color: isSelected
-                                                ? const Color(0xFFE2F3EB).withAlpha(220)
-                                                : Colors.white.withAlpha(50),
+                                                ? const color(0xFFE2F3EB).withAlpha(220)
+                                                : colors.white.withAlpha(50),
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(10),
                                               side: BorderSide(
                                                 color: isSelected
-                                                    ? const Color(0xFF0F5B46)
-                                                    : const Color(0xFF247D6B).withAlpha(45),
+                                                    ? const color(0xFF0F5B46)
+                                                    : const color(0xFF247D6B).withAlpha(45),
                                                 width: isSelected ? 1.8 : 1,
                                               ),
                                             ),
@@ -249,8 +249,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                                       height: 24,
                                                       decoration: BoxDecoration(
                                                         color: isSelected
-                                                            ? const Color(0xFF0F5B46)
-                                                            : const Color(0xFF0F5B46).withAlpha(20),
+                                                            ? const color(0xFF0F5B46)
+                                                            : const color(0xFF0F5B46).withAlpha(20),
                                                         shape: BoxShape.circle,
                                                       ),
                                                       alignment: Alignment.center,
@@ -260,8 +260,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                                           fontSize: 11.5,
                                                           fontWeight: FontWeight.w700,
                                                           color: isSelected
-                                                              ? Colors.white
-                                                              : const Color(0xFF0F5B46),
+                                                              ? colors.white
+                                                              : const color(0xFF0F5B46),
                                                         ),
                                                       ),
                                                     ),
@@ -276,8 +276,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                                             ? FontWeight.w700
                                                             : FontWeight.w600,
                                                         color: isSelected
-                                                            ? const Color(0xFF0C4D38)
-                                                            : const Color(0xFF2E6353),
+                                                            ? const color(0xFF0C4D38)
+                                                            : const color(0xFF2E6353),
                                                       ),
                                                     ),
                                                   ],
@@ -298,17 +298,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
                               decoration: BoxDecoration(
-                                color: Colors.white.withAlpha(55),
+                                color: colors.white.withAlpha(55),
                                 borderRadius: BorderRadius.circular(16),
                                 border: Border.all(
                                   color: canProceed
-                                      ? const Color(0xFF0F5B46).withAlpha(75)
-                                      : const Color(0xFF247D6B).withAlpha(45),
+                                      ? const color(0xFF0F5B46).withAlpha(75)
+                                      : const color(0xFF247D6B).withAlpha(45),
                                   width: 1,
                                 ),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: const Color(0xFF0F5B46).withAlpha(8),
+                                    color: const color(0xFF0F5B46).withAlpha(8),
                                     blurRadius: 12,
                                     offset: const Offset(0, 3),
                                   ),
@@ -323,13 +323,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       Container(
                                         padding: const EdgeInsets.all(3.5),
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFF0F5B46).withAlpha(25),
+                                          color: const color(0xFF0F5B46).withAlpha(25),
                                           borderRadius: BorderRadius.circular(6),
                                         ),
                                         child: const Icon(
                                           Icons.verified_user_outlined,
                                           size: 14,
-                                          color: Color(0xFF0F5B46),
+                                          color: color(0xFF0F5B46),
                                         ),
                                       ),
                                       const SizedBox(width: 6),
@@ -339,7 +339,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                           style: const TextStyle(
                                             fontSize: 12,
                                             fontWeight: FontWeight.w700,
-                                            color: Color(0xFF0C4D38),
+                                            color: color(0xFF0C4D38),
                                           ),
                                         ),
                                       ),
@@ -349,7 +349,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                           vertical: 1.5,
                                         ),
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFF0F5B46).withAlpha(20),
+                                          color: const color(0xFF0F5B46).withAlpha(20),
                                           borderRadius: BorderRadius.circular(6),
                                         ),
                                         child: const Text(
@@ -357,7 +357,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                           style: TextStyle(
                                             fontSize: 9.5,
                                             fontWeight: FontWeight.w700,
-                                            color: Color(0xFF0F5B46),
+                                            color: color(0xFF0F5B46),
                                           ),
                                         ),
                                       ),
@@ -380,12 +380,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                             height: 20,
                                             child: Checkbox(
                                               value: _is18Plus,
-                                              activeColor: const Color(0xFF0F5B46),
+                                              activecolor: const color(0xFF0F5B46),
                                               shape: RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.circular(4),
                                               ),
                                               side: const BorderSide(
-                                                color: Color(0xFF247D6B),
+                                                color: color(0xFF247D6B),
                                                 width: 1.5,
                                               ),
                                               onChanged: (val) =>
@@ -402,8 +402,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                                     ? FontWeight.w600
                                                     : FontWeight.w500,
                                                 color: _is18Plus
-                                                    ? const Color(0xFF0C4D38)
-                                                    : const Color(0xFF2E6353),
+                                                    ? const color(0xFF0C4D38)
+                                                    : const color(0xFF2E6353),
                                               ),
                                             ),
                                           ),
@@ -427,12 +427,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                             height: 20,
                                             child: Checkbox(
                                               value: _consentGiven,
-                                              activeColor: const Color(0xFF0F5B46),
+                                              activecolor: const color(0xFF0F5B46),
                                               shape: RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.circular(4),
                                               ),
                                               side: const BorderSide(
-                                                color: Color(0xFF247D6B),
+                                                color: color(0xFF247D6B),
                                                 width: 1.5,
                                               ),
                                               onChanged: (val) =>
@@ -449,8 +449,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                                     ? FontWeight.w600
                                                     : FontWeight.w500,
                                                 color: _consentGiven
-                                                    ? const Color(0xFF0C4D38)
-                                                    : const Color(0xFF2E6353),
+                                                    ? const color(0xFF0C4D38)
+                                                    : const color(0xFF2E6353),
                                               ),
                                             ),
                                           ),
@@ -467,7 +467,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       vertical: 3.5,
                                     ),
                                     decoration: BoxDecoration(
-                                      color: Colors.white.withAlpha(45),
+                                      color: colors.white.withAlpha(45),
                                       borderRadius: BorderRadius.circular(6),
                                     ),
                                     child: Row(
@@ -476,7 +476,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                         const Icon(
                                           Icons.info_outline_rounded,
                                           size: 12,
-                                          color: Color(0xFF0F5B46),
+                                          color: color(0xFF0F5B46),
                                         ),
                                         const SizedBox(width: 5),
                                         Expanded(
@@ -485,7 +485,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                             style: const TextStyle(
                                               fontSize: 9.5,
                                               height: 1.3,
-                                              color: Color(0xFF386457),
+                                              color: color(0xFF386457),
                                             ),
                                           ),
                                         ),
@@ -497,7 +497,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             ),
                             const SizedBox(height: 12),
 
-                            // 3. Pill Button: "Get Started  →" (Bottom-most)
+                            // 3. Pill Button: "Get Started  â†’" (Bottom-most)
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 10),
                               child: AnimatedContainer(
@@ -506,13 +506,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                 height: 50,
                                 decoration: BoxDecoration(
                                   color: canProceed
-                                      ? const Color(0xFF0F5B46)
-                                      : const Color(0xFF86AFA2),
+                                      ? const color(0xFF0F5B46)
+                                      : const color(0xFF86AFA2),
                                   borderRadius: BorderRadius.circular(28),
                                   boxShadow: canProceed
                                       ? [
                                           BoxShadow(
-                                            color: const Color(0xFF0F5B46).withAlpha(50),
+                                            color: const color(0xFF0F5B46).withAlpha(50),
                                             blurRadius: 16,
                                             offset: const Offset(0, 6),
                                           ),
@@ -520,7 +520,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       : [],
                                 ),
                                 child: Material(
-                                  color: Colors.transparent,
+                                  color: colors.transparent,
                                   child: InkWell(
                                     onTap: () {
                                       if (canProceed) {
@@ -530,7 +530,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                           SnackBar(
                                             content: Text(
                                               context.currentLanguage == AppLanguage.hindi
-                                                  ? 'जारी रखने के लिए 18+ और सुरक्षा नियमों की पुष्टि करें।'
+                                                  ? 'à¤œà¤¾à¤°à¥€ à¤°à¤–à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ 18+ à¤”à¤° à¤¸à¥à¤°à¤•à¥à¤·à¤¾ à¤¨à¤¿à¤¯à¤®à¥‹à¤‚ à¤•à¥€ à¤ªà¥à¤·à¥à¤Ÿà¤¿ à¤•à¤°à¥‡à¤‚à¥¤'
                                                   : (context.currentLanguage == AppLanguage.hinglish
                                                       ? 'Aage badhne ke liye 18+ aur safety terms confirm karein.'
                                                       : 'Please confirm 18+ eligibility and safety terms to continue.'),
@@ -550,14 +550,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                           style: const TextStyle(
                                             fontSize: 15.5,
                                             fontWeight: FontWeight.w600,
-                                            color: Colors.white,
+                                            color: colors.white,
                                             letterSpacing: 0.3,
                                           ),
                                         ),
                                         const SizedBox(width: 10),
                                         const Icon(
                                           Icons.arrow_forward_rounded,
-                                          color: Colors.white,
+                                          color: colors.white,
                                           size: 18,
                                         ),
                                       ],
@@ -581,3 +581,4 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 }
+

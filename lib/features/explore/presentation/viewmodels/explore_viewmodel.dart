@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import '../../domain/entities/guide_article.dart';
 
 class ExploreViewModel extends ChangeNotifier {
@@ -38,3 +38,4 @@ class ExploreViewModel extends ChangeNotifier {
     notifyListeners();
   }
 }
+

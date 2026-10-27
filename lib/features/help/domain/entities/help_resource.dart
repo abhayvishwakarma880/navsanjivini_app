@@ -1,4 +1,4 @@
-class HelpResource {
+﻿class HelpResource {
   final String id;
   final String name;
   final String description;
@@ -15,3 +15,4 @@ class HelpResource {
     this.isTollFree = true,
   });
 }
+

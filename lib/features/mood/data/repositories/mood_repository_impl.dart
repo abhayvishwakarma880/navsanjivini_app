@@ -1,4 +1,4 @@
-import '../../domain/entities/mood_entry.dart';
+﻿import '../../domain/entities/mood_entry.dart';
 import '../../domain/repositories/mood_repository.dart';
 import '../datasources/mood_local_datasource.dart';
 
@@ -22,3 +22,4 @@ class MoodRepositoryImpl implements MoodRepository {
     await localDataSource.removeMoodEntry(id);
   }
 }
+

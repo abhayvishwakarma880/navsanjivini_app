@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_spacing.dart';
 import '../theme/app_text_styles.dart';
@@ -30,7 +30,7 @@ class ErrorView extends StatelessWidget {
             const Icon(
               Icons.sentiment_dissatisfied_outlined,
               size: 56,
-              color: AppColors.textSecondary,
+              color: Appcolors.textSecondary,
             ),
             const SizedBox(height: AppSpacing.md),
             Text(
@@ -42,7 +42,7 @@ class ErrorView extends StatelessWidget {
             Text(
               message,
               style: AppTextStyles.bodyMedium.copyWith(
-                color: AppColors.textSecondary,
+                color: Appcolors.textSecondary,
               ),
               textAlign: TextAlign.center,
             ),
@@ -61,3 +61,4 @@ class ErrorView extends StatelessWidget {
     );
   }
 }
+

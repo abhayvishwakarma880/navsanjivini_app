@@ -1,4 +1,4 @@
-import 'auth_user.dart';
+﻿import 'auth_user.dart';
 
 /// Sealed class representing the result of any Auth operation.
 sealed class AuthResult {
@@ -17,3 +17,4 @@ class AuthFailure extends AuthResult {
 
   const AuthFailure(this.error);
 }
+

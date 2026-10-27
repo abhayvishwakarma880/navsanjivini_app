@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/theme/app_colors.dart';
 import '../../../explore/presentation/views/explore_screen.dart';
@@ -47,7 +47,7 @@ class _MainShellScreenState extends State<MainShellScreen> {
     final strings = context.tr;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundcolor: Appcolors.background,
       body: IndexedStack(
         index: _currentIndex,
         children: [
@@ -105,33 +105,33 @@ class _MainShellScreenState extends State<MainShellScreen> {
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
         onDestinationSelected: _onTabSelected,
-        backgroundColor: AppColors.surface,
-        indicatorColor: AppColors.primaryContainer,
+        backgroundcolor: Appcolors.surface,
+        indicatorcolor: Appcolors.primaryContainer,
         elevation: 4,
         destinations: [
           NavigationDestination(
             icon: const Icon(Icons.today_outlined),
-            selectedIcon: const Icon(Icons.today_rounded, color: AppColors.primary),
+            selectedIcon: const Icon(Icons.today_rounded, color: Appcolors.primary),
             label: strings.todayTab,
           ),
           NavigationDestination(
             icon: const Icon(Icons.chat_bubble_outline_rounded),
-            selectedIcon: const Icon(Icons.chat_bubble_rounded, color: AppColors.primary),
+            selectedIcon: const Icon(Icons.chat_bubble_rounded, color: Appcolors.primary),
             label: strings.talkTab,
           ),
           NavigationDestination(
             icon: const Icon(Icons.air_rounded),
-            selectedIcon: const Icon(Icons.air_rounded, color: AppColors.primary),
+            selectedIcon: const Icon(Icons.air_rounded, color: Appcolors.primary),
             label: strings.pauseTab,
           ),
           NavigationDestination(
             icon: const Icon(Icons.auto_stories_outlined),
-            selectedIcon: const Icon(Icons.auto_stories_rounded, color: AppColors.primary),
+            selectedIcon: const Icon(Icons.auto_stories_rounded, color: Appcolors.primary),
             label: strings.journalTab,
           ),
           NavigationDestination(
             icon: const Icon(Icons.support_agent_rounded),
-            selectedIcon: const Icon(Icons.support_agent_rounded, color: AppColors.primary),
+            selectedIcon: const Icon(Icons.support_agent_rounded, color: Appcolors.primary),
             label: strings.helpTab,
           ),
         ],
@@ -139,3 +139,4 @@ class _MainShellScreenState extends State<MainShellScreen> {
     );
   }
 }
+

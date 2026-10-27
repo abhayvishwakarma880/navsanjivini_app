@@ -1,25 +1,36 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
 import 'package:app/core/storage/storage_service.dart';
 import 'package:app/core/theme/app_theme.dart';
-import '../features/auth/data/repositories/mock_auth_repository.dart';
-import '../features/auth/domain/repositories/auth_repository.dart';
-import '../features/auth/presentation/viewmodels/auth_viewmodel.dart';
-import '../features/auth/presentation/views/auth_screen.dart';
-import '../features/explore/presentation/views/explore_screen.dart';
-import '../features/help/presentation/views/help_screen.dart';
-import '../features/home/presentation/views/main_shell_screen.dart';
-import '../features/mood/presentation/views/mood_checkin_screen.dart';
-import '../features/onboarding/presentation/views/eligibility_screen.dart';
-import '../features/onboarding/presentation/views/language_selection_screen.dart';
-import '../features/onboarding/presentation/views/welcome_screen.dart';
-import '../features/pause/presentation/views/pause_screen.dart';
-import '../features/privacy/presentation/views/privacy_screen.dart';
-import '../features/profile/presentation/views/profile_screen.dart';
-import '../features/settings/presentation/views/settings_screen.dart';
-import '../features/talk/presentation/views/talk_screen.dart';
+
+// Common module
+import '../common/views/eligibility_screen.dart';
+import '../common/views/language_selection_screen.dart';
+import '../common/views/welcome_screen.dart';
+
+// Doctor module
+import '../doctor/repositories/doctor_auth_repository.dart';
+import '../doctor/repositories/mock_doctor_auth_repository.dart';
+import '../doctor/viewmodels/doctor_auth_viewmodel.dart';
+import '../doctor/views/doctor_login_screen.dart';
+
+// User module
+import '../user/repositories/auth_repository.dart';
+import '../user/repositories/mock_auth_repository.dart';
+import '../user/viewmodels/auth_viewmodel.dart';
+import '../user/views/auth_screen.dart';
+import '../user/views/explore_screen.dart';
+import '../user/views/help_screen.dart';
+import '../user/views/main_shell_screen.dart';
+import '../user/views/mood_checkin_screen.dart';
+import '../user/views/pause_screen.dart';
+import '../user/views/privacy_screen.dart';
+import '../user/views/profile_screen.dart';
+import '../user/views/settings_screen.dart';
+import '../user/views/talk_screen.dart';
+
 import 'router.dart';
 
 /// Root Application Widget for Navsanjivini.
@@ -41,6 +52,7 @@ class _NavsanjiviniAppState extends State<NavsanjiviniApp> {
   late final StorageService _storageService;
   late final LanguageController _controller;
   late final AuthRepository _authRepository;
+  late final DoctorAuthRepository _doctorAuthRepository;
 
   @override
   void initState() {
@@ -48,6 +60,7 @@ class _NavsanjiviniAppState extends State<NavsanjiviniApp> {
     _storageService = widget.storageService ?? InMemoryStorageService();
     _controller = widget.languageController ?? LanguageController(_storageService);
     _authRepository = MockAuthRepository(_storageService);
+    _doctorAuthRepository = MockDoctorAuthRepository(_storageService);
   }
 
   @override
@@ -62,6 +75,7 @@ class _NavsanjiviniAppState extends State<NavsanjiviniApp> {
             theme: AppTheme.lightTheme,
             initialRoute: AppRoutes.initial,
             routes: {
+              // Common Flow: Welcome -> Language -> Eligibility -> Auth
               AppRoutes.initial: (context) => WelcomeScreen(
                     onContinue: () {
                       Navigator.of(context).pushReplacementNamed(AppRoutes.auth);
@@ -77,15 +91,35 @@ class _NavsanjiviniAppState extends State<NavsanjiviniApp> {
                       Navigator.of(context).pushReplacementNamed(AppRoutes.auth);
                     },
                   ),
+
+              // User Authentication (User Login & Register)
               AppRoutes.auth: (context) => AuthScreen(
                     viewModel: AuthViewModel(_authRepository),
                     onAuthSuccess: () {
                       Navigator.of(context).pushReplacementNamed(AppRoutes.home);
                     },
+                    onNavigateToDoctorLogin: () {
+                      Navigator.of(context).pushNamed(AppRoutes.doctorLogin);
+                    },
                   ),
+
+              // Doctor Authentication (Email + Password only)
+              AppRoutes.doctorLogin: (context) => DoctorLoginScreen(
+                    viewModel: DoctorAuthViewModel(_doctorAuthRepository),
+                    onAuthSuccess: () {
+                      // Doctor login opens the same main screen as user login
+                      Navigator.of(context).pushReplacementNamed(AppRoutes.home);
+                    },
+                    onNavigateToUserLogin: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+
+              // Main Application Shell (Home, Mood, Talk, Pause, Journal, Help)
               AppRoutes.home: (context) => MainShellScreen(
                     onLogout: () async {
                       await _authRepository.logout();
+                      await _doctorAuthRepository.logout();
                       if (context.mounted) {
                         Navigator.of(context).pushNamedAndRemoveUntil(
                           AppRoutes.auth,
@@ -115,6 +149,7 @@ class _NavsanjiviniAppState extends State<NavsanjiviniApp> {
               AppRoutes.profile: (context) => ProfileScreen(
                     onLogout: () async {
                       await _authRepository.logout();
+                      await _doctorAuthRepository.logout();
                       if (context.mounted) {
                         Navigator.of(context).pushNamedAndRemoveUntil(
                           AppRoutes.auth,
@@ -138,3 +173,4 @@ class _NavsanjiviniAppState extends State<NavsanjiviniApp> {
     );
   }
 }
+

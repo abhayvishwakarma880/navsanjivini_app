@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 import '../viewmodels/pause_viewmodel.dart';
@@ -9,14 +9,14 @@ import '../widgets/relax_activity_sheet.dart';
 
 /// Screen: Take a Pause (Tab 3)
 /// Exact layout and design matching the reference image:
-/// 1. Top Header: "Take a pause 🌿", "A little space just for you.", sprout avatar badge.
+/// 1. Top Header: "Take a pause ðŸŒ¿", "A little space just for you.", sprout avatar badge.
 /// 2. Featured Mint Card:
 ///    - Eyebrow: "YOUR MOMENT OF CALM"
 ///    - Heading: "Let's slow things down."
 ///    - Subtitle: "You don't have to solve everything right now."
 ///    - Concentric ripple breathing rings with central leaf
-///    - "Mindful breathing" & "1 minute • Gentle breathing"
-///    - Pill button: "Start breathing exercise →"
+///    - "Mindful breathing" & "1 minute â€¢ Gentle breathing"
+///    - Pill button: "Start breathing exercise â†’"
 /// 3. Choose your pause:
 ///    - 3 Cards Row: Breathe, Ground, Relax
 /// 4. A gentle reminder card:
@@ -57,7 +57,7 @@ class _PauseScreenState extends State<PauseScreen> {
     final strings = context.tr;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -81,7 +81,7 @@ class _PauseScreenState extends State<PauseScreen> {
                           style: const TextStyle(
                             fontSize: 19,
                             fontWeight: FontWeight.w700,
-                            color: Color(0xFF123C32),
+                            color: color(0xFF123C32),
                             letterSpacing: -0.2,
                           ),
                         ),
@@ -90,7 +90,7 @@ class _PauseScreenState extends State<PauseScreen> {
                           strings.pauseHeaderSubtitle,
                           style: const TextStyle(
                             fontSize: 13,
-                            color: Color(0xFF5E7369),
+                            color: color(0xFF5E7369),
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -101,17 +101,17 @@ class _PauseScreenState extends State<PauseScreen> {
                     width: 38,
                     height: 38,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFE2EFE9),
+                      color: const color(0xFFE2EFE9),
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: const Color(0xFF165A47).withAlpha(25),
+                        color: const color(0xFF165A47).withAlpha(25),
                         width: 1,
                       ),
                     ),
                     child: const Center(
                       child: Icon(
                         Icons.eco_rounded,
-                        color: Color(0xFF165A47),
+                        color: color(0xFF165A47),
                         size: 20,
                       ),
                     ),
@@ -127,10 +127,10 @@ class _PauseScreenState extends State<PauseScreen> {
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFE5F2EC),
+                  color: const color(0xFFE5F2EC),
                   borderRadius: BorderRadius.circular(24),
                   border: Border.all(
-                    color: const Color(0xFFD2E6DC),
+                    color: const color(0xFFD2E6DC),
                     width: 1.1,
                   ),
                 ),
@@ -144,7 +144,7 @@ class _PauseScreenState extends State<PauseScreen> {
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.8,
-                        color: Color(0xFF165A47),
+                        color: color(0xFF165A47),
                       ),
                     ),
                     const SizedBox(height: 8),
@@ -156,7 +156,7 @@ class _PauseScreenState extends State<PauseScreen> {
                       style: const TextStyle(
                         fontSize: 18.5,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF123C32),
+                        color: color(0xFF123C32),
                       ),
                     ),
                     const SizedBox(height: 6),
@@ -168,7 +168,7 @@ class _PauseScreenState extends State<PauseScreen> {
                       style: const TextStyle(
                         fontSize: 12.8,
                         fontWeight: FontWeight.w400,
-                        color: Color(0xFF4D6D63),
+                        color: color(0xFF4D6D63),
                       ),
                     ),
                     const SizedBox(height: 22),
@@ -187,7 +187,7 @@ class _PauseScreenState extends State<PauseScreen> {
                       style: const TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF123C32),
+                        color: color(0xFF123C32),
                       ),
                     ),
                     const SizedBox(height: 4),
@@ -198,7 +198,7 @@ class _PauseScreenState extends State<PauseScreen> {
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 12.5,
-                        color: Color(0xFF5E7369),
+                        color: color(0xFF5E7369),
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -210,8 +210,8 @@ class _PauseScreenState extends State<PauseScreen> {
                       height: 48,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF165A47),
-                          foregroundColor: Colors.white,
+                          backgroundcolor: const color(0xFF165A47),
+                          foregroundcolor: colors.white,
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(26),
@@ -240,7 +240,7 @@ class _PauseScreenState extends State<PauseScreen> {
                 style: const TextStyle(
                   fontSize: 16.5,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF123C32),
+                  color: color(0xFF123C32),
                 ),
               ),
               const SizedBox(height: 12),
@@ -290,10 +290,10 @@ class _PauseScreenState extends State<PauseScreen> {
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: colors.white,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: const Color(0xFFE4EDE7),
+                    color: const color(0xFFE4EDE7),
                     width: 1.1,
                   ),
                 ),
@@ -305,7 +305,7 @@ class _PauseScreenState extends State<PauseScreen> {
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF165A47),
+                        color: color(0xFF165A47),
                       ),
                     ),
                     const SizedBox(height: 5),
@@ -313,7 +313,7 @@ class _PauseScreenState extends State<PauseScreen> {
                       strings.pauseReminderBody,
                       style: const TextStyle(
                         fontSize: 12.8,
-                        color: Color(0xFF4D6D63),
+                        color: color(0xFF4D6D63),
                         height: 1.35,
                       ),
                     ),
@@ -345,11 +345,11 @@ class _PauseOptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
         side: const BorderSide(
-          color: Color(0xFFE4EDE7),
+          color: color(0xFFE4EDE7),
           width: 1.1,
         ),
       ),
@@ -363,7 +363,7 @@ class _PauseOptionCard extends StatelessWidget {
             children: [
               Icon(
                 icon,
-                color: const Color(0xFF165A47),
+                color: const color(0xFF165A47),
                 size: 22,
               ),
               const SizedBox(height: 10),
@@ -374,7 +374,7 @@ class _PauseOptionCard extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF123C32),
+                  color: color(0xFF123C32),
                 ),
               ),
               const SizedBox(height: 4),
@@ -384,7 +384,7 @@ class _PauseOptionCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 11,
-                  color: Color(0xFF6E8078),
+                  color: color(0xFF6E8078),
                   height: 1.25,
                 ),
               ),
@@ -395,3 +395,4 @@ class _PauseOptionCard extends StatelessWidget {
     );
   }
 }
+

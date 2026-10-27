@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
@@ -42,7 +42,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: AppColors.surface,
+      backgroundcolor: Appcolors.surface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
@@ -63,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   width: 40,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: AppColors.border,
+                    color: Appcolors.border,
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -79,7 +79,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Text(
                 context.tr.personalInfoSubtitle,
                 style: AppTextStyles.bodySmall.copyWith(
-                  color: AppColors.textSecondary,
+                  color: Appcolors.textSecondary,
                 ),
               ),
               const SizedBox(height: AppSpacing.lg),
@@ -114,7 +114,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         shape: RoundedRectangleBorder(borderRadius: AppRadius.radiusLg),
         title: Row(
           children: [
-            const Icon(Icons.file_download_outlined, color: AppColors.primary),
+            const Icon(Icons.file_download_outlined, color: Appcolors.primary),
             const SizedBox(width: AppSpacing.xs),
             Expanded(child: Text(context.tr.downloadDataTitle)),
           ],
@@ -129,8 +129,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.primary,
-              foregroundColor: AppColors.onPrimary,
+              backgroundcolor: Appcolors.primary,
+              foregroundcolor: Appcolors.onPrimary,
             ),
             onPressed: () {
               Navigator.of(dialogCtx).pop();
@@ -154,12 +154,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         shape: RoundedRectangleBorder(borderRadius: AppRadius.radiusLg),
         title: Row(
           children: [
-            const Icon(Icons.warning_amber_rounded, color: AppColors.error),
+            const Icon(Icons.warning_amber_rounded, color: Appcolors.error),
             const SizedBox(width: AppSpacing.xs),
             Expanded(
               child: Text(
                 context.tr.deleteAccountTitle,
-                style: const TextStyle(color: AppColors.error),
+                style: const TextStyle(color: Appcolors.error),
               ),
             ),
           ],
@@ -172,8 +172,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.error,
-              foregroundColor: Colors.white,
+              backgroundcolor: Appcolors.error,
+              foregroundcolor: colors.white,
             ),
             onPressed: () {
               Navigator.of(dialogCtx).pop();
@@ -200,8 +200,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.primary,
-              foregroundColor: AppColors.onPrimary,
+              backgroundcolor: Appcolors.primary,
+              foregroundcolor: Appcolors.onPrimary,
             ),
             onPressed: () {
               Navigator.of(dialogCtx).pop();
@@ -219,7 +219,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       context: context,
       applicationName: context.tr.appName,
       applicationVersion: '1.0.0',
-      applicationIcon: const Icon(Icons.spa_rounded, color: AppColors.primary, size: 36),
+      applicationIcon: const Icon(Icons.spa_rounded, color: Appcolors.primary, size: 36),
       children: [
         const SizedBox(height: AppSpacing.sm),
         Text(context.tr.clinicalDisclaimer),
@@ -235,7 +235,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       listenable: _viewModel,
       builder: (context, _) {
         return Scaffold(
-          backgroundColor: AppColors.background,
+          backgroundcolor: Appcolors.background,
           appBar: AppBar(
             title: Text(strings.yourProfileTitle),
             leading: IconButton(
@@ -251,21 +251,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Container(
                   padding: AppSpacing.cardPadding,
                   decoration: BoxDecoration(
-                    color: AppColors.surface,
+                    color: Appcolors.surface,
                     borderRadius: AppRadius.radiusLg,
-                    border: Border.all(color: AppColors.border),
+                    border: Border.all(color: Appcolors.border),
                   ),
                   child: Row(
                     children: [
                       CircleAvatar(
                         radius: 30,
-                        backgroundColor: AppColors.primaryContainer,
+                        backgroundcolor: Appcolors.primaryContainer,
                         child: Text(
                           _viewModel.displayName.isNotEmpty
                               ? _viewModel.displayName[0].toUpperCase()
                               : 'U',
                           style: AppTextStyles.headlineMedium.copyWith(
-                            color: AppColors.primary,
+                            color: Appcolors.primary,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -284,14 +284,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             Text(
                               strings.manageAccountSubtitle,
                               style: AppTextStyles.bodySmall.copyWith(
-                                color: AppColors.textSecondary,
+                                color: Appcolors.textSecondary,
                               ),
                             ),
                           ],
                         ),
                       ),
                       IconButton(
-                        icon: const Icon(Icons.edit_outlined, color: AppColors.primary),
+                        icon: const Icon(Icons.edit_outlined, color: Appcolors.primary),
                         tooltip: strings.editProfileTitle,
                         onPressed: () => _showEditProfileSheet(context),
                       ),
@@ -303,10 +303,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 // Section 1: Account & Profile
                 _buildSectionHeader('Account & Details'),
                 Material(
-                  color: AppColors.surface,
+                  color: Appcolors.surface,
                   shape: RoundedRectangleBorder(
                     borderRadius: AppRadius.radiusLg,
-                    side: const BorderSide(color: AppColors.border),
+                    side: const BorderSide(color: Appcolors.border),
                   ),
                   clipBehavior: Clip.antiAlias,
                   child: Column(
@@ -325,10 +325,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 // Section 2: Preferences & Notifications
                 _buildSectionHeader('Preferences & Notifications'),
                 Material(
-                  color: AppColors.surface,
+                  color: Appcolors.surface,
                   shape: RoundedRectangleBorder(
                     borderRadius: AppRadius.radiusLg,
-                    side: const BorderSide(color: AppColors.border),
+                    side: const BorderSide(color: Appcolors.border),
                   ),
                   clipBehavior: Clip.antiAlias,
                   child: Column(
@@ -354,10 +354,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 // Section 3: Privacy, Data & Rights
                 _buildSectionHeader('Privacy & Data Rights'),
                 Material(
-                  color: AppColors.surface,
+                  color: Appcolors.surface,
                   shape: RoundedRectangleBorder(
                     borderRadius: AppRadius.radiusLg,
-                    side: const BorderSide(color: AppColors.border),
+                    side: const BorderSide(color: Appcolors.border),
                   ),
                   clipBehavior: Clip.antiAlias,
                   child: Column(
@@ -390,10 +390,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 // Section 4: Help, About & Logout
                 _buildSectionHeader('Support & Session'),
                 Material(
-                  color: AppColors.surface,
+                  color: Appcolors.surface,
                   shape: RoundedRectangleBorder(
                     borderRadius: AppRadius.radiusLg,
-                    side: const BorderSide(color: AppColors.border),
+                    side: const BorderSide(color: Appcolors.border),
                   ),
                   clipBehavior: Clip.antiAlias,
                   child: Column(
@@ -429,10 +429,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
       child: Text(
         title,
         style: AppTextStyles.labelLarge.copyWith(
-          color: AppColors.textSecondary,
+          color: Appcolors.textSecondary,
           fontWeight: FontWeight.w600,
         ),
       ),
     );
   }
 }
+

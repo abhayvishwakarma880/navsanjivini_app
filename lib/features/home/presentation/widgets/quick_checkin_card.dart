@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -14,7 +14,7 @@ class QuickCheckinCard extends StatelessWidget {
     return Container(
       padding: AppSpacing.cardPadding,
       decoration: BoxDecoration(
-        color: AppColors.primaryContainer,
+        color: Appcolors.primaryContainer,
         borderRadius: AppRadius.radiusLg,
       ),
       child: Column(
@@ -24,31 +24,31 @@ class QuickCheckinCard extends StatelessWidget {
             children: [
               const Icon(
                 Icons.favorite_rounded,
-                color: AppColors.primary,
+                color: Appcolors.primary,
                 size: 22,
               ),
               const SizedBox(width: AppSpacing.xs),
               Text(
                 'How are you feeling right now?',
                 style: AppTextStyles.titleMedium.copyWith(
-                  color: AppColors.primaryDark,
+                  color: Appcolors.primaryDark,
                 ),
               ),
             ],
           ),
           const SizedBox(height: AppSpacing.xs),
           Text(
-            'Check in with yourself. No judgment, no scores — just a gentle pause.',
+            'Check in with yourself. No judgment, no scores â€” just a gentle pause.',
             style: AppTextStyles.bodySmall.copyWith(
-              color: AppColors.primaryDark.withAlpha(200),
+              color: Appcolors.primaryDark.withAlpha(200),
             ),
           ),
           const SizedBox(height: AppSpacing.md),
           ElevatedButton(
             onPressed: onStartCheckin,
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.primary,
-              foregroundColor: AppColors.onPrimary,
+              backgroundcolor: Appcolors.primary,
+              foregroundcolor: Appcolors.onPrimary,
               elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: AppRadius.radiusMd,
@@ -61,3 +61,4 @@ class QuickCheckinCard extends StatelessWidget {
     );
   }
 }
+

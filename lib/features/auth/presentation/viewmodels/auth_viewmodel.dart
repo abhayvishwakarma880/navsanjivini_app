@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../../domain/models/auth_result.dart';
 import '../../domain/repositories/auth_repository.dart';
 
@@ -233,3 +233,4 @@ class AuthViewModel extends ChangeNotifier {
     super.dispose();
   }
 }
+

@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 
 class SettingsViewModel extends ChangeNotifier {
   bool _dailyReminders = true;
@@ -31,3 +31,4 @@ class SettingsViewModel extends ChangeNotifier {
     notifyListeners();
   }
 }
+

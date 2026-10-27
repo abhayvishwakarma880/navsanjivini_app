@@ -1,4 +1,4 @@
-import '../entities/mood_entry.dart';
+﻿import '../entities/mood_entry.dart';
 
 /// Abstract contract for Mood repository operations.
 abstract class MoodRepository {
@@ -6,3 +6,4 @@ abstract class MoodRepository {
   Future<void> saveMoodEntry(MoodEntry entry);
   Future<void> deleteMoodEntry(String id);
 }
+

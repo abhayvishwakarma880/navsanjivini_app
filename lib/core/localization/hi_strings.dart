@@ -1,634 +1,670 @@
-import 'en_strings.dart';
+﻿import 'en_strings.dart';
 
-/// Hindi translations (हिंदी) - Extends EnStrings for automatic fallback
+/// Hindi translations (à¤¹à¤¿à¤‚à¤¦à¥€) - Extends EnStrings for automatic fallback
 class HiStrings extends EnStrings {
   @override
-  String get appName => 'नवसंजीवनी';
+  String get appName => 'à¤¨à¤µà¤¸à¤‚à¤œà¥€à¤µà¤¨à¥€';
 
   @override
-  String get namasteGreeting => 'नमस्ते 🙏';
+  String get namasteGreeting => 'à¤¨à¤®à¤¸à¥à¤¤à¥‡ ðŸ™';
 
   @override
-  String get continueBtn => 'आगे बढ़ें';
+  String get continueBtn => 'à¤†à¤—à¥‡ à¤¬à¤¢à¤¼à¥‡à¤‚';
 
   @override
-  String get backBtn => 'वापस जाएं';
+  String get backBtn => 'à¤µà¤¾à¤ªà¤¸ à¤œà¤¾à¤à¤‚';
 
   @override
-  String get cancelBtn => 'रद्द करें';
+  String get cancelBtn => 'à¤°à¤¦à¥à¤¦ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get saveBtn => 'सहेजें';
+  String get saveBtn => 'à¤¸à¤¹à¥‡à¤œà¥‡à¤‚';
 
   @override
   String get welcomeTagline =>
-      'आपकी मानसिक शांति, भावनात्मक संतुलन और व्यक्तिगत विकास के लिए एक सुरक्षित स्थान।';
+      'à¤†à¤ªà¤•à¥€ à¤®à¤¾à¤¨à¤¸à¤¿à¤• à¤¶à¤¾à¤‚à¤¤à¤¿, à¤­à¤¾à¤µà¤¨à¤¾à¤¤à¥à¤®à¤• à¤¸à¤‚à¤¤à¥à¤²à¤¨ à¤”à¤° à¤µà¥à¤¯à¤•à¥à¤¤à¤¿à¤—à¤¤ à¤µà¤¿à¤•à¤¾à¤¸ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤¸à¥à¤¥à¤¾à¤¨à¥¤';
 
   @override
-  String get welcomeSubtitle => 'बेहतर महसूस करने के लिए एक शांत स्थान';
+  String get welcomeSubtitle => 'à¤¬à¥‡à¤¹à¤¤à¤° à¤®à¤¹à¤¸à¥‚à¤¸ à¤•à¤°à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤¶à¤¾à¤‚à¤¤ à¤¸à¥à¤¥à¤¾à¤¨';
 
   @override
   String get welcomeDescription =>
-      'आपके दैनिक भावनात्मक स्वास्थ्य का साथी।';
+      'à¤†à¤ªà¤•à¥‡ à¤¦à¥ˆà¤¨à¤¿à¤• à¤­à¤¾à¤µà¤¨à¤¾à¤¤à¥à¤®à¤• à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯ à¤•à¤¾ à¤¸à¤¾à¤¥à¥€à¥¤';
 
   @override
-  String get getStartedBtn => 'शुरू करें';
+  String get getStartedBtn => 'à¤¶à¥à¤°à¥‚ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get chooseLanguageTitle => 'अपनी भाषा चुनें';
+  String get chooseLanguageTitle => 'à¤…à¤ªà¤¨à¥€ à¤­à¤¾à¤·à¤¾ à¤šà¥à¤¨à¥‡à¤‚';
 
   @override
-  String get continueToSafety => 'आगे बढ़ें';
+  String get continueToSafety => 'à¤†à¤—à¥‡ à¤¬à¤¢à¤¼à¥‡à¤‚';
 
   @override
-  String get safetyConsentTitle => 'सुरक्षा एवं सहमति';
+  String get safetyConsentTitle => 'à¤¸à¥à¤°à¤•à¥à¤·à¤¾ à¤à¤µà¤‚ à¤¸à¤¹à¤®à¤¤à¤¿';
 
   @override
-  String get trustAndEligibilityHeader => 'विश्वास और पात्रता';
+  String get trustAndEligibilityHeader => 'à¤µà¤¿à¤¶à¥à¤µà¤¾à¤¸ à¤”à¤° à¤ªà¤¾à¤¤à¥à¤°à¤¤à¤¾';
 
   @override
   String get trustAndEligibilitySubtitle =>
-      'शुरू करने से पहले, कृपया पुष्टि करें ताकि हम आपके लिए एक सुरक्षित और संवेदनशील अनुभव सुनिश्चित कर सकें।';
+      'à¤¶à¥à¤°à¥‚ à¤•à¤°à¤¨à¥‡ à¤¸à¥‡ à¤ªà¤¹à¤²à¥‡, à¤•à¥ƒà¤ªà¤¯à¤¾ à¤ªà¥à¤·à¥à¤Ÿà¤¿ à¤•à¤°à¥‡à¤‚ à¤¤à¤¾à¤•à¤¿ à¤¹à¤® à¤†à¤ªà¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤”à¤° à¤¸à¤‚à¤µà¥‡à¤¦à¤¨à¤¶à¥€à¤² à¤…à¤¨à¥à¤­à¤µ à¤¸à¥à¤¨à¤¿à¤¶à¥à¤šà¤¿à¤¤ à¤•à¤° à¤¸à¤•à¥‡à¤‚à¥¤';
 
   @override
-  String get ageConfirmationTitle => 'मेरी आयु 18 वर्ष या उससे अधिक है';
+  String get ageConfirmationTitle => 'à¤®à¥‡à¤°à¥€ à¤†à¤¯à¥ 18 à¤µà¤°à¥à¤· à¤¯à¤¾ à¤‰à¤¸à¤¸à¥‡ à¤…à¤§à¤¿à¤• à¤¹à¥ˆ';
 
   @override
   String get ageConfirmationSubtitle =>
-      'नवसंजीवनी विशेष रूप से वयस्कों (18+) के लिए तैयार की गई है।';
+      'à¤¨à¤µà¤¸à¤‚à¤œà¥€à¤µà¤¨à¥€ à¤µà¤¿à¤¶à¥‡à¤· à¤°à¥‚à¤ª à¤¸à¥‡ à¤µà¤¯à¤¸à¥à¤•à¥‹à¤‚ (18+) à¤•à¥‡ à¤²à¤¿à¤ à¤¤à¥ˆà¤¯à¤¾à¤° à¤•à¥€ à¤—à¤ˆ à¤¹à¥ˆà¥¤';
 
   @override
-  String get consentTitle => 'नियम एवं AI सीमाओं की सहमति';
+  String get consentTitle => 'à¤¨à¤¿à¤¯à¤® à¤à¤µà¤‚ AI à¤¸à¥€à¤®à¤¾à¤“à¤‚ à¤•à¥€ à¤¸à¤¹à¤®à¤¤à¤¿';
 
   @override
   String get consentSubtitle =>
-      'मैं समझता/समझती हूँ कि यह एक AI सपोर्ट टूल है, कोई क्लिनिकल डॉक्टर या आपातकालीन हेल्पलाइन नहीं।';
+      'à¤®à¥ˆà¤‚ à¤¸à¤®à¤à¤¤à¤¾/à¤¸à¤®à¤à¤¤à¥€ à¤¹à¥‚à¤ à¤•à¤¿ à¤¯à¤¹ à¤à¤• AI à¤¸à¤ªà¥‹à¤°à¥à¤Ÿ à¤Ÿà¥‚à¤² à¤¹à¥ˆ, à¤•à¥‹à¤ˆ à¤•à¥à¤²à¤¿à¤¨à¤¿à¤•à¤² à¤¡à¥‰à¤•à¥à¤Ÿà¤° à¤¯à¤¾ à¤†à¤ªà¤¾à¤¤à¤•à¤¾à¤²à¥€à¤¨ à¤¹à¥‡à¤²à¥à¤ªà¤²à¤¾à¤‡à¤¨ à¤¨à¤¹à¥€à¤‚à¥¤';
 
   @override
   String get clinicalDisclaimer =>
-      'नवसंजीवनी भावनात्मक स्वास्थ्य और आत्म-सहायता के लिए एक मार्गदर्शक टूल है। '
-      'यह किसी पेशेवर चिकित्सीय निदान या मनोरोग उपचार का विकल्प नहीं है।';
+      'à¤¨à¤µà¤¸à¤‚à¤œà¥€à¤µà¤¨à¥€ à¤­à¤¾à¤µà¤¨à¤¾à¤¤à¥à¤®à¤• à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯ à¤”à¤° à¤†à¤¤à¥à¤®-à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤®à¤¾à¤°à¥à¤—à¤¦à¤°à¥à¤¶à¤• à¤Ÿà¥‚à¤² à¤¹à¥ˆà¥¤ '
+      'à¤¯à¤¹ à¤•à¤¿à¤¸à¥€ à¤ªà¥‡à¤¶à¥‡à¤µà¤° à¤šà¤¿à¤•à¤¿à¤¤à¥à¤¸à¥€à¤¯ à¤¨à¤¿à¤¦à¤¾à¤¨ à¤¯à¤¾ à¤®à¤¨à¥‹à¤°à¥‹à¤— à¤‰à¤ªà¤šà¤¾à¤° à¤•à¤¾ à¤µà¤¿à¤•à¤²à¥à¤ª à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆà¥¤';
 
   @override
-  String get agreeAndContinue => 'सहमति दें और आगे बढ़ें';
+  String get agreeAndContinue => 'à¤¸à¤¹à¤®à¤¤à¤¿ à¤¦à¥‡à¤‚ à¤”à¤° à¤†à¤—à¥‡ à¤¬à¤¢à¤¼à¥‡à¤‚';
 
   // Auth Strings
   @override
-  String get loginTab => 'लॉग इन';
+  String get loginTab => 'à¤²à¥‰à¤— à¤‡à¤¨';
 
   @override
-  String get registerTab => 'पंजीकरण';
+  String get registerTab => 'à¤ªà¤‚à¤œà¥€à¤•à¤°à¤£';
 
   @override
-  String get loginTitle => 'वापसी पर स्वागत है';
+  String get loginTitle => 'à¤µà¤¾à¤ªà¤¸à¥€ à¤ªà¤° à¤¸à¥à¤µà¤¾à¤—à¤¤ à¤¹à¥ˆ';
 
   @override
-  String get loginSubtitle => 'आगे बढ़ने के लिए अपना पंजीकृत मोबाइल नंबर और पासवर्ड दर्ज करें।';
+  String get loginSubtitle => 'à¤†à¤—à¥‡ à¤¬à¤¢à¤¼à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤…à¤ªà¤¨à¤¾ à¤ªà¤‚à¤œà¥€à¤•à¥ƒà¤¤ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤”à¤° à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚à¥¤';
 
   @override
-  String get registerTitle => 'नया खाता बनाएं';
+  String get registerTitle => 'à¤¨à¤¯à¤¾ à¤–à¤¾à¤¤à¤¾ à¤¬à¤¨à¤¾à¤à¤‚';
 
   @override
-  String get registerSubtitle => 'आज ही अपनी मानसिक शांति और आत्म-विकास की यात्रा शुरू करें।';
+  String get registerSubtitle => 'à¤†à¤œ à¤¹à¥€ à¤…à¤ªà¤¨à¥€ à¤®à¤¾à¤¨à¤¸à¤¿à¤• à¤¶à¤¾à¤‚à¤¤à¤¿ à¤”à¤° à¤†à¤¤à¥à¤®-à¤µà¤¿à¤•à¤¾à¤¸ à¤•à¥€ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤¶à¥à¤°à¥‚ à¤•à¤°à¥‡à¤‚à¥¤';
 
   @override
-  String get mobileNumberLabel => 'मोबाइल नंबर';
+  String get mobileNumberLabel => 'à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤°';
 
   @override
-  String get mobileNumberHint => '10 अंकों का मोबाइल नंबर दर्ज करें';
+  String get mobileNumberHint => '10 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get passwordLabel => 'पासवर्ड';
+  String get passwordLabel => 'à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡';
 
   @override
-  String get passwordHint => 'अपना पासवर्ड दर्ज करें';
+  String get passwordHint => 'à¤…à¤ªà¤¨à¤¾ à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get confirmPasswordLabel => 'पासवर्ड की पुष्टि करें';
+  String get confirmPasswordLabel => 'à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤•à¥€ à¤ªà¥à¤·à¥à¤Ÿà¤¿ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get confirmPasswordHint => 'पासवर्ड पुनः दर्ज करें';
+  String get confirmPasswordHint => 'à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤ªà¥à¤¨à¤ƒ à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get nameLabel => 'पूरा नाम';
+  String get nameLabel => 'à¤ªà¥‚à¤°à¤¾ à¤¨à¤¾à¤®';
 
   @override
-  String get nameHint => 'हम आपको किस नाम से बुलाएं?';
+  String get nameHint => 'à¤¹à¤® à¤†à¤ªà¤•à¥‹ à¤•à¤¿à¤¸ à¤¨à¤¾à¤® à¤¸à¥‡ à¤¬à¥à¤²à¤¾à¤à¤‚?';
 
   @override
-  String get loginBtn => 'लॉग इन करें';
+  String get loginBtn => 'à¤²à¥‰à¤— à¤‡à¤¨ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get sendOtpBtn => 'OTP भेजें';
+  String get sendOtpBtn => 'OTP à¤­à¥‡à¤œà¥‡à¤‚';
 
   @override
-  String get verifyOtpBtn => 'OTP सत्यापित करें और पासवर्ड बनाएं';
+  String get verifyOtpBtn => 'OTP à¤¸à¤¤à¥à¤¯à¤¾à¤ªà¤¿à¤¤ à¤•à¤°à¥‡à¤‚ à¤”à¤° à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤¬à¤¨à¤¾à¤à¤‚';
 
   @override
-  String get resendOtpBtn => 'पुनः OTP भेजें';
+  String get resendOtpBtn => 'à¤ªà¥à¤¨à¤ƒ OTP à¤­à¥‡à¤œà¥‡à¤‚';
 
   @override
-  String get otpScreenTitle => 'मोबाइल नंबर सत्यापन';
+  String get otpScreenTitle => 'à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¸à¤¤à¥à¤¯à¤¾à¤ªà¤¨';
 
   @override
-  String get otpScreenSubtitle => 'दर्ज किए गए +91 पर भेजा गया 6 अंकों का OTP डालें: ';
+  String get otpScreenSubtitle => 'à¤¦à¤°à¥à¤œ à¤•à¤¿à¤ à¤—à¤ +91 à¤ªà¤° à¤­à¥‡à¤œà¤¾ à¤—à¤¯à¤¾ 6 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ OTP à¤¡à¤¾à¤²à¥‡à¤‚: ';
 
   @override
-  String get enterOtpHint => '6 अंकों का OTP दर्ज करें';
+  String get enterOtpHint => '6 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ OTP à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get createPasswordTitle => 'पासवर्ड सेट करें';
+  String get createPasswordTitle => 'à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤¸à¥‡à¤Ÿ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get createPasswordSubtitle => 'अपने अकाउंट को सुरक्षित रखने के लिए एक मजबूत पासवर्ड बनाएं।';
+  String get createPasswordSubtitle => 'à¤…à¤ªà¤¨à¥‡ à¤…à¤•à¤¾à¤‰à¤‚à¤Ÿ à¤•à¥‹ à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤°à¤–à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤®à¤œà¤¬à¥‚à¤¤ à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤¬à¤¨à¤¾à¤à¤‚à¥¤';
 
   @override
-  String get completeRegistrationBtn => 'खाता बनाएं और आगे बढ़ें';
+  String get completeRegistrationBtn => 'à¤–à¤¾à¤¤à¤¾ à¤¬à¤¨à¤¾à¤à¤‚ à¤”à¤° à¤†à¤—à¥‡ à¤¬à¤¢à¤¼à¥‡à¤‚';
 
   @override
-  String get dontHaveAccount => 'खाता नहीं है? ';
+  String get dontHaveAccount => 'à¤–à¤¾à¤¤à¤¾ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆ? ';
 
   @override
-  String get registerNow => 'नया खाता बनाएं';
+  String get registerNow => 'à¤¨à¤¯à¤¾ à¤–à¤¾à¤¤à¤¾ à¤¬à¤¨à¤¾à¤à¤‚';
 
   @override
-  String get alreadyHaveAccount => 'पहले से खाता है? ';
+  String get alreadyHaveAccount => 'à¤ªà¤¹à¤²à¥‡ à¤¸à¥‡ à¤–à¤¾à¤¤à¤¾ à¤¹à¥ˆ? ';
 
   @override
-  String get loginNow => 'लॉग इन करें';
+  String get loginNow => 'à¤²à¥‰à¤— à¤‡à¤¨ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get invalidPhoneError => 'कृपया 10 अंकों का मान्य भारतीय मोबाइल नंबर दर्ज करें';
+  String get invalidPhoneError => 'à¤•à¥ƒà¤ªà¤¯à¤¾ 10 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ à¤®à¤¾à¤¨à¥à¤¯ à¤­à¤¾à¤°à¤¤à¥€à¤¯ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get invalidPasswordError => 'पासवर्ड कम से कम 6 अक्षरों का होना चाहिए';
+  String get invalidPasswordError => 'à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤•à¤® à¤¸à¥‡ à¤•à¤® 6 à¤…à¤•à¥à¤·à¤°à¥‹à¤‚ à¤•à¤¾ à¤¹à¥‹à¤¨à¤¾ à¤šà¤¾à¤¹à¤¿à¤';
 
   @override
-  String get invalidOtpError => 'गलत OTP! डेमो के लिए 123456 दर्ज करें';
+  String get invalidOtpError => 'à¤—à¤²à¤¤ OTP! à¤¡à¥‡à¤®à¥‹ à¤•à¥‡ à¤²à¤¿à¤ 123456 à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get passwordMismatchError => 'पासवर्ड मेल नहीं खाते हैं';
+  String get passwordMismatchError => 'à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤®à¥‡à¤² à¤¨à¤¹à¥€à¤‚ à¤–à¤¾à¤¤à¥‡ à¤¹à¥ˆà¤‚';
 
   @override
-  String get loginSuccessMsg => 'सफलतापूर्वक लॉग इन हुआ!';
+  String get loginSuccessMsg => 'à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤²à¥‰à¤— à¤‡à¤¨ à¤¹à¥à¤†!';
 
   @override
-  String get registerSuccessMsg => 'खाता सफलतापूर्वक पंजीकृत हो गया!';
+  String get registerSuccessMsg => 'à¤–à¤¾à¤¤à¤¾ à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤ªà¤‚à¤œà¥€à¤•à¥ƒà¤¤ à¤¹à¥‹ à¤—à¤¯à¤¾!';
 
   @override
-  String get demoOtpNotice => 'डेमो OTP: 123456';
+  String get demoOtpNotice => 'à¤¡à¥‡à¤®à¥‹ OTP: 123456';
+
+  // User & Doctor Login Flow
+  @override
+  String get userLoginTitle => 'à¤‰à¤ªà¤¯à¥‹à¤—à¤•à¤°à¥à¤¤à¤¾ à¤²à¥‰à¤—à¤¿à¤¨';
+
+  @override
+  String get doctorLoginTitle => 'à¤¡à¥‰à¤•à¥à¤Ÿà¤° à¤²à¥‰à¤—à¤¿à¤¨';
+
+  @override
+  String get doctorLoginSubtitle =>
+      'à¤ªà¥‹à¤°à¥à¤Ÿà¤² à¤®à¥‡à¤‚ à¤ªà¥à¤°à¤µà¥‡à¤¶ à¤•à¥‡ à¤²à¤¿à¤ à¤…à¤ªà¤¨à¤¾ à¤ªà¤‚à¤œà¥€à¤•à¥ƒà¤¤ à¤ˆà¤®à¥‡à¤² à¤”à¤° à¤ªà¤¾à¤¸à¤µà¤°à¥à¤¡ à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚à¥¤';
+
+  @override
+  String get doctorEmailLabel => 'à¤ˆà¤®à¥‡à¤² à¤†à¤ˆà¤¡à¥€';
+
+  @override
+  String get doctorEmailHint => 'doctor@example.com';
+
+  @override
+  String get doctorLoginBtn => 'à¤¡à¥‰à¤•à¥à¤Ÿà¤° à¤²à¥‰à¤—à¤¿à¤¨ à¤•à¤°à¥‡à¤‚';
+
+  @override
+  String get areYouADoctor => 'à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤¡à¥‰à¤•à¥à¤Ÿà¤° à¤¯à¤¾ à¤šà¤¿à¤•à¤¿à¤¤à¥à¤¸à¤• à¤¹à¥ˆà¤‚?';
+
+  @override
+  String get areYouAUser => 'à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤à¤• à¤‰à¤ªà¤¯à¥‹à¤—à¤•à¤°à¥à¤¤à¤¾ / à¤®à¤°à¥€à¤œ à¤¹à¥ˆà¤‚?';
+
+  @override
+  String get switchToDoctorLogin => 'à¤¡à¥‰à¤•à¥à¤Ÿà¤° à¤²à¥‰à¤—à¤¿à¤¨';
+
+  @override
+  String get switchToUserLogin => 'à¤‰à¤ªà¤¯à¥‹à¤—à¤•à¤°à¥à¤¤à¤¾ à¤²à¥‰à¤—à¤¿à¤¨';
+
+  @override
+  String get invalidDoctorEmail => 'à¤•à¥ƒà¤ªà¤¯à¤¾ à¤à¤• à¤®à¤¾à¤¨à¥à¤¯ à¤ˆà¤®à¥‡à¤² à¤†à¤ˆà¤¡à¥€ à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚';
 
   // Navigation Bottom Tabs (5 Tabs)
   @override
-  String get todayTab => 'आज';
+  String get todayTab => 'à¤†à¤œ';
 
   @override
-  String get talkTab => 'बातचीत';
+  String get talkTab => 'à¤¬à¤¾à¤¤à¤šà¥€à¤¤';
 
   @override
-  String get pauseTab => 'ठहराव';
+  String get pauseTab => 'à¤ à¤¹à¤°à¤¾à¤µ';
 
   @override
-  String get journalTab => 'डायरी';
+  String get journalTab => 'à¤¡à¤¾à¤¯à¤°à¥€';
 
   @override
-  String get helpTab => 'मदद';
+  String get helpTab => 'à¤®à¤¦à¤¦';
 
   // Home / Today Screen Layout
   @override
-  String get appSubtitleTagline => 'आपके लिए एक शांत स्थान';
+  String get appSubtitleTagline => 'à¤†à¤ªà¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤¶à¤¾à¤‚à¤¤ à¤¸à¥à¤¥à¤¾à¤¨';
 
   @override
-  String get helloThere => 'शुभ प्रभात 🌿';
+  String get helloThere => 'à¤¶à¥à¤­ à¤ªà¥à¤°à¤­à¤¾à¤¤ ðŸŒ¿';
 
   @override
-  String get howAreYouFeeling => 'आज आप कैसा महसूस कर रहे हैं?';
+  String get howAreYouFeeling => 'à¤†à¤œ à¤†à¤ª à¤•à¥ˆà¤¸à¤¾ à¤®à¤¹à¤¸à¥‚à¤¸ à¤•à¤° à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚?';
 
   @override
-  String get goodMorningGreeting => 'शुभ प्रभात 🌿';
+  String get goodMorningGreeting => 'à¤¶à¥à¤­ à¤ªà¥à¤°à¤­à¤¾à¤¤ ðŸŒ¿';
 
   @override
-  String get goodAfternoonGreeting => 'शुभ दोपहर 🌿';
+  String get goodAfternoonGreeting => 'à¤¶à¥à¤­ à¤¦à¥‹à¤ªà¤¹à¤° ðŸŒ¿';
 
   @override
-  String get goodEveningGreeting => 'शुभ संध्या 🌿';
+  String get goodEveningGreeting => 'à¤¶à¥à¤­ à¤¸à¤‚à¤§à¥à¤¯à¤¾ ðŸŒ¿';
 
   @override
-  String get aMomentForYourself => 'खुद के लिए एक पल';
+  String get aMomentForYourself => 'à¤–à¥à¤¦ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤ªà¤²';
 
   @override
-  String get howAreYouFeelingRightNow => 'आप अभी कैसा महसूस कर रहे हैं?';
+  String get howAreYouFeelingRightNow => 'à¤†à¤ª à¤…à¤­à¥€ à¤•à¥ˆà¤¸à¤¾ à¤®à¤¹à¤¸à¥‚à¤¸ à¤•à¤° à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚?';
 
   @override
-  String get takeMomentForYourself => 'खुद के लिए एक पल';
+  String get takeMomentForYourself => 'à¤–à¥à¤¦ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤ªà¤²';
 
   @override
-  String get noRightOrWrongWay => 'भावनाएं कभी सही या गलत नहीं होतीं।';
+  String get noRightOrWrongWay => 'à¤­à¤¾à¤µà¤¨à¤¾à¤à¤‚ à¤•à¤­à¥€ à¤¸à¤¹à¥€ à¤¯à¤¾ à¤—à¤²à¤¤ à¤¨à¤¹à¥€à¤‚ à¤¹à¥‹à¤¤à¥€à¤‚à¥¤';
 
   @override
-  String get checkInWithMood => 'अपने मूड की जांच करें →';
+  String get checkInWithMood => 'à¤…à¤ªà¤¨à¥‡ à¤®à¥‚à¤¡ à¤•à¥€ à¤œà¤¾à¤‚à¤š à¤•à¤°à¥‡à¤‚ â†’';
 
   @override
-  String get moodGreat => 'उत्कृष्ट';
+  String get moodGreat => 'à¤‰à¤¤à¥à¤•à¥ƒà¤·à¥à¤Ÿ';
 
   @override
-  String get moodOkay => 'ठीक है';
+  String get moodOkay => 'à¤ à¥€à¤• à¤¹à¥ˆ';
 
   @override
-  String get moodLow => 'उदास';
+  String get moodLow => 'à¤‰à¤¦à¤¾à¤¸';
 
   @override
-  String get moodAnxious => 'चिंतित';
+  String get moodAnxious => 'à¤šà¤¿à¤‚à¤¤à¤¿à¤¤';
 
   @override
-  String get moodOverwhelmed => 'अभिभूत';
+  String get moodOverwhelmed => 'à¤…à¤­à¤¿à¤­à¥‚à¤¤';
 
   @override
-  String get takeSmallPauseTitle => 'एक छोटा विराम लें';
+  String get takeSmallPauseTitle => 'à¤à¤• à¤›à¥‹à¤Ÿà¤¾ à¤µà¤¿à¤°à¤¾à¤® à¤²à¥‡à¤‚';
 
   @override
-  String get takeSmallPauseSubtitle => 'सांस लेने और तरोताजा होने के लिए एक मिनट।';
+  String get takeSmallPauseSubtitle => 'à¤¸à¤¾à¤‚à¤¸ à¤²à¥‡à¤¨à¥‡ à¤”à¤° à¤¤à¤°à¥‹à¤¤à¤¾à¤œà¤¾ à¤¹à¥‹à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤®à¤¿à¤¨à¤Ÿà¥¤';
 
   @override
-  String get whatWouldHelpRightNow => 'अभी क्या मदद कर सकता है?';
+  String get whatWouldHelpRightNow => 'à¤…à¤­à¥€ à¤•à¥à¤¯à¤¾ à¤®à¤¦à¤¦ à¤•à¤° à¤¸à¤•à¤¤à¤¾ à¤¹à¥ˆ?';
 
   @override
-  String get talkItOutTitle => 'मन की बात कहें';
+  String get talkItOutTitle => 'à¤®à¤¨ à¤•à¥€ à¤¬à¤¾à¤¤ à¤•à¤¹à¥‡à¤‚';
 
   @override
-  String get talkItOutSubtitle => 'जो मन में है, साझा करें';
+  String get talkItOutSubtitle => 'à¤œà¥‹ à¤®à¤¨ à¤®à¥‡à¤‚ à¤¹à¥ˆ, à¤¸à¤¾à¤à¤¾ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get takePauseTitle => 'एक छोटा विराम लें';
+  String get takePauseTitle => 'à¤à¤• à¤›à¥‹à¤Ÿà¤¾ à¤µà¤¿à¤°à¤¾à¤® à¤²à¥‡à¤‚';
 
   @override
-  String get takePauseSubtitle => 'सांस लेने और तरोताजा होने के लिए एक मिनट।';
+  String get takePauseSubtitle => 'à¤¸à¤¾à¤‚à¤¸ à¤²à¥‡à¤¨à¥‡ à¤”à¤° à¤¤à¤°à¥‹à¤¤à¤¾à¤œà¤¾ à¤¹à¥‹à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤®à¤¿à¤¨à¤Ÿà¥¤';
 
   @override
-  String get exploreTitle => 'खोजें';
+  String get exploreTitle => 'à¤–à¥‹à¤œà¥‡à¤‚';
 
   @override
-  String get exploreSubtitle => 'मददगार संसाधन';
+  String get exploreSubtitle => 'à¤®à¤¦à¤¦à¤—à¤¾à¤° à¤¸à¤‚à¤¸à¤¾à¤§à¤¨';
 
   @override
-  String get myJournalTitle => 'मेरी डायरी';
+  String get myJournalTitle => 'à¤®à¥‡à¤°à¥€ à¤¡à¤¾à¤¯à¤°à¥€';
 
   @override
-  String get myJournalSubtitle => 'निजी तौर पर लिखें';
+  String get myJournalSubtitle => 'à¤¨à¤¿à¤œà¥€ à¤¤à¥Œà¤° à¤ªà¤° à¤²à¤¿à¤–à¥‡à¤‚';
 
   @override
-  String get findSupportTitle => 'सहयोग प्राप्त करें';
+  String get findSupportTitle => 'à¤¸à¤¹à¤¯à¥‹à¤— à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get findSupportSubtitle => 'विश्वसनीय सहायता विकल्प';
+  String get findSupportSubtitle => 'à¤µà¤¿à¤¶à¥à¤µà¤¸à¤¨à¥€à¤¯ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤µà¤¿à¤•à¤²à¥à¤ª';
 
   @override
-  String get gentleThoughtTitle => 'एक प्रेरक विचार 🌱';
+  String get gentleThoughtTitle => 'à¤à¤• à¤ªà¥à¤°à¥‡à¤°à¤• à¤µà¤¿à¤šà¤¾à¤° ðŸŒ±';
 
   @override
-  String get gentleThoughtQuote => 'मुश्किल दिनों में भी छोटे कदम मायने रखते हैं।';
+  String get gentleThoughtQuote => 'à¤®à¥à¤¶à¥à¤•à¤¿à¤² à¤¦à¤¿à¤¨à¥‹à¤‚ à¤®à¥‡à¤‚ à¤­à¥€ à¤›à¥‹à¤Ÿà¥‡ à¤•à¤¦à¤® à¤®à¤¾à¤¯à¤¨à¥‡ à¤°à¤–à¤¤à¥‡ à¤¹à¥ˆà¤‚à¥¤';
 
   // Talk Screen
   @override
-  String get talkHeaderSubtitle => 'अपने मन की बात साझा करने के लिए एक सुरक्षित स्थान।';
+  String get talkHeaderSubtitle => 'à¤…à¤ªà¤¨à¥‡ à¤®à¤¨ à¤•à¥€ à¤¬à¤¾à¤¤ à¤¸à¤¾à¤à¤¾ à¤•à¤°à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤¸à¥à¤¥à¤¾à¤¨à¥¤';
 
   @override
-  String get talkBannerEyebrow => 'आपका व्यक्तिगत मानसिक स्वास्थ्य स्थान';
+  String get talkBannerEyebrow => 'à¤†à¤ªà¤•à¤¾ à¤µà¥à¤¯à¤•à¥à¤¤à¤¿à¤—à¤¤ à¤®à¤¾à¤¨à¤¸à¤¿à¤• à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯ à¤¸à¥à¤¥à¤¾à¤¨';
 
   @override
-  String get talkBannerTitle => 'आप जहां भी हैं, वहीं से शुरुआत कर सकते हैं।';
+  String get talkBannerTitle => 'à¤†à¤ª à¤œà¤¹à¤¾à¤‚ à¤­à¥€ à¤¹à¥ˆà¤‚, à¤µà¤¹à¥€à¤‚ à¤¸à¥‡ à¤¶à¥à¤°à¥à¤†à¤¤ à¤•à¤° à¤¸à¤•à¤¤à¥‡ à¤¹à¥ˆà¤‚à¥¤';
 
   @override
-  String get talkBannerSubtitle => 'सही शब्दों को खोजने का कोई दबाव नहीं है।';
+  String get talkBannerSubtitle => 'à¤¸à¤¹à¥€ à¤¶à¤¬à¥à¤¦à¥‹à¤‚ à¤•à¥‹ à¤–à¥‹à¤œà¤¨à¥‡ à¤•à¤¾ à¤•à¥‹à¤ˆ à¤¦à¤¬à¤¾à¤µ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆà¥¤';
 
   @override
-  String get talkPromptLabel => 'आप इनसे भी शुरुआत कर सकते हैं:';
+  String get talkPromptLabel => 'à¤†à¤ª à¤‡à¤¨à¤¸à¥‡ à¤­à¥€ à¤¶à¥à¤°à¥à¤†à¤¤ à¤•à¤° à¤¸à¤•à¤¤à¥‡ à¤¹à¥ˆà¤‚:';
 
   @override
-  String get talkPromptWork => 'काम या पढ़ाई';
+  String get talkPromptWork => 'à¤•à¤¾à¤® à¤¯à¤¾ à¤ªà¤¢à¤¼à¤¾à¤ˆ';
 
   @override
-  String get talkPromptFeelings => 'मेरी भावनाएं';
+  String get talkPromptFeelings => 'à¤®à¥‡à¤°à¥€ à¤­à¤¾à¤µà¤¨à¤¾à¤à¤‚';
 
   @override
-  String get talkPromptVent => 'मुझे बस मन की बात कहनी है';
+  String get talkPromptVent => 'à¤®à¥à¤à¥‡ à¤¬à¤¸ à¤®à¤¨ à¤•à¥€ à¤¬à¤¾à¤¤ à¤•à¤¹à¤¨à¥€ à¤¹à¥ˆ';
 
   @override
-  String get talkInputHint => 'जो मन में है, यहां लिखें...';
+  String get talkInputHint => 'à¤œà¥‹ à¤®à¤¨ à¤®à¥‡à¤‚ à¤¹à¥ˆ, à¤¯à¤¹à¤¾à¤‚ à¤²à¤¿à¤–à¥‡à¤‚...';
 
   @override
-  String get talkDisclaimer => 'एक सहयोगी स्थान, पेशेवर चिकित्सा देखभाल का विकल्प नहीं।';
+  String get talkDisclaimer => 'à¤à¤• à¤¸à¤¹à¤¯à¥‹à¤—à¥€ à¤¸à¥à¤¥à¤¾à¤¨, à¤ªà¥‡à¤¶à¥‡à¤µà¤° à¤šà¤¿à¤•à¤¿à¤¤à¥à¤¸à¤¾ à¤¦à¥‡à¤–à¤­à¤¾à¤² à¤•à¤¾ à¤µà¤¿à¤•à¤²à¥à¤ª à¤¨à¤¹à¥€à¤‚à¥¤';
 
   @override
-  String get talkInitialGreeting => 'नमस्ते 🌿 मैं सुनने के लिए यहां हूं। आज आपके मन में क्या चल रहा है?';
+  String get talkInitialGreeting => 'à¤¨à¤®à¤¸à¥à¤¤à¥‡ ðŸŒ¿ à¤®à¥ˆà¤‚ à¤¸à¥à¤¨à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤¯à¤¹à¤¾à¤‚ à¤¹à¥‚à¤‚à¥¤ à¤†à¤œ à¤†à¤ªà¤•à¥‡ à¤®à¤¨ à¤®à¥‡à¤‚ à¤•à¥à¤¯à¤¾ à¤šà¤² à¤°à¤¹à¤¾ à¤¹à¥ˆ?';
 
   @override
-  String get talkInitialUser => 'मैं पिछले कुछ समय से थोड़ा अभिभूत महसूस कर रहा हूं।';
+  String get talkInitialUser => 'à¤®à¥ˆà¤‚ à¤ªà¤¿à¤›à¤²à¥‡ à¤•à¥à¤› à¤¸à¤®à¤¯ à¤¸à¥‡ à¤¥à¥‹à¤¡à¤¼à¤¾ à¤…à¤­à¤¿à¤­à¥‚à¤¤ à¤®à¤¹à¤¸à¥‚à¤¸ à¤•à¤° à¤°à¤¹à¤¾ à¤¹à¥‚à¤‚à¥¤';
 
   @override
-  String get talkInitialAiReply => 'यह वाकई भारी लग सकता है। क्या आप बताना चाहेंगे कि कौन सी बात भारी लग रही है?';
+  String get talkInitialAiReply => 'à¤¯à¤¹ à¤µà¤¾à¤•à¤ˆ à¤­à¤¾à¤°à¥€ à¤²à¤— à¤¸à¤•à¤¤à¤¾ à¤¹à¥ˆà¥¤ à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤¬à¤¤à¤¾à¤¨à¤¾ à¤šà¤¾à¤¹à¥‡à¤‚à¤—à¥‡ à¤•à¤¿ à¤•à¥Œà¤¨ à¤¸à¥€ à¤¬à¤¾à¤¤ à¤­à¤¾à¤°à¥€ à¤²à¤— à¤°à¤¹à¥€ à¤¹à¥ˆ?';
 
   // Pause Screen
   @override
-  String get pauseHeaderTitle => 'थोड़ा ठहरिए 🌿';
+  String get pauseHeaderTitle => 'à¤¥à¥‹à¤¡à¤¼à¤¾ à¤ à¤¹à¤°à¤¿à¤ ðŸŒ¿';
 
   @override
-  String get pauseHeaderSubtitle => 'खास आपके लिए थोड़ा सा शांत समय।';
+  String get pauseHeaderSubtitle => 'à¤–à¤¾à¤¸ à¤†à¤ªà¤•à¥‡ à¤²à¤¿à¤ à¤¥à¥‹à¤¡à¤¼à¤¾ à¤¸à¤¾ à¤¶à¤¾à¤‚à¤¤ à¤¸à¤®à¤¯à¥¤';
 
   @override
-  String get pauseMomentOfCalm => 'आपके सुकून का पल';
+  String get pauseMomentOfCalm => 'à¤†à¤ªà¤•à¥‡ à¤¸à¥à¤•à¥‚à¤¨ à¤•à¤¾ à¤ªà¤²';
 
   @override
-  String get pauseSlowDownTitle => 'चलिए सब कुछ थोड़ा धीमा करते हैं।';
+  String get pauseSlowDownTitle => 'à¤šà¤²à¤¿à¤ à¤¸à¤¬ à¤•à¥à¤› à¤¥à¥‹à¤¡à¤¼à¤¾ à¤§à¥€à¤®à¤¾ à¤•à¤°à¤¤à¥‡ à¤¹à¥ˆà¤‚à¥¤';
 
   @override
-  String get pauseSlowDownSubtitle => 'अभी सब कुछ सुलझाना ज़रूरी नहीं है।';
+  String get pauseSlowDownSubtitle => 'à¤…à¤­à¥€ à¤¸à¤¬ à¤•à¥à¤› à¤¸à¥à¤²à¤à¤¾à¤¨à¤¾ à¤œà¤¼à¤°à¥‚à¤°à¥€ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆà¥¤';
 
   @override
-  String get pauseMindfulBreathingTitle => 'सजग श्वास (माइंडफुल ब्रीदिंग)';
+  String get pauseMindfulBreathingTitle => 'à¤¸à¤œà¤— à¤¶à¥à¤µà¤¾à¤¸ (à¤®à¤¾à¤‡à¤‚à¤¡à¤«à¥à¤² à¤¬à¥à¤°à¥€à¤¦à¤¿à¤‚à¤—)';
 
   @override
-  String get pauseMindfulBreathingSubtitle => '1 मिनट • सहज और गहरी सांस';
+  String get pauseMindfulBreathingSubtitle => '1 à¤®à¤¿à¤¨à¤Ÿ â€¢ à¤¸à¤¹à¤œ à¤”à¤° à¤—à¤¹à¤°à¥€ à¤¸à¤¾à¤‚à¤¸';
 
   @override
-  String get pauseStartBreathingButton => 'श्वास अभ्यास शुरू करें →';
+  String get pauseStartBreathingButton => 'à¤¶à¥à¤µà¤¾à¤¸ à¤…à¤­à¥à¤¯à¤¾à¤¸ à¤¶à¥à¤°à¥‚ à¤•à¤°à¥‡à¤‚ â†’';
 
   @override
-  String get pauseChooseTitle => 'अपनी पसंद का ठहराव चुनें';
+  String get pauseChooseTitle => 'à¤…à¤ªà¤¨à¥€ à¤ªà¤¸à¤‚à¤¦ à¤•à¤¾ à¤ à¤¹à¤°à¤¾à¤µ à¤šà¥à¤¨à¥‡à¤‚';
 
   @override
-  String get pauseBreatheCardTitle => 'सांसें';
+  String get pauseBreatheCardTitle => 'à¤¸à¤¾à¤‚à¤¸à¥‡à¤‚';
 
   @override
-  String get pauseBreatheCardSubtitle => 'धीमी, शांत सांसें';
+  String get pauseBreatheCardSubtitle => 'à¤§à¥€à¤®à¥€, à¤¶à¤¾à¤‚à¤¤ à¤¸à¤¾à¤‚à¤¸à¥‡à¤‚';
 
   @override
-  String get pauseGroundCardTitle => 'स्थिरता';
+  String get pauseGroundCardTitle => 'à¤¸à¥à¤¥à¤¿à¤°à¤¤à¤¾';
 
   @override
-  String get pauseGroundCardSubtitle => 'वर्तमान से जुड़ें';
+  String get pauseGroundCardSubtitle => 'à¤µà¤°à¥à¤¤à¤®à¤¾à¤¨ à¤¸à¥‡ à¤œà¥à¤¡à¤¼à¥‡à¤‚';
 
   @override
-  String get pauseRelaxCardTitle => 'रिलैक्स';
+  String get pauseRelaxCardTitle => 'à¤°à¤¿à¤²à¥ˆà¤•à¥à¤¸';
 
   @override
-  String get pauseRelaxCardSubtitle => 'तनाव को दूर करें';
+  String get pauseRelaxCardSubtitle => 'à¤¤à¤¨à¤¾à¤µ à¤•à¥‹ à¤¦à¥‚à¤° à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get pauseReminderTitle => 'एक कोमल याद';
+  String get pauseReminderTitle => 'à¤à¤• à¤•à¥‹à¤®à¤² à¤¯à¤¾à¤¦';
 
   @override
-  String get pauseReminderBody => 'हर चीज़ को एक-एक पल करके जीना बिल्कुल ठीक है।';
+  String get pauseReminderBody => 'à¤¹à¤° à¤šà¥€à¤œà¤¼ à¤•à¥‹ à¤à¤•-à¤à¤• à¤ªà¤² à¤•à¤°à¤•à¥‡ à¤œà¥€à¤¨à¤¾ à¤¬à¤¿à¤²à¥à¤•à¥à¤² à¤ à¥€à¤• à¤¹à¥ˆà¥¤';
 
   @override
-  String get pauseBreatheIn => 'गहरी सांस अंदर लें...';
+  String get pauseBreatheIn => 'à¤—à¤¹à¤°à¥€ à¤¸à¤¾à¤‚à¤¸ à¤…à¤‚à¤¦à¤° à¤²à¥‡à¤‚...';
 
   @override
-  String get pauseHold => 'सहजता से रोकें...';
+  String get pauseHold => 'à¤¸à¤¹à¤œà¤¤à¤¾ à¤¸à¥‡ à¤°à¥‹à¤•à¥‡à¤‚...';
 
   @override
-  String get pauseBreatheOut => 'धीरे से सांस छोड़ें...';
+  String get pauseBreatheOut => 'à¤§à¥€à¤°à¥‡ à¤¸à¥‡ à¤¸à¤¾à¤‚à¤¸ à¤›à¥‹à¤¡à¤¼à¥‡à¤‚...';
 
   @override
-  String get pauseRest => 'विश्राम करें...';
+  String get pauseRest => 'à¤µà¤¿à¤¶à¥à¤°à¤¾à¤® à¤•à¤°à¥‡à¤‚...';
 
   @override
-  String get pauseReset => 'रीसेट';
+  String get pauseReset => 'à¤°à¥€à¤¸à¥‡à¤Ÿ';
 
   @override
-  String get pausePause => 'रोकें';
+  String get pausePause => 'à¤°à¥‹à¤•à¥‡à¤‚';
 
   @override
-  String get pauseResume => 'जारी रखें';
+  String get pauseResume => 'à¤œà¤¾à¤°à¥€ à¤°à¤–à¥‡à¤‚';
 
   @override
-  String get pauseDone => 'बहुत बढ़िया! इस शांति को अपने साथ रखें।';
+  String get pauseDone => 'à¤¬à¤¹à¥à¤¤ à¤¬à¤¢à¤¼à¤¿à¤¯à¤¾! à¤‡à¤¸ à¤¶à¤¾à¤‚à¤¤à¤¿ à¤•à¥‹ à¤…à¤ªà¤¨à¥‡ à¤¸à¤¾à¤¥ à¤°à¤–à¥‡à¤‚à¥¤';
 
   // Journal Screen Blueprint
   @override
-  String get journalHeaderTitle => 'मेरी डायरी 🌿';
+  String get journalHeaderTitle => 'à¤®à¥‡à¤°à¥€ à¤¡à¤¾à¤¯à¤°à¥€ ðŸŒ¿';
 
   @override
-  String get journalHeaderSubtitle => 'आपके विचारों के लिए एक शांत जगह।';
+  String get journalHeaderSubtitle => 'à¤†à¤ªà¤•à¥‡ à¤µà¤¿à¤šà¤¾à¤°à¥‹à¤‚ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤¶à¤¾à¤‚à¤¤ à¤œà¤—à¤¹à¥¤';
 
   @override
-  String get journalHowFeelingToday => 'आज आप कैसा महसूस कर रहे हैं?';
+  String get journalHowFeelingToday => 'à¤†à¤œ à¤†à¤ª à¤•à¥ˆà¤¸à¤¾ à¤®à¤¹à¤¸à¥‚à¤¸ à¤•à¤° à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚?';
 
   @override
-  String get journalCheckInSubtitle => 'एक पल निकालकर खुद से जुड़ें।';
+  String get journalCheckInSubtitle => 'à¤à¤• à¤ªà¤² à¤¨à¤¿à¤•à¤¾à¤²à¤•à¤° à¤–à¥à¤¦ à¤¸à¥‡ à¤œà¥à¤¡à¤¼à¥‡à¤‚à¥¤';
 
   @override
-  String get journalWriteNewEntryButton => '+ नई डायरी लिखें';
+  String get journalWriteNewEntryButton => '+ à¤¨à¤ˆ à¤¡à¤¾à¤¯à¤°à¥€ à¤²à¤¿à¤–à¥‡à¤‚';
 
   @override
-  String get journalMoodGood => 'अच्छा';
+  String get journalMoodGood => 'à¤…à¤šà¥à¤›à¤¾';
 
   @override
-  String get journalMoodCalm => 'शांत';
+  String get journalMoodCalm => 'à¤¶à¤¾à¤‚à¤¤';
 
   @override
-  String get journalMoodLow => 'उदास';
+  String get journalMoodLow => 'à¤‰à¤¦à¤¾à¤¸';
 
   @override
-  String get journalMoodAnxious => 'चिंतित';
+  String get journalMoodAnxious => 'à¤šà¤¿à¤‚à¤¤à¤¿à¤¤';
 
   @override
-  String get journalYourReflections => 'आपके विचार और डायरी';
+  String get journalYourReflections => 'à¤†à¤ªà¤•à¥‡ à¤µà¤¿à¤šà¤¾à¤° à¤”à¤° à¤¡à¤¾à¤¯à¤°à¥€';
 
   @override
-  String get journalViewAll => 'सभी देखें';
+  String get journalViewAll => 'à¤¸à¤­à¥€ à¤¦à¥‡à¤–à¥‡à¤‚';
 
   @override
-  String get journalPrivateBadge => 'निजी डायरी';
+  String get journalPrivateBadge => 'à¤¨à¤¿à¤œà¥€ à¤¡à¤¾à¤¯à¤°à¥€';
 
   @override
-  String get journalEmptyTitle => 'अभी तक कोई डायरी नहीं';
+  String get journalEmptyTitle => 'à¤…à¤­à¥€ à¤¤à¤• à¤•à¥‹à¤ˆ à¤¡à¤¾à¤¯à¤°à¥€ à¤¨à¤¹à¥€à¤‚';
 
   @override
   String get journalEmptySubtitle =>
-      'खुलकर लिखें। यह कोना पूरी तरह आपका है और केवल आपके डिवाइस पर सुरक्षित है।';
+      'à¤–à¥à¤²à¤•à¤° à¤²à¤¿à¤–à¥‡à¤‚à¥¤ à¤¯à¤¹ à¤•à¥‹à¤¨à¤¾ à¤ªà¥‚à¤°à¥€ à¤¤à¤°à¤¹ à¤†à¤ªà¤•à¤¾ à¤¹à¥ˆ à¤”à¤° à¤•à¥‡à¤µà¤² à¤†à¤ªà¤•à¥‡ à¤¡à¤¿à¤µà¤¾à¤‡à¤¸ à¤ªà¤° à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤¹à¥ˆà¥¤';
 
   @override
-  String get journalNewEntryTitle => 'नई डायरी प्रविष्टि';
+  String get journalNewEntryTitle => 'à¤¨à¤ˆ à¤¡à¤¾à¤¯à¤°à¥€ à¤ªà¥à¤°à¤µà¤¿à¤·à¥à¤Ÿà¤¿';
 
   @override
-  String get journalEditEntryTitle => 'डायरी संपादित करें';
+  String get journalEditEntryTitle => 'à¤¡à¤¾à¤¯à¤°à¥€ à¤¸à¤‚à¤ªà¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get journalSave => 'सहेजें';
+  String get journalSave => 'à¤¸à¤¹à¥‡à¤œà¥‡à¤‚';
 
   @override
-  String get journalTitleLabel => 'अपनी डायरी को एक शीर्षक दें';
+  String get journalTitleLabel => 'à¤…à¤ªà¤¨à¥€ à¤¡à¤¾à¤¯à¤°à¥€ à¤•à¥‹ à¤à¤• à¤¶à¥€à¤°à¥à¤·à¤• à¤¦à¥‡à¤‚';
 
   @override
-  String get journalTitleHint => 'उदा. आज का एक छोटा अनुभव...';
+  String get journalTitleHint => 'à¤‰à¤¦à¤¾. à¤†à¤œ à¤•à¤¾ à¤à¤• à¤›à¥‹à¤Ÿà¤¾ à¤…à¤¨à¥à¤­à¤µ...';
 
   @override
-  String get journalBodyLabel => 'आपके मन में क्या चल रहा है?';
+  String get journalBodyLabel => 'à¤†à¤ªà¤•à¥‡ à¤®à¤¨ à¤®à¥‡à¤‚ à¤•à¥à¤¯à¤¾ à¤šà¤² à¤°à¤¹à¤¾ à¤¹à¥ˆ?';
 
   @override
-  String get journalBodyHint => 'खुलकर लिखें। यह स्थान सिर्फ आपका है...';
+  String get journalBodyHint => 'à¤–à¥à¤²à¤•à¤° à¤²à¤¿à¤–à¥‡à¤‚à¥¤ à¤¯à¤¹ à¤¸à¥à¤¥à¤¾à¤¨ à¤¸à¤¿à¤°à¥à¤« à¤†à¤ªà¤•à¤¾ à¤¹à¥ˆ...';
 
   @override
-  String get journalMoodOptionalLabel => 'आप कैसा महसूस कर रहे हैं? (वैकल्पिक)';
+  String get journalMoodOptionalLabel => 'à¤†à¤ª à¤•à¥ˆà¤¸à¤¾ à¤®à¤¹à¤¸à¥‚à¤¸ à¤•à¤° à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚? (à¤µà¥ˆà¤•à¤²à¥à¤ªà¤¿à¤•)';
 
   @override
-  String get journalSaveEntryButton => 'डायरी सहेजें';
+  String get journalSaveEntryButton => 'à¤¡à¤¾à¤¯à¤°à¥€ à¤¸à¤¹à¥‡à¤œà¥‡à¤‚';
 
   @override
-  String get journalPrivacyFootnote => 'आपकी डायरी पूरी तरह निजी और सुरक्षित है।';
+  String get journalPrivacyFootnote => 'à¤†à¤ªà¤•à¥€ à¤¡à¤¾à¤¯à¤°à¥€ à¤ªà¥‚à¤°à¥€ à¤¤à¤°à¤¹ à¤¨à¤¿à¤œà¥€ à¤”à¤° à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤¹à¥ˆà¥¤';
 
   @override
-  String get journalReadEntry => 'डायरी पढ़ें';
+  String get journalReadEntry => 'à¤¡à¤¾à¤¯à¤°à¥€ à¤ªà¤¢à¤¼à¥‡à¤‚';
 
   @override
-  String get journalEdit => 'संपादित करें';
+  String get journalEdit => 'à¤¸à¤‚à¤ªà¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get journalDelete => 'हटाएं';
+  String get journalDelete => 'à¤¹à¤Ÿà¤¾à¤à¤‚';
 
   @override
-  String get journalDeleteConfirmTitle => 'क्या यह डायरी हटाएं?';
+  String get journalDeleteConfirmTitle => 'à¤•à¥à¤¯à¤¾ à¤¯à¤¹ à¤¡à¤¾à¤¯à¤°à¥€ à¤¹à¤Ÿà¤¾à¤à¤‚?';
 
   @override
   String get journalDeleteConfirmMessage =>
-      'क्या आप वाकई इस डायरी को हटाना चाहते हैं? यह वापस नहीं आएगी।';
+      'à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤µà¤¾à¤•à¤ˆ à¤‡à¤¸ à¤¡à¤¾à¤¯à¤°à¥€ à¤•à¥‹ à¤¹à¤Ÿà¤¾à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚? à¤¯à¤¹ à¤µà¤¾à¤ªà¤¸ à¤¨à¤¹à¥€à¤‚ à¤†à¤à¤—à¥€à¥¤';
 
   @override
-  String get journalCancel => 'रद्द करें';
+  String get journalCancel => 'à¤°à¤¦à¥à¤¦ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get journalSavedToast => 'डायरी सुरक्षित रूप से सहेज ली गई।';
+  String get journalSavedToast => 'à¤¡à¤¾à¤¯à¤°à¥€ à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤°à¥‚à¤ª à¤¸à¥‡ à¤¸à¤¹à¥‡à¤œ à¤²à¥€ à¤—à¤ˆà¥¤';
 
   @override
-  String get journalDeletedToast => 'डायरी हटा दी गई।';
+  String get journalDeletedToast => 'à¤¡à¤¾à¤¯à¤°à¥€ à¤¹à¤Ÿà¤¾ à¤¦à¥€ à¤—à¤ˆà¥¤';
 
   // Help Screen Blueprint
   @override
-  String get helpHeaderTitle => 'आप अकेले नहीं हैं 🌿';
+  String get helpHeaderTitle => 'à¤†à¤ª à¤…à¤•à¥‡à¤²à¥‡ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆà¤‚ ðŸŒ¿';
 
   @override
-  String get helpHeaderSubtitle => 'जब भी आपको जरूरत हो, सहायता उपलब्ध है।';
+  String get helpHeaderSubtitle => 'à¤œà¤¬ à¤­à¥€ à¤†à¤ªà¤•à¥‹ à¤œà¤°à¥‚à¤°à¤¤ à¤¹à¥‹, à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¹à¥ˆà¥¤';
 
   @override
-  String get helpHeroTitle => 'आपको किस प्रकार की सहायता चाहिए?';
+  String get helpHeroTitle => 'à¤†à¤ªà¤•à¥‹ à¤•à¤¿à¤¸ à¤ªà¥à¤°à¤•à¤¾à¤° à¤•à¥€ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤šà¤¾à¤¹à¤¿à¤?';
 
   @override
-  String get helpHeroSubtitle => 'वह विकल्प चुनें जो आपके लिए सही लगे।';
+  String get helpHeroSubtitle => 'à¤µà¤¹ à¤µà¤¿à¤•à¤²à¥à¤ª à¤šà¥à¤¨à¥‡à¤‚ à¤œà¥‹ à¤†à¤ªà¤•à¥‡ à¤²à¤¿à¤ à¤¸à¤¹à¥€ à¤²à¤—à¥‡à¥¤';
 
   @override
-  String get helpExploreSupportTitle => 'सहायता विकल्प';
+  String get helpExploreSupportTitle => 'à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤µà¤¿à¤•à¤²à¥à¤ª';
 
   @override
-  String get helpTalkSomeoneTitle => 'किसी से बात करें';
+  String get helpTalkSomeoneTitle => 'à¤•à¤¿à¤¸à¥€ à¤¸à¥‡ à¤¬à¤¾à¤¤ à¤•à¤°à¥‡à¤‚';
 
   @override
   String get helpTalkSomeoneSubtitle =>
-      'विश्वसनीय सहायता सेवाओं और संपर्क विकल्पों को खोजें।';
+      'à¤µà¤¿à¤¶à¥à¤µà¤¸à¤¨à¥€à¤¯ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤¸à¥‡à¤µà¤¾à¤“à¤‚ à¤”à¤° à¤¸à¤‚à¤ªà¤°à¥à¤• à¤µà¤¿à¤•à¤²à¥à¤ªà¥‹à¤‚ à¤•à¥‹ à¤–à¥‹à¤œà¥‡à¤‚à¥¤';
 
   @override
-  String get helpResourcesTitle => 'उपयोगी सामग्री';
+  String get helpResourcesTitle => 'à¤‰à¤ªà¤¯à¥‹à¤—à¥€ à¤¸à¤¾à¤®à¤—à¥à¤°à¥€';
 
   @override
   String get helpResourcesSubtitle =>
-      'मानसिक स्वास्थ्य गाइड और उपयोगी जानकारी पढ़ें।';
+      'à¤®à¤¾à¤¨à¤¸à¤¿à¤• à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯ à¤—à¤¾à¤‡à¤¡ à¤”à¤° à¤‰à¤ªà¤¯à¥‹à¤—à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤ªà¤¢à¤¼à¥‡à¤‚à¥¤';
 
   @override
-  String get helpFaqsTitle => 'अक्सर पूछे जाने वाले सवाल';
+  String get helpFaqsTitle => 'à¤…à¤•à¥à¤¸à¤° à¤ªà¥‚à¤›à¥‡ à¤œà¤¾à¤¨à¥‡ à¤µà¤¾à¤²à¥‡ à¤¸à¤µà¤¾à¤²';
 
   @override
   String get helpFaqsSubtitle =>
-      'गोपनीयता, डायरी और ऐप सुविधाओं के बारे में जानें।';
+      'à¤—à¥‹à¤ªà¤¨à¥€à¤¯à¤¤à¤¾, à¤¡à¤¾à¤¯à¤°à¥€ à¤”à¤° à¤à¤ª à¤¸à¥à¤µà¤¿à¤§à¤¾à¤“à¤‚ à¤•à¥‡ à¤¬à¤¾à¤°à¥‡ à¤®à¥‡à¤‚ à¤œà¤¾à¤¨à¥‡à¤‚à¥¤';
 
   @override
-  String get helpUrgentCardTitle => 'तुरंत सहायता चाहिए?';
+  String get helpUrgentCardTitle => 'à¤¤à¥à¤°à¤‚à¤¤ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤šà¤¾à¤¹à¤¿à¤?';
 
   @override
   String get helpUrgentCardSubtitle =>
-      'यदि आप या कोई अन्य तत्काल खतरे में है, तो स्थानीय आपातकालीन सेवाओं या किसी भरोसेमंद व्यक्ति से संपर्क करें।';
+      'à¤¯à¤¦à¤¿ à¤†à¤ª à¤¯à¤¾ à¤•à¥‹à¤ˆ à¤…à¤¨à¥à¤¯ à¤¤à¤¤à¥à¤•à¤¾à¤² à¤–à¤¤à¤°à¥‡ à¤®à¥‡à¤‚ à¤¹à¥ˆ, à¤¤à¥‹ à¤¸à¥à¤¥à¤¾à¤¨à¥€à¤¯ à¤†à¤ªà¤¾à¤¤à¤•à¤¾à¤²à¥€à¤¨ à¤¸à¥‡à¤µà¤¾à¤“à¤‚ à¤¯à¤¾ à¤•à¤¿à¤¸à¥€ à¤­à¤°à¥‹à¤¸à¥‡à¤®à¤‚à¤¦ à¤µà¥à¤¯à¤•à¥à¤¤à¤¿ à¤¸à¥‡ à¤¸à¤‚à¤ªà¤°à¥à¤• à¤•à¤°à¥‡à¤‚à¥¤';
 
   @override
-  String get helpUrgentButton => 'आपातकालीन सहायता विकल्प देखें →';
+  String get helpUrgentButton => 'à¤†à¤ªà¤¾à¤¤à¤•à¤¾à¤²à¥€à¤¨ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤µà¤¿à¤•à¤²à¥à¤ª à¤¦à¥‡à¤–à¥‡à¤‚ â†’';
 
   @override
-  String get helpUrgentModalTitle => 'आपातकालीन सहायता और हेल्पलाइन';
+  String get helpUrgentModalTitle => 'à¤†à¤ªà¤¾à¤¤à¤•à¤¾à¤²à¥€à¤¨ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤”à¤° à¤¹à¥‡à¤²à¥à¤ªà¤²à¤¾à¤‡à¤¨';
 
   @override
   String get helpUrgentModalSubtitle =>
-      'पूरे भारत में 24/7 मुफ़्त और गोपनीय सहायता। सीधे कॉल करने के लिए टैप करें।';
+      'à¤ªà¥‚à¤°à¥‡ à¤­à¤¾à¤°à¤¤ à¤®à¥‡à¤‚ 24/7 à¤®à¥à¤«à¤¼à¥à¤¤ à¤”à¤° à¤—à¥‹à¤ªà¤¨à¥€à¤¯ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾à¥¤ à¤¸à¥€à¤§à¥‡ à¤•à¥‰à¤² à¤•à¤°à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤Ÿà¥ˆà¤ª à¤•à¤°à¥‡à¤‚à¥¤';
 
   @override
   String get helpDisclaimer =>
-      'नवसंजीवनी भावनात्मक भलाई और आत्म-देखभाल के साधन प्रदान करती है। यह चिकित्सीय उपचार, नैदानिक निदान या आपातकालीन सेवा का विकल्प नहीं है।';
+      'à¤¨à¤µà¤¸à¤‚à¤œà¥€à¤µà¤¨à¥€ à¤­à¤¾à¤µà¤¨à¤¾à¤¤à¥à¤®à¤• à¤­à¤²à¤¾à¤ˆ à¤”à¤° à¤†à¤¤à¥à¤®-à¤¦à¥‡à¤–à¤­à¤¾à¤² à¤•à¥‡ à¤¸à¤¾à¤§à¤¨ à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤•à¤°à¤¤à¥€ à¤¹à¥ˆà¥¤ à¤¯à¤¹ à¤šà¤¿à¤•à¤¿à¤¤à¥à¤¸à¥€à¤¯ à¤‰à¤ªà¤šà¤¾à¤°, à¤¨à¥ˆà¤¦à¤¾à¤¨à¤¿à¤• à¤¨à¤¿à¤¦à¤¾à¤¨ à¤¯à¤¾ à¤†à¤ªà¤¾à¤¤à¤•à¤¾à¤²à¥€à¤¨ à¤¸à¥‡à¤µà¤¾ à¤•à¤¾ à¤µà¤¿à¤•à¤²à¥à¤ª à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆà¥¤';
 
   @override
-  String get helpCallAction => 'अभी कॉल करें';
+  String get helpCallAction => 'à¤…à¤­à¥€ à¤•à¥‰à¤² à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get helpTollFree => 'टोल-फ्री • 24/7';
+  String get helpTollFree => 'à¤Ÿà¥‹à¤²-à¤«à¥à¤°à¥€ â€¢ 24/7';
 
   // Profile Screen
   @override
-  String get yourProfileTitle => 'आपकी प्रोफ़ाइल';
+  String get yourProfileTitle => 'à¤†à¤ªà¤•à¥€ à¤ªà¥à¤°à¥‹à¤«à¤¼à¤¾à¤‡à¤²';
 
   @override
-  String get manageAccountSubtitle => 'अपने खाते और प्राथमिकताओं का प्रबंधन करें';
+  String get manageAccountSubtitle => 'à¤…à¤ªà¤¨à¥‡ à¤–à¤¾à¤¤à¥‡ à¤”à¤° à¤ªà¥à¤°à¤¾à¤¥à¤®à¤¿à¤•à¤¤à¤¾à¤“à¤‚ à¤•à¤¾ à¤ªà¥à¤°à¤¬à¤‚à¤§à¤¨ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get personalInfoTitle => 'व्यक्तिगत जानकारी';
+  String get personalInfoTitle => 'à¤µà¥à¤¯à¤•à¥à¤¤à¤¿à¤—à¤¤ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€';
 
   @override
-  String get personalInfoSubtitle => 'नाम और प्रोफ़ाइल विवरण';
+  String get personalInfoSubtitle => 'à¤¨à¤¾à¤® à¤”à¤° à¤ªà¥à¤°à¥‹à¤«à¤¼à¤¾à¤‡à¤² à¤µà¤¿à¤µà¤°à¤£';
 
   @override
-  String get preferencesTitle => 'प्राथमिकताएं';
+  String get preferencesTitle => 'à¤ªà¥à¤°à¤¾à¤¥à¤®à¤¿à¤•à¤¤à¤¾à¤à¤‚';
 
   @override
-  String get preferencesSubtitle => 'भाषा और सुगमता';
+  String get preferencesSubtitle => 'à¤­à¤¾à¤·à¤¾ à¤”à¤° à¤¸à¥à¤—à¤®à¤¤à¤¾';
 
   @override
-  String get notificationsTitle => 'सूचनाएं';
+  String get notificationsTitle => 'à¤¸à¥‚à¤šà¤¨à¤¾à¤à¤‚';
 
   @override
-  String get notificationsSubtitle => 'रिमाइंडर और शांत घंटे';
+  String get notificationsSubtitle => 'à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤”à¤° à¤¶à¤¾à¤‚à¤¤ à¤˜à¤‚à¤Ÿà¥‡';
 
   @override
-  String get privacyConsentTitle => 'गोपनीयता और सहमति';
+  String get privacyConsentTitle => 'à¤—à¥‹à¤ªà¤¨à¥€à¤¯à¤¤à¤¾ à¤”à¤° à¤¸à¤¹à¤®à¤¤à¤¿';
 
   @override
-  String get privacyConsentSubtitle => 'डेटा विकल्प और AI नोटिस';
+  String get privacyConsentSubtitle => 'à¤¡à¥‡à¤Ÿà¤¾ à¤µà¤¿à¤•à¤²à¥à¤ª à¤”à¤° AI à¤¨à¥‹à¤Ÿà¤¿à¤¸';
 
   @override
-  String get downloadDataTitle => 'मेरा डेटा डाउनलोड करें';
+  String get downloadDataTitle => 'à¤®à¥‡à¤°à¤¾ à¤¡à¥‡à¤Ÿà¤¾ à¤¡à¤¾à¤‰à¤¨à¤²à¥‹à¤¡ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get downloadDataSubtitle => 'सुरक्षित डेटा निर्यात का अनुरोध करें';
+  String get downloadDataSubtitle => 'à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤¡à¥‡à¤Ÿà¤¾ à¤¨à¤¿à¤°à¥à¤¯à¤¾à¤¤ à¤•à¤¾ à¤…à¤¨à¥à¤°à¥‹à¤§ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get deleteAccountTitle => 'खाता हटाएं';
+  String get deleteAccountTitle => 'à¤–à¤¾à¤¤à¤¾ à¤¹à¤Ÿà¤¾à¤à¤‚';
 
   @override
-  String get deleteAccountSubtitle => 'खाता हमेशा के लिए हटाने का अनुरोध';
+  String get deleteAccountSubtitle => 'à¤–à¤¾à¤¤à¤¾ à¤¹à¤®à¥‡à¤¶à¤¾ à¤•à¥‡ à¤²à¤¿à¤ à¤¹à¤Ÿà¤¾à¤¨à¥‡ à¤•à¤¾ à¤…à¤¨à¥à¤°à¥‹à¤§';
 
   @override
-  String get helpAboutTitle => 'सहायता और जानकारी';
+  String get helpAboutTitle => 'à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤”à¤° à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€';
 
   @override
-  String get helpAboutSubtitle => 'सहायता, नीतियां और ऐप जानकारी';
+  String get helpAboutSubtitle => 'à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾, à¤¨à¥€à¤¤à¤¿à¤¯à¤¾à¤‚ à¤”à¤° à¤à¤ª à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€';
 
   @override
-  String get logOutTitle => 'लॉग आउट';
+  String get logOutTitle => 'à¤²à¥‰à¤— à¤†à¤‰à¤Ÿ';
 
   @override
-  String get logOutSubtitle => 'इस डिवाइस से साइन आउट करें';
+  String get logOutSubtitle => 'à¤‡à¤¸ à¤¡à¤¿à¤µà¤¾à¤‡à¤¸ à¤¸à¥‡ à¤¸à¤¾à¤‡à¤¨ à¤†à¤‰à¤Ÿ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get editProfileTitle => 'प्रोफ़ाइल संपादित करें';
+  String get editProfileTitle => 'à¤ªà¥à¤°à¥‹à¤«à¤¼à¤¾à¤‡à¤² à¤¸à¤‚à¤ªà¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¥‡à¤‚';
 
   @override
-  String get confirmLogOutDialog => 'क्या आप वाकई इस डिवाइस से साइन आउट करना चाहते हैं?';
+  String get confirmLogOutDialog => 'à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤µà¤¾à¤•à¤ˆ à¤‡à¤¸ à¤¡à¤¿à¤µà¤¾à¤‡à¤¸ à¤¸à¥‡ à¤¸à¤¾à¤‡à¤¨ à¤†à¤‰à¤Ÿ à¤•à¤°à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?';
 
   @override
   String get confirmDeleteAccountDialog =>
-      'स्थायी खाता विलोपन:\nआपकी सभी व्यक्तिगत डायरी, मूड प्रविष्टियाँ और बातचीत का इतिहास हमेशा के लिए हटा दिया जाएगा। यह क्रिया पूर्ववत नहीं की जा सकती। क्या आप जारी रखना चाहते हैं?';
+      'à¤¸à¥à¤¥à¤¾à¤¯à¥€ à¤–à¤¾à¤¤à¤¾ à¤µà¤¿à¤²à¥‹à¤ªà¤¨:\nà¤†à¤ªà¤•à¥€ à¤¸à¤­à¥€ à¤µà¥à¤¯à¤•à¥à¤¤à¤¿à¤—à¤¤ à¤¡à¤¾à¤¯à¤°à¥€, à¤®à¥‚à¤¡ à¤ªà¥à¤°à¤µà¤¿à¤·à¥à¤Ÿà¤¿à¤¯à¤¾à¤ à¤”à¤° à¤¬à¤¾à¤¤à¤šà¥€à¤¤ à¤•à¤¾ à¤‡à¤¤à¤¿à¤¹à¤¾à¤¸ à¤¹à¤®à¥‡à¤¶à¤¾ à¤•à¥‡ à¤²à¤¿à¤ à¤¹à¤Ÿà¤¾ à¤¦à¤¿à¤¯à¤¾ à¤œà¤¾à¤à¤—à¤¾à¥¤ à¤¯à¤¹ à¤•à¥à¤°à¤¿à¤¯à¤¾ à¤ªà¥‚à¤°à¥à¤µà¤µà¤¤ à¤¨à¤¹à¥€à¤‚ à¤•à¥€ à¤œà¤¾ à¤¸à¤•à¤¤à¥€à¥¤ à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤œà¤¾à¤°à¥€ à¤°à¤–à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?';
 }
+

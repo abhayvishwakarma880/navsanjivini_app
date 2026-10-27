@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -9,7 +9,7 @@ class ActionCard extends StatelessWidget {
   final String subtitle;
   final IconData icon;
   final VoidCallback onTap;
-  final Color? iconColor;
+  final color? iconcolor;
 
   const ActionCard({
     super.key,
@@ -17,16 +17,16 @@ class ActionCard extends StatelessWidget {
     required this.subtitle,
     required this.icon,
     required this.onTap,
-    this.iconColor,
+    this.iconcolor,
   });
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.surface,
+      color: Appcolors.surface,
       shape: RoundedRectangleBorder(
         borderRadius: AppRadius.radiusLg,
-        side: const BorderSide(color: AppColors.border),
+        side: const BorderSide(color: Appcolors.border),
       ),
       child: InkWell(
         onTap: onTap,
@@ -40,12 +40,12 @@ class ActionCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: (iconColor ?? AppColors.primary).withAlpha(25),
+                  color: (iconcolor ?? Appcolors.primary).withAlpha(25),
                   borderRadius: AppRadius.radiusMd,
                 ),
                 child: Icon(
                   icon,
-                  color: iconColor ?? AppColors.primary,
+                  color: iconcolor ?? Appcolors.primary,
                   size: 24,
                 ),
               ),
@@ -72,3 +72,4 @@ class ActionCard extends StatelessWidget {
     );
   }
 }
+

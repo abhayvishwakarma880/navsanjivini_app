@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_spacing.dart';
 import 'package:app/core/theme/app_text_styles.dart';
@@ -30,7 +30,7 @@ class _MoodCheckinScreenState extends State<MoodCheckinScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundcolor: Appcolors.background,
       appBar: AppBar(
         title: const Text('Mood Check-in'),
       ),
@@ -47,7 +47,7 @@ class _MoodCheckinScreenState extends State<MoodCheckinScreen> {
               const SizedBox(height: AppSpacing.xs),
               Text(
                 'Acknowledge what is present without trying to fix or evaluate it.',
-                style: AppTextStyles.bodyMedium.copyWith(color: AppColors.textSecondary),
+                style: AppTextStyles.bodyMedium.copyWith(color: Appcolors.textSecondary),
               ),
               const SizedBox(height: AppSpacing.lg),
 
@@ -95,3 +95,4 @@ class _MoodCheckinScreenState extends State<MoodCheckinScreen> {
     );
   }
 }
+

@@ -1,4 +1,4 @@
-/// Contract for all localized strings across Navsanjivini.
+﻿/// Contract for all localized strings across Navsanjivini.
 abstract class AppStrings {
   // App General
   String get appName;
@@ -63,6 +63,19 @@ abstract class AppStrings {
   String get loginSuccessMsg;
   String get registerSuccessMsg;
   String get demoOtpNotice;
+
+  // User & Doctor Login Flow
+  String get userLoginTitle;
+  String get doctorLoginTitle;
+  String get doctorLoginSubtitle;
+  String get doctorEmailLabel;
+  String get doctorEmailHint;
+  String get doctorLoginBtn;
+  String get areYouADoctor;
+  String get areYouAUser;
+  String get switchToDoctorLogin;
+  String get switchToUserLogin;
+  String get invalidDoctorEmail;
 
   // Navigation Bottom Tabs (5 Tabs)
   String get todayTab;
@@ -248,3 +261,4 @@ abstract class AppStrings {
   String get languageSettingTitle;
   String get privacyPolicyTitle;
 }
+

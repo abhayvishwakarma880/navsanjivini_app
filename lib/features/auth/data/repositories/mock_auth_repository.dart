@@ -1,4 +1,4 @@
-import 'package:app/core/constants/app_constants.dart';
+﻿import 'package:app/core/constants/app_constants.dart';
 import 'package:app/core/storage/storage_service.dart';
 import '../../domain/models/auth_result.dart';
 import '../../domain/models/auth_user.dart';
@@ -174,3 +174,4 @@ class _RegisteredAccount {
 
   const _RegisteredAccount({required this.user, required this.password});
 }
+

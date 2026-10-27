@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_spacing.dart';
 import 'package:app/core/theme/app_text_styles.dart';
@@ -13,7 +13,7 @@ class ProgressScreen extends StatelessWidget {
     final viewModel = ProgressViewModel();
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundcolor: Appcolors.background,
       appBar: AppBar(
         title: const Text('Your Growth & Well-being'),
       ),
@@ -25,7 +25,7 @@ class ProgressScreen extends StatelessWidget {
             const SizedBox(height: AppSpacing.xs),
             Text(
               'Gentle insights into your daily pauses and mindful reflections.',
-              style: AppTextStyles.bodyMedium.copyWith(color: AppColors.textSecondary),
+              style: AppTextStyles.bodyMedium.copyWith(color: Appcolors.textSecondary),
             ),
             const SizedBox(height: AppSpacing.lg),
             GrowthSummaryCard(
@@ -51,3 +51,4 @@ class ProgressScreen extends StatelessWidget {
     );
   }
 }
+

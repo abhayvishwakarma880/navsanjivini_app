@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/theme/app_colors.dart';
@@ -35,7 +35,7 @@ class _AuthScreenState extends State<AuthScreen> {
       listenable: vm,
       builder: (context, _) {
         return Scaffold(
-          backgroundColor: AppColors.background,
+          backgroundcolor: Appcolors.background,
           body: SafeArea(
             child: Center(
               child: SingleChildScrollView(
@@ -50,11 +50,11 @@ class _AuthScreenState extends State<AuthScreen> {
                         width: 68,
                         height: 68,
                         decoration: BoxDecoration(
-                          color: AppColors.primaryContainer,
+                          color: Appcolors.primaryContainer,
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(
-                              color: AppColors.primary.withAlpha(20),
+                              color: Appcolors.primary.withAlpha(20),
                               blurRadius: 16,
                               offset: const Offset(0, 6),
                             ),
@@ -62,7 +62,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         ),
                         child: const Icon(
                           Icons.spa_rounded,
-                          color: AppColors.primary,
+                          color: Appcolors.primary,
                           size: 36,
                         ),
                       ),
@@ -73,7 +73,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     Text(
                       strings.appName,
                       style: AppTextStyles.headlineSmall.copyWith(
-                        color: AppColors.primaryDark,
+                        color: Appcolors.primaryDark,
                         fontWeight: FontWeight.w800,
                       ),
                       textAlign: TextAlign.center,
@@ -89,7 +89,7 @@ class _AuthScreenState extends State<AuthScreen> {
                             : strings.registerSubtitle,
                         key: ValueKey<AuthMode>(vm.authMode),
                         style: AppTextStyles.bodySmall.copyWith(
-                          color: AppColors.textSecondary,
+                          color: Appcolors.textSecondary,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -108,15 +108,15 @@ class _AuthScreenState extends State<AuthScreen> {
                           vertical: AppSpacing.sm,
                         ),
                         decoration: BoxDecoration(
-                          color: AppColors.errorContainer,
+                          color: Appcolors.errorContainer,
                           borderRadius: AppRadius.radiusMd,
-                          border: Border.all(color: AppColors.error.withAlpha(50)),
+                          border: Border.all(color: Appcolors.error.withAlpha(50)),
                         ),
                         child: Row(
                           children: [
                             const Icon(
                               Icons.error_outline_rounded,
-                              color: AppColors.error,
+                              color: Appcolors.error,
                               size: 20,
                             ),
                             const SizedBox(width: AppSpacing.xs),
@@ -124,7 +124,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               child: Text(
                                 vm.errorMessage!,
                                 style: AppTextStyles.bodySmall.copyWith(
-                                  color: AppColors.error,
+                                  color: Appcolors.error,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -143,15 +143,15 @@ class _AuthScreenState extends State<AuthScreen> {
                           vertical: AppSpacing.sm,
                         ),
                         decoration: BoxDecoration(
-                          color: AppColors.primaryContainer,
+                          color: Appcolors.primaryContainer,
                           borderRadius: AppRadius.radiusMd,
-                          border: Border.all(color: AppColors.primary.withAlpha(50)),
+                          border: Border.all(color: Appcolors.primary.withAlpha(50)),
                         ),
                         child: Row(
                           children: [
                             const Icon(
                               Icons.check_circle_outline_rounded,
-                              color: AppColors.primary,
+                              color: Appcolors.primary,
                               size: 20,
                             ),
                             const SizedBox(width: AppSpacing.xs),
@@ -159,7 +159,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               child: Text(
                                 vm.successMessage!,
                                 style: AppTextStyles.bodySmall.copyWith(
-                                  color: AppColors.primaryDark,
+                                  color: Appcolors.primaryDark,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -233,7 +233,7 @@ class _AuthScreenState extends State<AuthScreen> {
       height: 48,
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
-        color: AppColors.surfaceVariant,
+        color: Appcolors.surfaceVariant,
         borderRadius: BorderRadius.circular(14),
       ),
       child: LayoutBuilder(
@@ -251,11 +251,11 @@ class _AuthScreenState extends State<AuthScreen> {
                 width: tabWidth,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: AppColors.surface,
+                    color: Appcolors.surface,
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: AppColors.primaryDark.withAlpha(20),
+                        color: Appcolors.primaryDark.withAlpha(20),
                         blurRadius: 8,
                         offset: const Offset(0, 2),
                       ),
@@ -268,7 +268,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 children: [
                   Expanded(
                     child: Material(
-                      color: Colors.transparent,
+                      color: colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(10),
                         onTap: () {
@@ -280,8 +280,8 @@ class _AuthScreenState extends State<AuthScreen> {
                             duration: const Duration(milliseconds: 220),
                             style: AppTextStyles.titleMedium.copyWith(
                               color: isLogin
-                                  ? AppColors.primaryDark
-                                  : AppColors.textSecondary,
+                                  ? Appcolors.primaryDark
+                                  : Appcolors.textSecondary,
                               fontWeight:
                                   isLogin ? FontWeight.w700 : FontWeight.w500,
                             ),
@@ -293,7 +293,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                   Expanded(
                     child: Material(
-                      color: Colors.transparent,
+                      color: colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(10),
                         onTap: () {
@@ -305,8 +305,8 @@ class _AuthScreenState extends State<AuthScreen> {
                             duration: const Duration(milliseconds: 220),
                             style: AppTextStyles.titleMedium.copyWith(
                               color: !isLogin
-                                  ? AppColors.primaryDark
-                                  : AppColors.textSecondary,
+                                  ? Appcolors.primaryDark
+                                  : Appcolors.textSecondary,
                               fontWeight:
                                   !isLogin ? FontWeight.w700 : FontWeight.w500,
                             ),
@@ -448,7 +448,7 @@ class _AuthScreenState extends State<AuthScreen> {
               child: Text(
                 '${strings.otpScreenSubtitle}${vm.registerPhoneController.text}',
                 style: AppTextStyles.bodySmall.copyWith(
-                  color: AppColors.textSecondary,
+                  color: Appcolors.textSecondary,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -497,7 +497,7 @@ class _AuthScreenState extends State<AuthScreen> {
         Text(
           strings.createPasswordSubtitle,
           style: AppTextStyles.bodySmall.copyWith(
-            color: AppColors.textSecondary,
+            color: Appcolors.textSecondary,
           ),
         ),
         const SizedBox(height: AppSpacing.md),
@@ -556,7 +556,7 @@ class _AuthScreenState extends State<AuthScreen> {
         vertical: 4,
       ),
       decoration: BoxDecoration(
-        color: AppColors.surfaceVariant,
+        color: Appcolors.surfaceVariant,
         borderRadius: BorderRadius.circular(6),
       ),
       child: Row(
@@ -565,13 +565,13 @@ class _AuthScreenState extends State<AuthScreen> {
           const Icon(
             Icons.info_outline_rounded,
             size: 14,
-            color: AppColors.primary,
+            color: Appcolors.primary,
           ),
           const SizedBox(width: 4),
           Text(
             text,
             style: AppTextStyles.bodySmall.copyWith(
-              color: AppColors.primaryDark,
+              color: Appcolors.primaryDark,
               fontWeight: FontWeight.w600,
               fontSize: 11,
             ),
@@ -589,7 +589,7 @@ class _AuthScreenState extends State<AuthScreen> {
         Text(
           isLogin ? strings.dontHaveAccount : strings.alreadyHaveAccount,
           style: AppTextStyles.bodySmall.copyWith(
-            color: AppColors.textSecondary,
+            color: Appcolors.textSecondary,
           ),
         ),
         GestureDetector(
@@ -599,7 +599,7 @@ class _AuthScreenState extends State<AuthScreen> {
           child: Text(
             isLogin ? strings.registerNow : strings.loginNow,
             style: AppTextStyles.bodySmall.copyWith(
-              color: AppColors.primary,
+              color: Appcolors.primary,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -608,4 +608,5 @@ class _AuthScreenState extends State<AuthScreen> {
     );
   }
 }
+
 

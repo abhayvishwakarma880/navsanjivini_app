@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
 /// Centralized spacing tokens for consistent padding and margins.
 abstract final class AppSpacing {
@@ -25,3 +25,4 @@ abstract final class AppSpacing {
     vertical: sm,
   );
 }
+

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_radius.dart';
 import '../theme/app_spacing.dart';
@@ -32,7 +32,7 @@ class CustomButton extends StatelessWidget {
             width: 20,
             child: CircularProgressIndicator(
               strokeWidth: 2.2,
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+              valuecolor: AlwaysStoppedAnimation<color>(colors.white),
             ),
           )
         : Row(
@@ -54,8 +54,8 @@ class CustomButton extends StatelessWidget {
         ButtonVariant.primary => ElevatedButton(
             onPressed: isLoading ? null : onPressed,
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.primary,
-              foregroundColor: AppColors.onPrimary,
+              backgroundcolor: Appcolors.primary,
+              foregroundcolor: Appcolors.onPrimary,
               elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: AppRadius.radiusMd,
@@ -66,8 +66,8 @@ class CustomButton extends StatelessWidget {
         ButtonVariant.secondary => ElevatedButton(
             onPressed: isLoading ? null : onPressed,
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.primaryContainer,
-              foregroundColor: AppColors.primaryDark,
+              backgroundcolor: Appcolors.primaryContainer,
+              foregroundcolor: Appcolors.primaryDark,
               elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: AppRadius.radiusMd,
@@ -78,8 +78,8 @@ class CustomButton extends StatelessWidget {
         ButtonVariant.outline => OutlinedButton(
             onPressed: isLoading ? null : onPressed,
             style: OutlinedButton.styleFrom(
-              foregroundColor: AppColors.primary,
-              side: const BorderSide(color: AppColors.primary, width: 1.5),
+              foregroundcolor: Appcolors.primary,
+              side: const BorderSide(color: Appcolors.primary, width: 1.5),
               shape: RoundedRectangleBorder(
                 borderRadius: AppRadius.radiusMd,
               ),
@@ -90,3 +90,4 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+

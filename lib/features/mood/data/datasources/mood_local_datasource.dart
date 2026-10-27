@@ -1,4 +1,4 @@
-import 'package:app/core/storage/storage_service.dart';
+﻿import 'package:app/core/storage/storage_service.dart';
 import '../../domain/entities/mood_entry.dart';
 
 /// Local data source contract for caching mood check-in records.
@@ -30,3 +30,4 @@ class MoodLocalDataSourceImpl implements MoodLocalDataSource {
     _inMemoryCache.removeWhere((item) => item.id == id);
   }
 }
+

@@ -1,4 +1,4 @@
-/// Base exception class for app-level runtime exceptions.
+﻿/// Base exception class for app-level runtime exceptions.
 abstract class AppException implements Exception {
   final String message;
   final int? statusCode;
@@ -24,3 +24,4 @@ class CacheException extends AppException {
 class AuthException extends AppException {
   const AuthException({required super.message, super.statusCode});
 }
+

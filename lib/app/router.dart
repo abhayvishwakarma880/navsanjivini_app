@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
 /// App navigation route names.
 abstract final class AppRoutes {
@@ -7,6 +7,8 @@ abstract final class AppRoutes {
   static const String language = '/onboarding/language';
   static const String eligibility = '/onboarding/eligibility';
   static const String auth = '/auth';
+  static const String userLogin = '/auth';
+  static const String doctorLogin = '/auth/doctor';
   static const String home = '/home';
   static const String moodCheckin = '/mood/checkin';
   static const String moodHistory = '/mood/history';
@@ -33,3 +35,4 @@ abstract final class AppRouter {
     );
   }
 }
+

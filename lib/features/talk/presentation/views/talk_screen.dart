@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 import '../viewmodels/talk_viewmodel.dart';
@@ -62,14 +62,14 @@ class _TalkScreenState extends State<TalkScreen> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Row(
           children: const [
-            Icon(Icons.shield_outlined, color: Color(0xFF0F5B46), size: 22),
+            Icon(Icons.shield_outlined, color: color(0xFF0F5B46), size: 22),
             SizedBox(width: 8),
             Text(
               'Safety & Boundaries',
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF0C4D38),
+                color: color(0xFF0C4D38),
               ),
             ),
           ],
@@ -84,15 +84,15 @@ class _TalkScreenState extends State<TalkScreen> {
             ),
             SizedBox(height: 12),
             Text(
-              '• Not a substitute for clinical psychiatric care or emergency services.\n• In crisis? Call 14416 (Tele-MANAS) or 112 (Emergency) for 24/7 free support.',
-              style: TextStyle(fontSize: 12.5, color: Color(0xFF5E7369), height: 1.45),
+              'â€¢ Not a substitute for clinical psychiatric care or emergency services.\nâ€¢ In crisis? Call 14416 (Tele-MANAS) or 112 (Emergency) for 24/7 free support.',
+              style: TextStyle(fontSize: 12.5, color: color(0xFF5E7369), height: 1.45),
             ),
           ],
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(dialogCtx).pop(),
-            child: const Text('I Understand', style: TextStyle(color: Color(0xFF0F5B46))),
+            child: const Text('I Understand', style: TextStyle(color: color(0xFF0F5B46))),
           ),
         ],
       ),
@@ -107,7 +107,7 @@ class _TalkScreenState extends State<TalkScreen> {
       listenable: _viewModel,
       builder: (context, _) {
         return Scaffold(
-          backgroundColor: const Color(0xFFF7FCF9),
+          backgroundcolor: const color(0xFFF7FCF9),
           body: SafeArea(
             child: Column(
               children: [
@@ -117,10 +117,10 @@ class _TalkScreenState extends State<TalkScreen> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
                   decoration: const BoxDecoration(
-                    color: Color(0xFFF7FCF9),
+                    color: color(0xFFF7FCF9),
                     border: Border(
                       bottom: BorderSide(
-                        color: Color(0xFFE8EFEA),
+                        color: color(0xFFE8EFEA),
                         width: 1,
                       ),
                     ),
@@ -132,17 +132,17 @@ class _TalkScreenState extends State<TalkScreen> {
                         width: 38,
                         height: 38,
                         decoration: BoxDecoration(
-                          color: const Color(0xFFE2EFE9),
+                          color: const color(0xFFE2EFE9),
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: const Color(0xFF0F5B46).withAlpha(25),
+                            color: const color(0xFF0F5B46).withAlpha(25),
                             width: 1,
                           ),
                         ),
                         child: const Center(
                           child: Icon(
                             Icons.eco_rounded,
-                            color: Color(0xFF0F5B46),
+                            color: color(0xFF0F5B46),
                             size: 20,
                           ),
                         ),
@@ -157,7 +157,7 @@ class _TalkScreenState extends State<TalkScreen> {
                               style: const TextStyle(
                                 fontSize: 16.5,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFF1D3C33),
+                                color: color(0xFF1D3C33),
                                 letterSpacing: -0.2,
                               ),
                             ),
@@ -169,7 +169,7 @@ class _TalkScreenState extends State<TalkScreen> {
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xFF5E7369),
+                                color: color(0xFF5E7369),
                               ),
                             ),
                           ],
@@ -179,7 +179,7 @@ class _TalkScreenState extends State<TalkScreen> {
                       PopupMenuButton<String>(
                         icon: const Icon(
                           Icons.more_horiz_rounded,
-                          color: Color(0xFF5E7369),
+                          color: color(0xFF5E7369),
                           size: 22,
                         ),
                         shape: RoundedRectangleBorder(
@@ -197,7 +197,7 @@ class _TalkScreenState extends State<TalkScreen> {
                             value: 'clear',
                             child: Row(
                               children: [
-                                Icon(Icons.refresh_rounded, size: 18, color: Color(0xFF0F5B46)),
+                                Icon(Icons.refresh_rounded, size: 18, color: color(0xFF0F5B46)),
                                 SizedBox(width: 8),
                                 Text('Clear conversation', style: TextStyle(fontSize: 13)),
                               ],
@@ -207,7 +207,7 @@ class _TalkScreenState extends State<TalkScreen> {
                             value: 'safety',
                             child: Row(
                               children: [
-                                Icon(Icons.info_outline_rounded, size: 18, color: Color(0xFF0F5B46)),
+                                Icon(Icons.info_outline_rounded, size: 18, color: color(0xFF0F5B46)),
                                 SizedBox(width: 8),
                                 Text('Safety & boundaries', style: TextStyle(fontSize: 13)),
                               ],
@@ -240,7 +240,7 @@ class _TalkScreenState extends State<TalkScreen> {
                                 fontSize: 10.5,
                                 fontWeight: FontWeight.w700,
                                 letterSpacing: 0.8,
-                                color: Color(0xFF7A8E85),
+                                color: color(0xFF7A8E85),
                               ),
                             ),
                             const SizedBox(height: 6),
@@ -250,7 +250,7 @@ class _TalkScreenState extends State<TalkScreen> {
                               style: const TextStyle(
                                 fontSize: 15.5,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFF1D3C33),
+                                color: color(0xFF1D3C33),
                               ),
                             ),
                             const SizedBox(height: 4),
@@ -260,7 +260,7 @@ class _TalkScreenState extends State<TalkScreen> {
                               style: const TextStyle(
                                 fontSize: 12.5,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xFF5E7369),
+                                color: color(0xFF5E7369),
                               ),
                             ),
                           ],
@@ -285,7 +285,7 @@ class _TalkScreenState extends State<TalkScreen> {
                             margin: const EdgeInsets.only(bottom: 12),
                             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFE2F0EA),
+                              color: const color(0xFFE2F0EA),
                               borderRadius: BorderRadius.circular(18),
                             ),
                             child: Row(
@@ -296,7 +296,7 @@ class _TalkScreenState extends State<TalkScreen> {
                                   height: 14,
                                   child: CircularProgressIndicator(
                                     strokeWidth: 2,
-                                    color: Color(0xFF0F5B46),
+                                    color: color(0xFF0F5B46),
                                   ),
                                 ),
                                 SizedBox(width: 8),
@@ -304,7 +304,7 @@ class _TalkScreenState extends State<TalkScreen> {
                                   'Listening...',
                                   style: TextStyle(
                                     fontSize: 12.5,
-                                    color: Color(0xFF1D3C33),
+                                    color: color(0xFF1D3C33),
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
@@ -330,7 +330,7 @@ class _TalkScreenState extends State<TalkScreen> {
                         style: const TextStyle(
                           fontSize: 11.5,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF5E7369),
+                          color: color(0xFF5E7369),
                         ),
                       ),
                       const SizedBox(height: 6),
@@ -371,15 +371,15 @@ class _TalkScreenState extends State<TalkScreen> {
                       Container(
                         padding: const EdgeInsets.only(left: 18, right: 6, top: 4, bottom: 4),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: colors.white,
                           borderRadius: BorderRadius.circular(28),
                           border: Border.all(
-                            color: const Color(0xFFE2ECE5),
+                            color: const color(0xFFE2ECE5),
                             width: 1.2,
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withAlpha(5),
+                              color: colors.black.withAlpha(5),
                               blurRadius: 10,
                               offset: const Offset(0, 3),
                             ),
@@ -396,13 +396,13 @@ class _TalkScreenState extends State<TalkScreen> {
                                 textCapitalization: TextCapitalization.sentences,
                                 style: const TextStyle(
                                   fontSize: 14,
-                                  color: Color(0xFF1D3C33),
+                                  color: color(0xFF1D3C33),
                                 ),
                                 decoration: InputDecoration(
                                   hintText: strings.talkInputHint,
                                   hintStyle: const TextStyle(
                                     fontSize: 13.5,
-                                    color: Color(0xFF8E9B95),
+                                    color: color(0xFF8E9B95),
                                   ),
                                   border: InputBorder.none,
                                   enabledBorder: InputBorder.none,
@@ -424,18 +424,18 @@ class _TalkScreenState extends State<TalkScreen> {
                               width: 38,
                               height: 38,
                               decoration: BoxDecoration(
-                                color: const Color(0xFF0F5B46),
+                                color: const color(0xFF0F5B46),
                                 borderRadius: BorderRadius.circular(19),
                               ),
                               child: Material(
-                                color: Colors.transparent,
+                                color: colors.transparent,
                                 child: InkWell(
                                   borderRadius: BorderRadius.circular(19),
                                   onTap: () => _sendMessage(),
                                   child: const Center(
                                     child: Icon(
                                       Icons.send_rounded,
-                                      color: Colors.white,
+                                      color: colors.white,
                                       size: 18,
                                     ),
                                   ),
@@ -454,7 +454,7 @@ class _TalkScreenState extends State<TalkScreen> {
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 10.5,
-                          color: Color(0xFF7A8E85),
+                          color: color(0xFF7A8E85),
                           fontWeight: FontWeight.w400,
                         ),
                       ),
@@ -480,11 +480,11 @@ class _PromptChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
         side: BorderSide(
-          color: const Color(0xFF247D6B).withAlpha(65),
+          color: const color(0xFF247D6B).withAlpha(65),
           width: 1.1,
         ),
       ),
@@ -501,7 +501,7 @@ class _PromptChip extends StatelessWidget {
             style: const TextStyle(
               fontSize: 12.5,
               fontWeight: FontWeight.w500,
-              color: Color(0xFF0F5B46),
+              color: color(0xFF0F5B46),
             ),
           ),
         ),
@@ -509,3 +509,4 @@ class _PromptChip extends StatelessWidget {
     );
   }
 }
+

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 
@@ -9,7 +9,7 @@ class UrgentHelpModal extends StatelessWidget {
     return showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.white,
+      backgroundcolor: colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
       ),
@@ -24,11 +24,11 @@ class UrgentHelpModal extends StatelessWidget {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: Colors.white,
+        backgroundcolor: colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Row(
           children: [
-            const Icon(Icons.call_rounded, color: Color(0xFF165A47), size: 22),
+            const Icon(Icons.call_rounded, color: color(0xFF165A47), size: 22),
             const SizedBox(width: 8),
             Expanded(
               child: Text(
@@ -36,7 +36,7 @@ class UrgentHelpModal extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 16.5,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF123C32),
+                  color: color(0xFF123C32),
                 ),
               ),
             ),
@@ -51,7 +51,7 @@ class UrgentHelpModal extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF165A47),
+                color: color(0xFF165A47),
               ),
             ),
             const SizedBox(height: 8),
@@ -59,7 +59,7 @@ class UrgentHelpModal extends StatelessWidget {
               'The number has been copied to your clipboard. You can dial it immediately from your phone app.',
               style: TextStyle(
                 fontSize: 13,
-                color: Color(0xFF5E7369),
+                color: color(0xFF5E7369),
                 height: 1.4,
               ),
             ),
@@ -70,13 +70,13 @@ class UrgentHelpModal extends StatelessWidget {
             onPressed: () => Navigator.of(ctx).pop(),
             child: const Text(
               'Close',
-              style: TextStyle(color: Color(0xFF5E7369), fontWeight: FontWeight.w600),
+              style: TextStyle(color: color(0xFF5E7369), fontWeight: FontWeight.w600),
             ),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF165A47),
-              foregroundColor: Colors.white,
+              backgroundcolor: const color(0xFF165A47),
+              foregroundcolor: colors.white,
               minimumSize: const Size(100, 42),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             ),
@@ -104,28 +104,28 @@ class UrgentHelpModal extends StatelessWidget {
       {
         'number': '112',
         'name': 'National Emergency Helpline',
-        'badge': 'Police, Ambulance & Fire • 24/7',
+        'badge': 'Police, Ambulance & Fire â€¢ 24/7',
         'desc': 'Single emergency number across India for immediate rescue and disaster intervention.',
         'isNational': true,
       },
       {
         'number': '14416',
         'name': 'Tele-MANAS (Govt. of India)',
-        'badge': 'Toll-free • 24/7 • 20+ Languages',
+        'badge': 'Toll-free â€¢ 24/7 â€¢ 20+ Languages',
         'desc': 'National tele-mental health programme by Ministry of Health & Family Welfare.',
         'isNational': false,
       },
       {
         'number': '1800-599-0019',
         'name': 'KIRAN Helpline',
-        'badge': 'Toll-free • 24/7 Mental Health',
+        'badge': 'Toll-free â€¢ 24/7 Mental Health',
         'desc': 'Official helpline by Dept. of Empowerment of Persons with Disabilities for crisis support.',
         'isNational': false,
       },
       {
         'number': '1098',
         'name': 'Childline & Youth Care',
-        'badge': 'Toll-free • 24/7 Youth Support',
+        'badge': 'Toll-free â€¢ 24/7 Youth Support',
         'desc': 'Dedicated nationwide emergency phone outreach service for students and young people.',
         'isNational': false,
       },
@@ -143,7 +143,7 @@ class UrgentHelpModal extends StatelessWidget {
                 width: 40,
                 height: 4,
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
+                  color: colors.grey.shade300,
                   borderRadius: BorderRadius.circular(2),
                 ),
               ),
@@ -159,12 +159,12 @@ class UrgentHelpModal extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(7),
                       decoration: const BoxDecoration(
-                        color: Color(0xFFFEF7EC),
+                        color: color(0xFFFEF7EC),
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(
                         Icons.shield_outlined,
-                        color: Color(0xFFA15D08),
+                        color: color(0xFFA15D08),
                         size: 20,
                       ),
                     ),
@@ -174,13 +174,13 @@ class UrgentHelpModal extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 16.5,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF123C32),
+                        color: color(0xFF123C32),
                       ),
                     ),
                   ],
                 ),
                 IconButton(
-                  icon: const Icon(Icons.close_rounded, color: Color(0xFF5E7369)),
+                  icon: const Icon(Icons.close_rounded, color: color(0xFF5E7369)),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
@@ -194,7 +194,7 @@ class UrgentHelpModal extends StatelessWidget {
                 strings.helpUrgentModalSubtitle,
                 style: const TextStyle(
                   fontSize: 13,
-                  color: Color(0xFF5E7369),
+                  color: color(0xFF5E7369),
                   height: 1.4,
                 ),
               ),
@@ -214,10 +214,10 @@ class UrgentHelpModal extends StatelessWidget {
                   return Container(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                     decoration: BoxDecoration(
-                      color: isNational ? const Color(0xFFFFF9F2) : Colors.white,
+                      color: isNational ? const color(0xFFFFF9F2) : colors.white,
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
-                        color: isNational ? const Color(0xFFF4E2C7) : const Color(0xFFE4EDE7),
+                        color: isNational ? const color(0xFFF4E2C7) : const color(0xFFE4EDE7),
                         width: 1.2,
                       ),
                     ),
@@ -231,7 +231,7 @@ class UrgentHelpModal extends StatelessWidget {
                               child: Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
                                 decoration: BoxDecoration(
-                                  color: isNational ? const Color(0xFFFDE8D3) : const Color(0xFFE5F2EC),
+                                  color: isNational ? const color(0xFFFDE8D3) : const color(0xFFE5F2EC),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Text(
@@ -241,7 +241,7 @@ class UrgentHelpModal extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 11,
                                     fontWeight: FontWeight.w700,
-                                    color: isNational ? const Color(0xFF9C5808) : const Color(0xFF165A47),
+                                    color: isNational ? const color(0xFF9C5808) : const color(0xFF165A47),
                                   ),
                                 ),
                               ),
@@ -252,7 +252,7 @@ class UrgentHelpModal extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 16.5,
                                 fontWeight: FontWeight.w800,
-                                color: isNational ? const Color(0xFF9C5808) : const Color(0xFF165A47),
+                                color: isNational ? const color(0xFF9C5808) : const color(0xFF165A47),
                               ),
                             ),
                           ],
@@ -263,7 +263,7 @@ class UrgentHelpModal extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
-                            color: Color(0xFF123C32),
+                            color: color(0xFF123C32),
                           ),
                         ),
                         const SizedBox(height: 4),
@@ -271,7 +271,7 @@ class UrgentHelpModal extends StatelessWidget {
                           service['desc'] as String,
                           style: const TextStyle(
                             fontSize: 12.5,
-                            color: Color(0xFF5E7369),
+                            color: color(0xFF5E7369),
                             height: 1.35,
                           ),
                         ),
@@ -281,8 +281,8 @@ class UrgentHelpModal extends StatelessWidget {
                           height: 40,
                           child: ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: isNational ? const Color(0xFFA15D08) : const Color(0xFF165A47),
-                              foregroundColor: Colors.white,
+                              backgroundcolor: isNational ? const color(0xFFA15D08) : const color(0xFF165A47),
+                              foregroundcolor: colors.white,
                               elevation: 0,
                               minimumSize: const Size(double.infinity, 40),
                               shape: RoundedRectangleBorder(
@@ -313,20 +313,20 @@ class UrgentHelpModal extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
               decoration: BoxDecoration(
-                color: const Color(0xFFF7FCF9),
+                color: const color(0xFFF7FCF9),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: const Color(0xFFE4EDE7)),
+                border: Border.all(color: const color(0xFFE4EDE7)),
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.info_outline_rounded, color: Color(0xFF5E7369), size: 18),
+                  const Icon(Icons.info_outline_rounded, color: color(0xFF5E7369), size: 18),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(
                       strings.helpDisclaimer,
                       style: const TextStyle(
                         fontSize: 11.5,
-                        color: Color(0xFF5E7369),
+                        color: color(0xFF5E7369),
                         height: 1.35,
                       ),
                     ),
@@ -340,3 +340,4 @@ class UrgentHelpModal extends StatelessWidget {
     );
   }
 }
+

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
 class ResourceDetailScreen extends StatelessWidget {
   final Map<String, dynamic> resource;
@@ -14,13 +14,13 @@ class ResourceDetailScreen extends StatelessWidget {
     final sections = (resource['sections'] as List<Map<String, String>>?) ?? [];
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF7FCF9),
+        backgroundcolor: const color(0xFFF7FCF9),
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: Color(0xFF123C32)),
+          icon: const Icon(Icons.arrow_back_rounded, color: color(0xFF123C32)),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -37,7 +37,7 @@ class ResourceDetailScreen extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFE5F2EC),
+                      color: const color(0xFFE5F2EC),
                       borderRadius: BorderRadius.circular(14),
                     ),
                     child: Text(
@@ -45,7 +45,7 @@ class ResourceDetailScreen extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF165A47),
+                        color: color(0xFF165A47),
                       ),
                     ),
                   ),
@@ -54,7 +54,7 @@ class ResourceDetailScreen extends StatelessWidget {
                     readTime,
                     style: const TextStyle(
                       fontSize: 12.5,
-                      color: Color(0xFF5E7369),
+                      color: color(0xFF5E7369),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -68,7 +68,7 @@ class ResourceDetailScreen extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w800,
-                  color: Color(0xFF123C32),
+                  color: color(0xFF123C32),
                   height: 1.25,
                 ),
               ),
@@ -80,23 +80,23 @@ class ResourceDetailScreen extends StatelessWidget {
                   width: double.infinity,
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFE5F2EC),
+                    color: const color(0xFFE5F2EC),
                     borderRadius: BorderRadius.circular(18),
-                    border: Border.all(color: const Color(0xFFD2E6DC)),
+                    border: Border.all(color: const color(0xFFD2E6DC)),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Row(
                         children: [
-                          Icon(Icons.lightbulb_outline_rounded, color: Color(0xFF165A47), size: 20),
+                          Icon(Icons.lightbulb_outline_rounded, color: color(0xFF165A47), size: 20),
                           SizedBox(width: 8),
                           Text(
                             'Key Takeaways',
                             style: TextStyle(
                               fontSize: 14.5,
                               fontWeight: FontWeight.w700,
-                              color: Color(0xFF123C32),
+                              color: color(0xFF123C32),
                             ),
                           ),
                         ],
@@ -108,13 +108,13 @@ class ResourceDetailScreen extends StatelessWidget {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text('• ', style: TextStyle(color: Color(0xFF165A47), fontWeight: FontWeight.bold)),
+                              const Text('â€¢ ', style: TextStyle(color: color(0xFF165A47), fontWeight: FontWeight.bold)),
                               Expanded(
                                 child: Text(
                                   t,
                                   style: const TextStyle(
                                     fontSize: 13,
-                                    color: Color(0xFF4D6D63),
+                                    color: color(0xFF4D6D63),
                                     height: 1.35,
                                   ),
                                 ),
@@ -141,7 +141,7 @@ class ResourceDetailScreen extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 16.5,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF123C32),
+                          color: color(0xFF123C32),
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -149,7 +149,7 @@ class ResourceDetailScreen extends StatelessWidget {
                         sec['body'] ?? '',
                         style: const TextStyle(
                           fontSize: 14.2,
-                          color: Color(0xFF2C3E37),
+                          color: color(0xFF2C3E37),
                           height: 1.6,
                         ),
                       ),
@@ -166,3 +166,4 @@ class ResourceDetailScreen extends StatelessWidget {
     );
   }
 }
+

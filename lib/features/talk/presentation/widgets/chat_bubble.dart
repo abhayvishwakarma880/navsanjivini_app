@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../../domain/entities/talk_message.dart';
 
 class ChatBubble extends StatelessWidget {
@@ -29,7 +29,7 @@ class ChatBubble extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF0F5B46), // Deep emerald green
+                  color: const color(0xFF0F5B46), // Deep emerald green
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(18),
                     topRight: Radius.circular(18),
@@ -38,7 +38,7 @@ class ChatBubble extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF0F5B46).withAlpha(25),
+                      color: const color(0xFF0F5B46).withAlpha(25),
                       blurRadius: 8,
                       offset: const Offset(0, 3),
                     ),
@@ -49,7 +49,7 @@ class ChatBubble extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white,
+                    color: colors.white,
                     height: 1.4,
                   ),
                 ),
@@ -58,10 +58,10 @@ class ChatBubble extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(right: 4),
                 child: Text(
-                  'You • Just now',
+                  'You â€¢ Just now',
                   style: TextStyle(
                     fontSize: 11,
-                    color: Color(0xFF7A8E85),
+                    color: color(0xFF7A8E85),
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -85,8 +85,8 @@ class ChatBubble extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 13),
         decoration: BoxDecoration(
           color: isGreetingStyle
-              ? const Color(0xFFE2F0EA) // Soft mint for greeting
-              : Colors.white, // Crisp white for subsequent responses
+              ? const color(0xFFE2F0EA) // Soft mint for greeting
+              : colors.white, // Crisp white for subsequent responses
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(18),
             topRight: Radius.circular(18),
@@ -95,12 +95,12 @@ class ChatBubble extends StatelessWidget {
           ),
           border: isGreetingStyle
               ? null
-              : Border.all(color: const Color(0xFFE4EDE7), width: 1.2),
+              : Border.all(color: const color(0xFFE4EDE7), width: 1.2),
           boxShadow: isGreetingStyle
               ? null
               : [
                   BoxShadow(
-                    color: Colors.black.withAlpha(5),
+                    color: colors.black.withAlpha(5),
                     blurRadius: 8,
                     offset: const Offset(0, 2),
                   ),
@@ -110,7 +110,7 @@ class ChatBubble extends StatelessWidget {
           message.text,
           style: const TextStyle(
             fontSize: 14,
-            color: Color(0xFF1D3C33),
+            color: color(0xFF1D3C33),
             fontWeight: FontWeight.w400,
             height: 1.45,
           ),
@@ -119,3 +119,4 @@ class ChatBubble extends StatelessWidget {
     );
   }
 }
+

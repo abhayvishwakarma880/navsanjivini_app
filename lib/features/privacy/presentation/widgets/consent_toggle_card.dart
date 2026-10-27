@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -23,9 +23,9 @@ class ConsentToggleCard extends StatelessWidget {
     return Container(
       padding: AppSpacing.cardPadding,
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: Appcolors.surface,
         borderRadius: AppRadius.radiusLg,
-        border: Border.all(color: AppColors.border),
+        border: Border.all(color: Appcolors.border),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +45,7 @@ class ConsentToggleCard extends StatelessWidget {
           ),
           Switch(
             value: value,
-            activeThumbColor: AppColors.primary,
+            activeThumbcolor: Appcolors.primary,
             onChanged: onChanged,
           ),
         ],
@@ -53,3 +53,4 @@ class ConsentToggleCard extends StatelessWidget {
     );
   }
 }
+

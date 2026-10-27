@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
@@ -26,7 +26,7 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
     final strings = context.tr;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundcolor: Appcolors.background,
       appBar: AppBar(
         title: Text(strings.safetyConsentTitle),
         leading: IconButton(
@@ -49,18 +49,18 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
               Text(
                 strings.trustAndEligibilitySubtitle,
                 style: AppTextStyles.bodyMedium.copyWith(
-                  color: AppColors.textSecondary,
+                  color: Appcolors.textSecondary,
                 ),
               ),
               const SizedBox(height: AppSpacing.xl),
 
               // 18+ Confirmation Card
               Material(
-                color: _is18Plus ? AppColors.primaryContainer : AppColors.surface,
+                color: _is18Plus ? Appcolors.primaryContainer : Appcolors.surface,
                 shape: RoundedRectangleBorder(
                   borderRadius: AppRadius.radiusLg,
                   side: BorderSide(
-                    color: _is18Plus ? AppColors.primary : AppColors.border,
+                    color: _is18Plus ? Appcolors.primary : Appcolors.border,
                     width: _is18Plus ? 1.8 : 1,
                   ),
                 ),
@@ -70,11 +70,11 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
                     vertical: AppSpacing.xs,
                   ),
                   value: _is18Plus,
-                  activeColor: AppColors.primary,
+                  activecolor: Appcolors.primary,
                   title: Text(
                     strings.ageConfirmationTitle,
                     style: AppTextStyles.titleMedium.copyWith(
-                      color: _is18Plus ? AppColors.primaryDark : AppColors.textPrimary,
+                      color: _is18Plus ? Appcolors.primaryDark : Appcolors.textPrimary,
                     ),
                   ),
                   subtitle: Text(
@@ -90,11 +90,11 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
 
               // Consent & AI Limitations Card
               Material(
-                color: _consentGiven ? AppColors.primaryContainer : AppColors.surface,
+                color: _consentGiven ? Appcolors.primaryContainer : Appcolors.surface,
                 shape: RoundedRectangleBorder(
                   borderRadius: AppRadius.radiusLg,
                   side: BorderSide(
-                    color: _consentGiven ? AppColors.primary : AppColors.border,
+                    color: _consentGiven ? Appcolors.primary : Appcolors.border,
                     width: _consentGiven ? 1.8 : 1,
                   ),
                 ),
@@ -104,11 +104,11 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
                     vertical: AppSpacing.xs,
                   ),
                   value: _consentGiven,
-                  activeColor: AppColors.primary,
+                  activecolor: Appcolors.primary,
                   title: Text(
                     strings.consentTitle,
                     style: AppTextStyles.titleMedium.copyWith(
-                      color: _consentGiven ? AppColors.primaryDark : AppColors.textPrimary,
+                      color: _consentGiven ? Appcolors.primaryDark : Appcolors.textPrimary,
                     ),
                   ),
                   subtitle: Text(
@@ -126,16 +126,16 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
               Container(
                 padding: AppSpacing.cardPadding,
                 decoration: BoxDecoration(
-                  color: AppColors.surfaceVariant,
+                  color: Appcolors.surfaceVariant,
                   borderRadius: AppRadius.radiusLg,
-                  border: Border.all(color: AppColors.border),
+                  border: Border.all(color: Appcolors.border),
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Icon(
                       Icons.shield_outlined,
-                      color: AppColors.primary,
+                      color: Appcolors.primary,
                       size: 22,
                     ),
                     const SizedBox(width: AppSpacing.sm),
@@ -143,7 +143,7 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
                       child: Text(
                         strings.clinicalDisclaimer,
                         style: AppTextStyles.bodySmall.copyWith(
-                          color: AppColors.textSecondary,
+                          color: Appcolors.textSecondary,
                           height: 1.45,
                         ),
                       ),
@@ -167,3 +167,4 @@ class _EligibilityScreenState extends State<EligibilityScreen> {
     );
   }
 }
+

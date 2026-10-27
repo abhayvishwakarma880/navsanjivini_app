@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/app_languages.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
@@ -20,11 +20,11 @@ class LanguageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: isSelected ? AppColors.primaryContainer : AppColors.surface,
+      color: isSelected ? Appcolors.primaryContainer : Appcolors.surface,
       shape: RoundedRectangleBorder(
         borderRadius: AppRadius.radiusLg,
         side: BorderSide(
-          color: isSelected ? AppColors.primary : AppColors.border,
+          color: isSelected ? Appcolors.primary : Appcolors.border,
           width: isSelected ? 2 : 1,
         ),
       ),
@@ -42,7 +42,7 @@ class LanguageCard extends StatelessWidget {
                     Text(
                       language.nativeName,
                       style: AppTextStyles.titleMedium.copyWith(
-                        color: isSelected ? AppColors.primaryDark : AppColors.textPrimary,
+                        color: isSelected ? Appcolors.primaryDark : Appcolors.textPrimary,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -50,7 +50,7 @@ class LanguageCard extends StatelessWidget {
                     Text(
                       language.displayName,
                       style: AppTextStyles.bodySmall.copyWith(
-                        color: AppColors.textSecondary,
+                        color: Appcolors.textSecondary,
                       ),
                     ),
                   ],
@@ -59,7 +59,7 @@ class LanguageCard extends StatelessWidget {
               if (isSelected)
                 const Icon(
                   Icons.check_circle_rounded,
-                  color: AppColors.primary,
+                  color: Appcolors.primary,
                   size: 24,
                 ),
             ],
@@ -69,3 +69,4 @@ class LanguageCard extends StatelessWidget {
     );
   }
 }
+

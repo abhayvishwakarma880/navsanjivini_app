@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import 'package:app/core/localization/app_languages.dart';
 
 /// ViewModel managing Onboarding, Language Selection, and Age/Consent checks.
@@ -41,3 +41,4 @@ class OnboardingViewModel extends ChangeNotifier {
     return true;
   }
 }
+

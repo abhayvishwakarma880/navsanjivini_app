@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/app_languages.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/theme/app_colors.dart';
@@ -33,7 +33,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       listenable: _viewModel,
       builder: (context, _) {
         return Scaffold(
-          backgroundColor: AppColors.background,
+          backgroundcolor: Appcolors.background,
           appBar: AppBar(
             title: Text(strings.settingsTitle),
           ),
@@ -46,9 +46,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 const SizedBox(height: AppSpacing.md),
                 Container(
                   decoration: BoxDecoration(
-                    color: AppColors.surface,
+                    color: Appcolors.surface,
                     borderRadius: AppRadius.radiusLg,
-                    border: Border.all(color: AppColors.border),
+                    border: Border.all(color: Appcolors.border),
                   ),
                   child: Column(
                     children: AppLanguage.values.map((lang) {
@@ -58,11 +58,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         shape: RoundedRectangleBorder(borderRadius: AppRadius.radiusLg),
                         leading: CircleAvatar(
                           radius: 16,
-                          backgroundColor: isSelected ? AppColors.primary : AppColors.surfaceVariant,
+                          backgroundcolor: isSelected ? Appcolors.primary : Appcolors.surfaceVariant,
                           child: Text(
-                            lang.code == 'hi' ? 'अ' : (lang.code == 'hi_en' ? 'ह' : 'A'),
+                            lang.code == 'hi' ? 'à¤…' : (lang.code == 'hi_en' ? 'à¤¹' : 'A'),
                             style: TextStyle(
-                              color: isSelected ? Colors.white : AppColors.textPrimary,
+                              color: isSelected ? colors.white : Appcolors.textPrimary,
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
                             ),
@@ -72,7 +72,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           lang.nativeName,
                           style: AppTextStyles.titleMedium.copyWith(
                             fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                            color: isSelected ? AppColors.primaryDark : AppColors.textPrimary,
+                            color: isSelected ? Appcolors.primaryDark : Appcolors.textPrimary,
                           ),
                         ),
                         subtitle: Text(
@@ -80,7 +80,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           style: AppTextStyles.bodySmall,
                         ),
                         trailing: isSelected
-                            ? const Icon(Icons.check_circle_rounded, color: AppColors.primary)
+                            ? const Icon(Icons.check_circle_rounded, color: Appcolors.primary)
                             : null,
                       );
                     }).toList(),
@@ -126,3 +126,4 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 }
+

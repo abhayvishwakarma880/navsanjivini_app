@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/utils/date_time_utils.dart';
@@ -19,13 +19,13 @@ class JournalDetailScreen extends StatelessWidget {
   String _getMoodLabel(String? mood, dynamic strings) {
     switch (mood) {
       case 'good':
-        return '😊 ${strings.journalMoodGood}';
+        return 'ðŸ˜Š ${strings.journalMoodGood}';
       case 'calm':
-        return '😌 ${strings.journalMoodCalm}';
+        return 'ðŸ˜Œ ${strings.journalMoodCalm}';
       case 'low':
-        return '😔 ${strings.journalMoodLow}';
+        return 'ðŸ˜” ${strings.journalMoodLow}';
       case 'anxious':
-        return '😰 ${strings.journalMoodAnxious}';
+        return 'ðŸ˜° ${strings.journalMoodAnxious}';
       default:
         return '';
     }
@@ -37,32 +37,32 @@ class JournalDetailScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: Colors.white,
+        backgroundcolor: colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Text(
           strings.journalDeleteConfirmTitle,
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
-            color: Color(0xFF123C32),
+            color: color(0xFF123C32),
           ),
         ),
         content: Text(
           strings.journalDeleteConfirmMessage,
-          style: const TextStyle(fontSize: 14, color: Color(0xFF5E7369)),
+          style: const TextStyle(fontSize: 14, color: color(0xFF5E7369)),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
             child: Text(
               strings.journalCancel,
-              style: const TextStyle(color: Color(0xFF5E7369), fontWeight: FontWeight.w600),
+              style: const TextStyle(color: color(0xFF5E7369), fontWeight: FontWeight.w600),
             ),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFD32F2F),
-              foregroundColor: Colors.white,
+              backgroundcolor: const color(0xFFD32F2F),
+              foregroundcolor: colors.white,
               minimumSize: const Size(90, 40),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             ),
@@ -110,23 +110,23 @@ class JournalDetailScreen extends StatelessWidget {
     final moodText = _getMoodLabel(entry.mood, strings);
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF7FCF9),
+        backgroundcolor: const color(0xFFF7FCF9),
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: Color(0xFF123C32)),
+          icon: const Icon(Icons.arrow_back_rounded, color: color(0xFF123C32)),
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.edit_outlined, color: Color(0xFF165A47)),
+            icon: const Icon(Icons.edit_outlined, color: color(0xFF165A47)),
             tooltip: strings.journalEdit,
             onPressed: () => _openEdit(context),
           ),
           IconButton(
-            icon: const Icon(Icons.delete_outline_rounded, color: Color(0xFFD32F2F)),
+            icon: const Icon(Icons.delete_outline_rounded, color: color(0xFFD32F2F)),
             tooltip: strings.journalDelete,
             onPressed: () => _confirmDelete(context),
           ),
@@ -149,23 +149,23 @@ class JournalDetailScreen extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 12.5,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFF5E7369),
+                      color: color(0xFF5E7369),
                     ),
                   ),
                   if (moodText.isNotEmpty)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFE5F2EC),
+                        color: const color(0xFFE5F2EC),
                         borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: const Color(0xFFD2E6DC)),
+                        border: Border.all(color: const color(0xFFD2E6DC)),
                       ),
                       child: Text(
                         moodText,
                         style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
-                          color: Color(0xFF165A47),
+                          color: color(0xFF165A47),
                         ),
                       ),
                     ),
@@ -179,7 +179,7 @@ class JournalDetailScreen extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w800,
-                  color: Color(0xFF123C32),
+                  color: color(0xFF123C32),
                   height: 1.25,
                 ),
               ),
@@ -189,17 +189,17 @@ class JournalDetailScreen extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: 1.1,
-                color: const Color(0xFFE4EDE7),
+                color: const color(0xFFE4EDE7),
               ),
               const SizedBox(height: 16),
 
               // Body Content
               Text(
-                entry.body.isEmpty ? '—' : entry.body,
+                entry.body.isEmpty ? 'â€”' : entry.body,
                 style: const TextStyle(
                   fontSize: 15,
                   height: 1.6,
-                  color: Color(0xFF2C3E37),
+                  color: color(0xFF2C3E37),
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -210,10 +210,10 @@ class JournalDetailScreen extends StatelessWidget {
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: colors.white,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: const Color(0xFFE4EDE7),
+                    color: const color(0xFFE4EDE7),
                     width: 1.1,
                   ),
                 ),
@@ -223,12 +223,12 @@ class JournalDetailScreen extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(7),
                       decoration: const BoxDecoration(
-                        color: Color(0xFFE5F2EC),
+                        color: color(0xFFE5F2EC),
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(
                         Icons.lock_rounded,
-                        color: Color(0xFF165A47),
+                        color: color(0xFF165A47),
                         size: 16,
                       ),
                     ),
@@ -242,7 +242,7 @@ class JournalDetailScreen extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 13.5,
                               fontWeight: FontWeight.w700,
-                              color: Color(0xFF123C32),
+                              color: color(0xFF123C32),
                             ),
                           ),
                           SizedBox(height: 3),
@@ -250,7 +250,7 @@ class JournalDetailScreen extends StatelessWidget {
                             'This reflection is saved securely on your device. It is never shared with AI companion or external services.',
                             style: TextStyle(
                               fontSize: 12,
-                              color: Color(0xFF5E7369),
+                              color: color(0xFF5E7369),
                               height: 1.35,
                             ),
                           ),
@@ -268,3 +268,4 @@ class JournalDetailScreen extends StatelessWidget {
     );
   }
 }
+

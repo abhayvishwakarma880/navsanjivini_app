@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/utils/date_time_utils.dart';
 import '../../domain/entities/journal_entry.dart';
@@ -18,13 +18,13 @@ class JournalCard extends StatelessWidget {
   String _getMoodEmoji(String? mood) {
     switch (mood) {
       case 'good':
-        return '😊';
+        return 'ðŸ˜Š';
       case 'calm':
-        return '😌';
+        return 'ðŸ˜Œ';
       case 'low':
-        return '😔';
+        return 'ðŸ˜”';
       case 'anxious':
-        return '😰';
+        return 'ðŸ˜°';
       default:
         return '';
     }
@@ -36,11 +36,11 @@ class JournalCard extends StatelessWidget {
     final moodEmoji = _getMoodEmoji(entry.mood);
 
     return Material(
-      color: Colors.white,
+      color: colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18),
         side: const BorderSide(
-          color: Color(0xFFE4EDE7),
+          color: color(0xFFE4EDE7),
           width: 1.1,
         ),
       ),
@@ -64,7 +64,7 @@ class JournalCard extends StatelessWidget {
                           fontSize: 11.5,
                           fontWeight: FontWeight.w700,
                           letterSpacing: 0.5,
-                          color: Color(0xFF5E7369),
+                          color: color(0xFF5E7369),
                         ),
                       ),
                       if (moodEmoji.isNotEmpty) ...[
@@ -79,7 +79,7 @@ class JournalCard extends StatelessWidget {
                   IconButton(
                     icon: const Icon(
                       Icons.more_horiz_rounded,
-                      color: Color(0xFF7A8E85),
+                      color: color(0xFF7A8E85),
                       size: 20,
                     ),
                     padding: EdgeInsets.zero,
@@ -97,7 +97,7 @@ class JournalCard extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 15.5,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF123C32),
+                  color: color(0xFF123C32),
                   letterSpacing: -0.1,
                 ),
               ),
@@ -110,7 +110,7 @@ class JournalCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 13.2,
-                  color: Color(0xFF5E7369),
+                  color: color(0xFF5E7369),
                   height: 1.4,
                 ),
               ),
@@ -122,7 +122,7 @@ class JournalCard extends StatelessWidget {
                   const Icon(
                     Icons.lock_outline_rounded,
                     size: 13,
-                    color: Color(0xFF6E8078),
+                    color: color(0xFF6E8078),
                   ),
                   const SizedBox(width: 5),
                   Text(
@@ -130,7 +130,7 @@ class JournalCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 11.8,
                       fontWeight: FontWeight.w500,
-                      color: Color(0xFF6E8078),
+                      color: color(0xFF6E8078),
                     ),
                   ),
                 ],
@@ -142,3 +142,4 @@ class JournalCard extends StatelessWidget {
     );
   }
 }
+

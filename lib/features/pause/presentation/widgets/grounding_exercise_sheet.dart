@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class GroundingExerciseSheet extends StatefulWidget {
@@ -8,7 +8,7 @@ class GroundingExerciseSheet extends StatefulWidget {
     return showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.white,
+      backgroundcolor: colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
       ),
@@ -29,7 +29,7 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
       'sense': 'SEE',
       'icon': Icons.visibility_outlined,
       'title': '5 things you can see',
-      'instruction': 'Look around the room or wherever you are. Notice 5 distinct things you see — colors, shadows, a clock, or an object on your desk.',
+      'instruction': 'Look around the room or wherever you are. Notice 5 distinct things you see â€” colors, shadows, a clock, or an object on your desk.',
       'hint': 'e.g. A pattern on the wall, a window frame, light reflection',
     },
     {
@@ -83,7 +83,7 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
                 width: 40,
                 height: 4,
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
+                  color: colors.grey.shade300,
                   borderRadius: BorderRadius.circular(2),
                 ),
               ),
@@ -99,11 +99,11 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
                   style: TextStyle(
                     fontSize: 16.5,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xFF123C32),
+                    color: color(0xFF123C32),
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.close_rounded, color: Color(0xFF5E7369)),
+                  icon: const Icon(Icons.close_rounded, color: color(0xFF5E7369)),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
@@ -122,8 +122,8 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
                   height: 8,
                   decoration: BoxDecoration(
                     color: isActive
-                        ? const Color(0xFF165A47)
-                        : (isDone ? const Color(0xFF76BCA3) : const Color(0xFFE5EDE8)),
+                        ? const color(0xFF165A47)
+                        : (isDone ? const color(0xFF76BCA3) : const color(0xFFE5EDE8)),
                     borderRadius: BorderRadius.circular(4),
                   ),
                 );
@@ -137,13 +137,13 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
               height: 86,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: const Color(0xFFE5F2EC),
-                border: Border.all(color: const Color(0xFFC7E8DC), width: 2),
+                color: const color(0xFFE5F2EC),
+                border: Border.all(color: const color(0xFFC7E8DC), width: 2),
               ),
               child: Center(
                 child: Icon(
                   step['icon'] as IconData,
-                  color: const Color(0xFF165A47),
+                  color: const color(0xFF165A47),
                   size: 40,
                 ),
               ),
@@ -154,7 +154,7 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
               decoration: BoxDecoration(
-                color: const Color(0xFFE5F2EC),
+                color: const color(0xFFE5F2EC),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
@@ -163,7 +163,7 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
                   fontSize: 11,
                   fontWeight: FontWeight.w700,
                   letterSpacing: 0.8,
-                  color: Color(0xFF165A47),
+                  color: color(0xFF165A47),
                 ),
               ),
             ),
@@ -175,7 +175,7 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF123C32),
+                color: color(0xFF123C32),
               ),
               textAlign: TextAlign.center,
             ),
@@ -189,7 +189,7 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
                 style: const TextStyle(
                   fontSize: 14,
                   height: 1.5,
-                  color: Color(0xFF4D6D63),
+                  color: color(0xFF4D6D63),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -200,16 +200,16 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
               decoration: BoxDecoration(
-                color: const Color(0xFFF7FCF9),
+                color: const color(0xFFF7FCF9),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: const Color(0xFFE4EDE7)),
+                border: Border.all(color: const color(0xFFE4EDE7)),
               ),
               child: Text(
                 step['hint'] as String,
                 style: const TextStyle(
                   fontSize: 12,
                   fontStyle: FontStyle.italic,
-                  color: Color(0xFF5E7369),
+                  color: color(0xFF5E7369),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -223,8 +223,8 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
                   OutlinedButton(
                     style: OutlinedButton.styleFrom(
                       minimumSize: const Size(80, 48),
-                      foregroundColor: const Color(0xFF5E7369),
-                      side: const BorderSide(color: Color(0xFFD2E6DC), width: 1.2),
+                      foregroundcolor: const color(0xFF5E7369),
+                      side: const BorderSide(color: color(0xFFD2E6DC), width: 1.2),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24),
                       ),
@@ -243,8 +243,8 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(0, 48),
-                        backgroundColor: const Color(0xFF165A47),
-                        foregroundColor: Colors.white,
+                        backgroundcolor: const color(0xFF165A47),
+                        foregroundcolor: colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24),
                         ),
@@ -258,7 +258,7 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
                         }
                       },
                       child: Text(
-                        isLast ? 'Complete grounding' : 'Next step →',
+                        isLast ? 'Complete grounding' : 'Next step â†’',
                         style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -273,3 +273,4 @@ class _GroundingExerciseSheetState extends State<GroundingExerciseSheet> {
     );
   }
 }
+

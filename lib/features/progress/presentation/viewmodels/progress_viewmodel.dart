@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 
 class ProgressViewModel extends ChangeNotifier {
   final int _checkinsThisWeek = 5;
@@ -9,3 +9,4 @@ class ProgressViewModel extends ChangeNotifier {
   int get pauseMinutes => _pauseMinutes;
   int get journalEntriesCount => _journalEntriesCount;
 }
+

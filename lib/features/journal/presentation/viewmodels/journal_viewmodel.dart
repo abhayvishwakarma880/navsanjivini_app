@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import '../../../../core/storage/storage_service.dart';
 import '../../domain/entities/journal_entry.dart';
@@ -161,3 +161,4 @@ class JournalViewModel extends ChangeNotifier {
     }
   }
 }
+

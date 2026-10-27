@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -14,16 +14,16 @@ class DailyThoughtCard extends StatelessWidget {
     return Container(
       padding: AppSpacing.cardPadding,
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: Appcolors.surface,
         borderRadius: AppRadius.radiusLg,
-        border: Border.all(color: AppColors.border),
+        border: Border.all(color: Appcolors.border),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Icon(
             Icons.format_quote_rounded,
-            color: AppColors.primaryLight,
+            color: Appcolors.primaryLight,
             size: 28,
           ),
           const SizedBox(width: AppSpacing.xs),
@@ -34,7 +34,7 @@ class DailyThoughtCard extends StatelessWidget {
                 Text(
                   'Daily Reflection',
                   style: AppTextStyles.labelMedium.copyWith(
-                    color: AppColors.primary,
+                    color: Appcolors.primary,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -54,3 +54,4 @@ class DailyThoughtCard extends StatelessWidget {
     );
   }
 }
+

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_scope.dart';
 
 class JournalMoodSelector extends StatelessWidget {
@@ -12,10 +12,10 @@ class JournalMoodSelector extends StatelessWidget {
   });
 
   static const List<Map<String, String>> _moods = [
-    {'id': 'good', 'emoji': '😊'},
-    {'id': 'calm', 'emoji': '😌'},
-    {'id': 'low', 'emoji': '😔'},
-    {'id': 'anxious', 'emoji': '😰'},
+    {'id': 'good', 'emoji': 'ðŸ˜Š'},
+    {'id': 'calm', 'emoji': 'ðŸ˜Œ'},
+    {'id': 'low', 'emoji': 'ðŸ˜”'},
+    {'id': 'anxious', 'emoji': 'ðŸ˜°'},
   ];
 
   String _getMoodLabel(String id, dynamic strings) {
@@ -48,11 +48,11 @@ class JournalMoodSelector extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(right: isLast ? 0 : 8),
             child: Material(
-              color: isSelected ? const Color(0xFFE5F2EC) : Colors.white,
+              color: isSelected ? const color(0xFFE5F2EC) : colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(14),
                 side: BorderSide(
-                  color: isSelected ? const Color(0xFF165A47) : const Color(0xFFE4EDE7),
+                  color: isSelected ? const color(0xFF165A47) : const color(0xFFE4EDE7),
                   width: isSelected ? 1.5 : 1.1,
                 ),
               ),
@@ -83,8 +83,8 @@ class JournalMoodSelector extends StatelessWidget {
                           fontSize: 12,
                           fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                           color: isSelected
-                              ? const Color(0xFF165A47)
-                              : const Color(0xFF4D6D63),
+                              ? const color(0xFF165A47)
+                              : const color(0xFF4D6D63),
                         ),
                       ),
                     ],
@@ -98,3 +98,4 @@ class JournalMoodSelector extends StatelessWidget {
     );
   }
 }
+

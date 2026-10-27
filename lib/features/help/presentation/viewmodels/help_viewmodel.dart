@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import '../../domain/entities/help_resource.dart';
 
 class HelpViewModel extends ChangeNotifier {
@@ -31,3 +31,4 @@ class HelpViewModel extends ChangeNotifier {
 
   List<HelpResource> get resources => _resources;
 }
+

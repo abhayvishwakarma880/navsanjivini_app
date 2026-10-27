@@ -1,4 +1,4 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'package:flutter/foundation.dart';
 
 enum ExerciseType {
@@ -143,3 +143,4 @@ class PauseViewModel extends ChangeNotifier {
     super.dispose();
   }
 }
+

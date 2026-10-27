@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -21,19 +21,19 @@ class GrowthSummaryCard extends StatelessWidget {
     return Container(
       padding: AppSpacing.cardPadding,
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: Appcolors.surface,
         borderRadius: AppRadius.radiusLg,
-        border: Border.all(color: AppColors.border),
+        border: Border.all(color: Appcolors.border),
       ),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: AppColors.primaryContainer,
+              color: Appcolors.primaryContainer,
               borderRadius: AppRadius.radiusMd,
             ),
-            child: Icon(icon, color: AppColors.primary, size: 24),
+            child: Icon(icon, color: Appcolors.primary, size: 24),
           ),
           const SizedBox(width: AppSpacing.md),
           Expanded(
@@ -51,3 +51,4 @@ class GrowthSummaryCard extends StatelessWidget {
     );
   }
 }
+

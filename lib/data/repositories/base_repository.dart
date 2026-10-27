@@ -1,2 +1,3 @@
-/// Base repository marker class for data repositories.
+﻿/// Base repository marker class for data repositories.
 abstract class BaseRepository {}
+

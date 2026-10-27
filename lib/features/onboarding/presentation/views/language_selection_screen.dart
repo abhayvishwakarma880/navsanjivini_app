@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/app_languages.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/theme/app_colors.dart';
@@ -22,12 +22,12 @@ class LanguageSelectionScreen extends StatelessWidget {
     final strings = context.tr;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundcolor: Appcolors.background,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundcolor: colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.textPrimary),
+          icon: const Icon(Icons.arrow_back_rounded, color: Appcolors.textPrimary),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -43,14 +43,14 @@ class LanguageSelectionScreen extends StatelessWidget {
                 strings.chooseLanguageTitle,
                 style: AppTextStyles.headlineLarge.copyWith(
                   fontWeight: FontWeight.w700,
-                  color: AppColors.primaryDark,
+                  color: Appcolors.primaryDark,
                 ),
               ),
               const SizedBox(height: AppSpacing.xs),
               Text(
                 strings.welcomeTagline,
                 style: AppTextStyles.bodyMedium.copyWith(
-                  color: AppColors.textSecondary,
+                  color: Appcolors.textSecondary,
                 ),
               ),
               const SizedBox(height: AppSpacing.xl),
@@ -63,11 +63,11 @@ class LanguageSelectionScreen extends StatelessWidget {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: AppSpacing.md),
                       child: Material(
-                        color: isSelected ? AppColors.primaryContainer : AppColors.surface,
+                        color: isSelected ? Appcolors.primaryContainer : Appcolors.surface,
                         shape: RoundedRectangleBorder(
                           borderRadius: AppRadius.radiusLg,
                           side: BorderSide(
-                            color: isSelected ? AppColors.primary : AppColors.border,
+                            color: isSelected ? Appcolors.primary : Appcolors.border,
                             width: isSelected ? 2 : 1,
                           ),
                         ),
@@ -88,21 +88,21 @@ class LanguageSelectionScreen extends StatelessWidget {
                                   height: 44,
                                   decoration: BoxDecoration(
                                     color: isSelected
-                                        ? AppColors.primary
-                                        : AppColors.surfaceVariant,
+                                        ? Appcolors.primary
+                                        : Appcolors.surfaceVariant,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Center(
                                     child: Text(
                                       lang == AppLanguage.english
                                           ? 'A'
-                                          : (lang == AppLanguage.hindi ? 'अ' : 'Aa'),
+                                          : (lang == AppLanguage.hindi ? 'à¤…' : 'Aa'),
                                       style: TextStyle(
                                         fontSize: 18,
                                         fontWeight: FontWeight.w700,
                                         color: isSelected
-                                            ? AppColors.onPrimary
-                                            : AppColors.primary,
+                                            ? Appcolors.onPrimary
+                                            : Appcolors.primary,
                                       ),
                                     ),
                                   ),
@@ -122,7 +122,7 @@ class LanguageSelectionScreen extends StatelessWidget {
                                       Text(
                                         lang.displayName,
                                         style: AppTextStyles.bodySmall.copyWith(
-                                          color: AppColors.textSecondary,
+                                          color: Appcolors.textSecondary,
                                         ),
                                       ),
                                     ],
@@ -131,7 +131,7 @@ class LanguageSelectionScreen extends StatelessWidget {
                                 if (isSelected)
                                   const Icon(
                                     Icons.check_circle_rounded,
-                                    color: AppColors.primary,
+                                    color: Appcolors.primary,
                                     size: 24,
                                   ),
                               ],
@@ -157,3 +157,4 @@ class LanguageSelectionScreen extends StatelessWidget {
     );
   }
 }
+

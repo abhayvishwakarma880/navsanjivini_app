@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 import '../../domain/entities/journal_entry.dart';
@@ -101,32 +101,32 @@ class _JournalListScreenState extends State<JournalListScreen> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: Colors.white,
+        backgroundcolor: colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Text(
           strings.journalDeleteConfirmTitle,
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
-            color: Color(0xFF123C32),
+            color: color(0xFF123C32),
           ),
         ),
         content: Text(
           strings.journalDeleteConfirmMessage,
-          style: const TextStyle(fontSize: 14, color: Color(0xFF5E7369)),
+          style: const TextStyle(fontSize: 14, color: color(0xFF5E7369)),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
             child: Text(
               strings.journalCancel,
-              style: const TextStyle(color: Color(0xFF5E7369), fontWeight: FontWeight.w600),
+              style: const TextStyle(color: color(0xFF5E7369), fontWeight: FontWeight.w600),
             ),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFD32F2F),
-              foregroundColor: Colors.white,
+              backgroundcolor: const color(0xFFD32F2F),
+              foregroundcolor: colors.white,
               minimumSize: const Size(90, 40),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             ),
@@ -152,7 +152,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
 
     showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.white,
+      backgroundcolor: colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
@@ -168,7 +168,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
                   width: 40,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade300,
+                    color: colors.grey.shade300,
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -181,16 +181,16 @@ class _JournalListScreenState extends State<JournalListScreen> {
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF123C32),
+                  color: color(0xFF123C32),
                 ),
               ),
               const SizedBox(height: 14),
               ListTile(
                 contentPadding: EdgeInsets.zero,
-                leading: const Icon(Icons.visibility_outlined, color: Color(0xFF165A47)),
+                leading: const Icon(Icons.visibility_outlined, color: color(0xFF165A47)),
                 title: Text(
                   strings.journalReadEntry,
-                  style: const TextStyle(fontWeight: FontWeight.w600, color: Color(0xFF123C32)),
+                  style: const TextStyle(fontWeight: FontWeight.w600, color: color(0xFF123C32)),
                 ),
                 onTap: () {
                   Navigator.of(ctx).pop();
@@ -199,10 +199,10 @@ class _JournalListScreenState extends State<JournalListScreen> {
               ),
               ListTile(
                 contentPadding: EdgeInsets.zero,
-                leading: const Icon(Icons.edit_outlined, color: Color(0xFF165A47)),
+                leading: const Icon(Icons.edit_outlined, color: color(0xFF165A47)),
                 title: Text(
                   strings.journalEdit,
-                  style: const TextStyle(fontWeight: FontWeight.w600, color: Color(0xFF123C32)),
+                  style: const TextStyle(fontWeight: FontWeight.w600, color: color(0xFF123C32)),
                 ),
                 onTap: () {
                   Navigator.of(ctx).pop();
@@ -211,10 +211,10 @@ class _JournalListScreenState extends State<JournalListScreen> {
               ),
               ListTile(
                 contentPadding: EdgeInsets.zero,
-                leading: const Icon(Icons.delete_outline_rounded, color: Color(0xFFD32F2F)),
+                leading: const Icon(Icons.delete_outline_rounded, color: color(0xFFD32F2F)),
                 title: Text(
                   strings.journalDelete,
-                  style: const TextStyle(fontWeight: FontWeight.w600, color: Color(0xFFD32F2F)),
+                  style: const TextStyle(fontWeight: FontWeight.w600, color: color(0xFFD32F2F)),
                 ),
                 onTap: () {
                   Navigator.of(ctx).pop();
@@ -234,7 +234,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
     final strings = context.tr;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       body: SafeArea(
         child: ListenableBuilder(
           listenable: _viewModel,
@@ -263,7 +263,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
                               style: const TextStyle(
                                 fontSize: 19.5,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFF123C32),
+                                color: color(0xFF123C32),
                                 letterSpacing: -0.2,
                               ),
                             ),
@@ -272,7 +272,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
                               strings.journalHeaderSubtitle,
                               style: const TextStyle(
                                 fontSize: 13,
-                                color: Color(0xFF5E7369),
+                                color: color(0xFF5E7369),
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
@@ -283,17 +283,17 @@ class _JournalListScreenState extends State<JournalListScreen> {
                         width: 38,
                         height: 38,
                         decoration: BoxDecoration(
-                          color: const Color(0xFFE2EFE9),
+                          color: const color(0xFFE2EFE9),
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: const Color(0xFF165A47).withAlpha(25),
+                            color: const color(0xFF165A47).withAlpha(25),
                             width: 1,
                           ),
                         ),
                         child: const Center(
                           child: Icon(
                             Icons.menu_book_rounded,
-                            color: Color(0xFF165A47),
+                            color: color(0xFF165A47),
                             size: 19,
                           ),
                         ),
@@ -309,10 +309,10 @@ class _JournalListScreenState extends State<JournalListScreen> {
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFE5F2EC),
+                      color: const color(0xFFE5F2EC),
                       borderRadius: BorderRadius.circular(24),
                       border: Border.all(
-                        color: const Color(0xFFD2E6DC),
+                        color: const color(0xFFD2E6DC),
                         width: 1.1,
                       ),
                     ),
@@ -324,7 +324,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
                           style: const TextStyle(
                             fontSize: 17.5,
                             fontWeight: FontWeight.w700,
-                            color: Color(0xFF123C32),
+                            color: color(0xFF123C32),
                             letterSpacing: -0.1,
                           ),
                         ),
@@ -333,7 +333,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
                           strings.journalCheckInSubtitle,
                           style: const TextStyle(
                             fontSize: 13,
-                            color: Color(0xFF4D6D63),
+                            color: color(0xFF4D6D63),
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -354,8 +354,8 @@ class _JournalListScreenState extends State<JournalListScreen> {
                           height: 48,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF165A47),
-                              foregroundColor: Colors.white,
+                              backgroundcolor: const color(0xFF165A47),
+                              foregroundcolor: colors.white,
                               elevation: 0,
                               minimumSize: const Size(double.infinity, 48),
                               shape: RoundedRectangleBorder(
@@ -388,13 +388,13 @@ class _JournalListScreenState extends State<JournalListScreen> {
                         style: const TextStyle(
                           fontSize: 16.5,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF123C32),
+                          color: color(0xFF123C32),
                         ),
                       ),
                       TextButton(
                         onPressed: () {},
                         style: TextButton.styleFrom(
-                          foregroundColor: const Color(0xFF165A47),
+                          foregroundcolor: const color(0xFF165A47),
                           padding: EdgeInsets.zero,
                           minimumSize: const Size(50, 30),
                         ),
@@ -403,7 +403,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
                           style: const TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFF165A47),
+                            color: color(0xFF165A47),
                           ),
                         ),
                       ),
@@ -417,10 +417,10 @@ class _JournalListScreenState extends State<JournalListScreen> {
                       width: double.infinity,
                       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 32),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colors.white,
                         borderRadius: BorderRadius.circular(18),
                         border: Border.all(
-                          color: const Color(0xFFE4EDE7),
+                          color: const color(0xFFE4EDE7),
                           width: 1.1,
                         ),
                       ),
@@ -431,12 +431,12 @@ class _JournalListScreenState extends State<JournalListScreen> {
                             width: 52,
                             height: 52,
                             decoration: const BoxDecoration(
-                              color: Color(0xFFE5F2EC),
+                              color: color(0xFFE5F2EC),
                               shape: BoxShape.circle,
                             ),
                             child: const Icon(
                               Icons.menu_book_rounded,
-                              color: Color(0xFF165A47),
+                              color: color(0xFF165A47),
                               size: 26,
                             ),
                           ),
@@ -446,7 +446,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
                             style: const TextStyle(
                               fontSize: 15.5,
                               fontWeight: FontWeight.w700,
-                              color: Color(0xFF123C32),
+                              color: color(0xFF123C32),
                             ),
                           ),
                           const SizedBox(height: 6),
@@ -455,7 +455,7 @@ class _JournalListScreenState extends State<JournalListScreen> {
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               fontSize: 13,
-                              color: Color(0xFF5E7369),
+                              color: color(0xFF5E7369),
                               height: 1.4,
                             ),
                           ),
@@ -483,3 +483,4 @@ class _JournalListScreenState extends State<JournalListScreen> {
     );
   }
 }
+

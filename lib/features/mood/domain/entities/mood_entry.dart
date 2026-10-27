@@ -1,14 +1,14 @@
-/// Mood entry domain entity.
+﻿/// Mood entry domain entity.
 /// Note: Mood is represented for self-reflection and emotional awareness,
 /// NEVER as a clinical diagnosis or medical score.
 enum MoodType {
-  calm(label: 'Calm', emoji: '😌'),
-  peaceful(label: 'Peaceful', emoji: '🌿'),
-  happy(label: 'Happy', emoji: '😊'),
-  overwhelmed(label: 'Overwhelmed', emoji: '🌊'),
-  anxious(label: 'Anxious', emoji: '💭'),
-  sad(label: 'Sad', emoji: '🌧️'),
-  tired(label: 'Tired', emoji: '🥱');
+  calm(label: 'Calm', emoji: 'ðŸ˜Œ'),
+  peaceful(label: 'Peaceful', emoji: 'ðŸŒ¿'),
+  happy(label: 'Happy', emoji: 'ðŸ˜Š'),
+  overwhelmed(label: 'Overwhelmed', emoji: 'ðŸŒŠ'),
+  anxious(label: 'Anxious', emoji: 'ðŸ’­'),
+  sad(label: 'Sad', emoji: 'ðŸŒ§ï¸'),
+  tired(label: 'Tired', emoji: 'ðŸ¥±');
 
   final String label;
   final String emoji;
@@ -33,3 +33,4 @@ class MoodEntry {
     required this.timestamp,
   });
 }
+

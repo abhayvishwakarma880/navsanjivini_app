@@ -1,4 +1,4 @@
-import 'en_strings.dart';
+﻿import 'en_strings.dart';
 
 /// Hinglish translations (Romanized Hindi) - Extends EnStrings for automatic fallback
 class HinglishStrings extends EnStrings {
@@ -6,7 +6,7 @@ class HinglishStrings extends EnStrings {
   String get appName => 'Navsanjivini';
 
   @override
-  String get namasteGreeting => 'Namaste 🙏';
+  String get namasteGreeting => 'Namaste ðŸ™';
 
   @override
   String get continueBtn => 'Aage Badhein';
@@ -178,6 +178,41 @@ class HinglishStrings extends EnStrings {
   @override
   String get demoOtpNotice => 'Demo OTP: 123456';
 
+  // User & Doctor Login Flow
+  @override
+  String get userLoginTitle => 'User Login';
+
+  @override
+  String get doctorLoginTitle => 'Doctor Login';
+
+  @override
+  String get doctorLoginSubtitle =>
+      'Portal access karne ke liye apna registered email aur password dalein.';
+
+  @override
+  String get doctorEmailLabel => 'Email Address';
+
+  @override
+  String get doctorEmailHint => 'doctor@example.com';
+
+  @override
+  String get doctorLoginBtn => 'Doctor Log In';
+
+  @override
+  String get areYouADoctor => 'Doctor ya healthcare practitioner hain?';
+
+  @override
+  String get areYouAUser => 'Normal user ya patient hain?';
+
+  @override
+  String get switchToDoctorLogin => 'Doctor Login';
+
+  @override
+  String get switchToUserLogin => 'User Login';
+
+  @override
+  String get invalidDoctorEmail => 'Kripya valid email address dalein';
+
   // Navigation Bottom Tabs (5 Tabs)
   @override
   String get todayTab => 'Today';
@@ -199,19 +234,19 @@ class HinglishStrings extends EnStrings {
   String get appSubtitleTagline => 'A little space for yourself';
 
   @override
-  String get helloThere => 'Good morning 🌿';
+  String get helloThere => 'Good morning ðŸŒ¿';
 
   @override
   String get howAreYouFeeling => 'Aaj aap kaisa feel kar rahe hain?';
 
   @override
-  String get goodMorningGreeting => 'Good morning 🌿';
+  String get goodMorningGreeting => 'Good morning ðŸŒ¿';
 
   @override
-  String get goodAfternoonGreeting => 'Good afternoon 🌿';
+  String get goodAfternoonGreeting => 'Good afternoon ðŸŒ¿';
 
   @override
-  String get goodEveningGreeting => 'Good evening 🌿';
+  String get goodEveningGreeting => 'Good evening ðŸŒ¿';
 
   @override
   String get aMomentForYourself => 'Apne liye ek moment';
@@ -226,7 +261,7 @@ class HinglishStrings extends EnStrings {
   String get noRightOrWrongWay => 'Feelings sahi ya galat nahi hoti.';
 
   @override
-  String get checkInWithMood => 'Check in with your mood →';
+  String get checkInWithMood => 'Check in with your mood â†’';
 
   @override
   String get moodGreat => 'Great';
@@ -283,7 +318,7 @@ class HinglishStrings extends EnStrings {
   String get findSupportSubtitle => 'Trusted help options';
 
   @override
-  String get gentleThoughtTitle => 'A gentle thought 🌱';
+  String get gentleThoughtTitle => 'A gentle thought ðŸŒ±';
 
   @override
   String get gentleThoughtQuote => 'Difficult days par bhi small steps bohot count hote hain.';
@@ -320,7 +355,7 @@ class HinglishStrings extends EnStrings {
   String get talkDisclaimer => 'A supportive space, not a substitute for professional care.';
 
   @override
-  String get talkInitialGreeting => "Hi there 🌿 Main sunne ke liye yahan hoon. Aaj aapke mind mein kya chal raha hai?";
+  String get talkInitialGreeting => "Hi there ðŸŒ¿ Main sunne ke liye yahan hoon. Aaj aapke mind mein kya chal raha hai?";
 
   @override
   String get talkInitialUser => "Main thoda overwhelmed feel kar raha hoon.";
@@ -330,7 +365,7 @@ class HinglishStrings extends EnStrings {
 
   // Pause Screen
   @override
-  String get pauseHeaderTitle => 'Take a pause 🌿';
+  String get pauseHeaderTitle => 'Take a pause ðŸŒ¿';
 
   @override
   String get pauseHeaderSubtitle => 'A little space just for you.';
@@ -348,10 +383,10 @@ class HinglishStrings extends EnStrings {
   String get pauseMindfulBreathingTitle => 'Mindful breathing';
 
   @override
-  String get pauseMindfulBreathingSubtitle => '1 minute • Gentle breathing';
+  String get pauseMindfulBreathingSubtitle => '1 minute â€¢ Gentle breathing';
 
   @override
-  String get pauseStartBreathingButton => 'Start breathing exercise →';
+  String get pauseStartBreathingButton => 'Start breathing exercise â†’';
 
   @override
   String get pauseChooseTitle => 'Choose your pause';
@@ -406,7 +441,7 @@ class HinglishStrings extends EnStrings {
 
   // Journal Screen Blueprint
   @override
-  String get journalHeaderTitle => 'My Journal 🌿';
+  String get journalHeaderTitle => 'My Journal ðŸŒ¿';
 
   @override
   String get journalHeaderSubtitle => 'A little space for your thoughts.';
@@ -505,7 +540,7 @@ class HinglishStrings extends EnStrings {
 
   // Help Screen Blueprint
   @override
-  String get helpHeaderTitle => "You're not alone 🌿";
+  String get helpHeaderTitle => "You're not alone ðŸŒ¿";
 
   @override
   String get helpHeaderSubtitle => 'Support available hai jab bhi aapko zaroorat ho.';
@@ -548,7 +583,7 @@ class HinglishStrings extends EnStrings {
       'Agar aap ya koi aur immediate danger me hai, toh local emergency services ya trusted person se contact karein.';
 
   @override
-  String get helpUrgentButton => 'View urgent support options →';
+  String get helpUrgentButton => 'View urgent support options â†’';
 
   @override
   String get helpUrgentModalTitle => 'Urgent Support & Crisis Lines';
@@ -565,7 +600,7 @@ class HinglishStrings extends EnStrings {
   String get helpCallAction => 'Call now';
 
   @override
-  String get helpTollFree => 'Toll-free • 24/7';
+  String get helpTollFree => 'Toll-free â€¢ 24/7';
 
   // Profile Screen
   @override
@@ -632,3 +667,4 @@ class HinglishStrings extends EnStrings {
   String get confirmDeleteAccountDialog =>
       'Permanent Account Deletion:\nAapka sara data, mood entries aur chat history permanently delete ho jayegi. Is action ko undo nahi kiya ja sakta. Kya aap continue karna chahte hain?';
 }
+

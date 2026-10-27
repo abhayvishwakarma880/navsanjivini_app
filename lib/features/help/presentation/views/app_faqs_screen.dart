@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_scope.dart';
 
 class AppFaqsScreen extends StatelessWidget {
@@ -36,19 +36,19 @@ class AppFaqsScreen extends StatelessWidget {
       },
       {
         'q': 'What languages are supported?',
-        'a': 'Navsanjivini supports English, Hindi (हिंदी), and Hinglish (हिंग्लिश). You can switch your preferred language at any time from the Welcome screen or through Profile -> Settings.',
+        'a': 'Navsanjivini supports English, Hindi (à¤¹à¤¿à¤‚à¤¦à¥€), and Hinglish (à¤¹à¤¿à¤‚à¤—à¥à¤²à¤¿à¤¶). You can switch your preferred language at any time from the Welcome screen or through Profile -> Settings.',
         'tag': 'Localization',
       },
     ];
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF7FCF9),
+        backgroundcolor: const color(0xFFF7FCF9),
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: Color(0xFF123C32)),
+          icon: const Icon(Icons.arrow_back_rounded, color: color(0xFF123C32)),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -56,7 +56,7 @@ class AppFaqsScreen extends StatelessWidget {
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
-            color: Color(0xFF123C32),
+            color: color(0xFF123C32),
             letterSpacing: -0.2,
           ),
         ),
@@ -71,25 +71,25 @@ class AppFaqsScreen extends StatelessWidget {
             final faq = faqs[idx];
 
             return Material(
-              color: Colors.white,
+              color: colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18),
-                side: const BorderSide(color: Color(0xFFE4EDE7), width: 1.1),
+                side: const BorderSide(color: color(0xFFE4EDE7), width: 1.1),
               ),
               child: Theme(
-                data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                data: Theme.of(context).copyWith(dividercolor: colors.transparent),
                 child: ExpansionTile(
                   tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                   childrenPadding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-                  iconColor: const Color(0xFF165A47),
-                  collapsedIconColor: const Color(0xFF5E7369),
+                  iconcolor: const color(0xFF165A47),
+                  collapsedIconcolor: const color(0xFF5E7369),
                   title: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFE5F2EC),
+                          color: const color(0xFFE5F2EC),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
@@ -97,7 +97,7 @@ class AppFaqsScreen extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 10.5,
                             fontWeight: FontWeight.w700,
-                            color: Color(0xFF165A47),
+                            color: color(0xFF165A47),
                           ),
                         ),
                       ),
@@ -107,7 +107,7 @@ class AppFaqsScreen extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 14.5,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF123C32),
+                          color: color(0xFF123C32),
                           height: 1.3,
                         ),
                       ),
@@ -118,7 +118,7 @@ class AppFaqsScreen extends StatelessWidget {
                       faq['a']!,
                       style: const TextStyle(
                         fontSize: 13.5,
-                        color: Color(0xFF4D6D63),
+                        color: color(0xFF4D6D63),
                         height: 1.5,
                       ),
                     ),
@@ -132,3 +132,4 @@ class AppFaqsScreen extends StatelessWidget {
     );
   }
 }
+

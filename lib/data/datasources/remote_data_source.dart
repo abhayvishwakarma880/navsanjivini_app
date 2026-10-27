@@ -1,4 +1,4 @@
-import 'package:app/core/network/api_client.dart';
+﻿import 'package:app/core/network/api_client.dart';
 
 /// Base contract for feature remote data sources.
 abstract class BaseRemoteDataSource {
@@ -6,3 +6,4 @@ abstract class BaseRemoteDataSource {
 
   const BaseRemoteDataSource(this.apiClient);
 }
+

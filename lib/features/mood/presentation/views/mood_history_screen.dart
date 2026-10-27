@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_spacing.dart';
 import 'package:app/core/theme/app_text_styles.dart';
@@ -9,7 +9,7 @@ class MoodHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundcolor: Appcolors.background,
       appBar: AppBar(
         title: const Text('Mood Log & History'),
       ),
@@ -23,7 +23,7 @@ class MoodHistoryScreen extends StatelessWidget {
                 const Icon(
                   Icons.calendar_today_outlined,
                   size: 48,
-                  color: AppColors.primary,
+                  color: Appcolors.primary,
                 ),
                 const SizedBox(height: AppSpacing.md),
                 Text(
@@ -34,7 +34,7 @@ class MoodHistoryScreen extends StatelessWidget {
                 Text(
                   'Track patterns and emotional awareness over time. Remember, feelings come and go.',
                   textAlign: TextAlign.center,
-                  style: AppTextStyles.bodyMedium.copyWith(color: AppColors.textSecondary),
+                  style: AppTextStyles.bodyMedium.copyWith(color: Appcolors.textSecondary),
                 ),
               ],
             ),
@@ -44,3 +44,4 @@ class MoodHistoryScreen extends StatelessWidget {
     );
   }
 }
+

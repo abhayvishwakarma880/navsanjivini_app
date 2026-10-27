@@ -1,4 +1,4 @@
-/// Global app constants for Navsanjivini.
+﻿/// Global app constants for Navsanjivini.
 abstract final class AppConstants {
   static const String appName = 'Navsanjivini';
   static const String appTagline = 'Your safe space for emotional well-being';
@@ -19,3 +19,4 @@ abstract final class AppConstants {
   static const String keyConsentGiven = 'consent_given';
   static const String keyAuthToken = 'auth_token';
 }
+

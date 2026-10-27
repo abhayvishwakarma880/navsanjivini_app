@@ -1,4 +1,4 @@
-enum MessageSender { user, ai, system }
+﻿enum MessageSender { user, ai, system }
 
 class TalkMessage {
   final String id;
@@ -15,3 +15,4 @@ class TalkMessage {
     this.isSafetyRouting = false,
   });
 }
+

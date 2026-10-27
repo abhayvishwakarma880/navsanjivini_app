@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_scope.dart';
 import '../viewmodels/pause_viewmodel.dart';
 import 'concentric_breathing_visual.dart';
@@ -15,7 +15,7 @@ class BreathingSessionModal extends StatelessWidget {
     return showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.white,
+      backgroundcolor: colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
       ),
@@ -80,7 +80,7 @@ class BreathingSessionModal extends StatelessWidget {
                     width: 40,
                     height: 4,
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
+                      color: colors.grey.shade300,
                       borderRadius: BorderRadius.circular(2),
                     ),
                   ),
@@ -92,7 +92,7 @@ class BreathingSessionModal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
-                      icon: const Icon(Icons.close_rounded, color: Color(0xFF5E7369)),
+                      icon: const Icon(Icons.close_rounded, color: color(0xFF5E7369)),
                       onPressed: () {
                         vm.stopSession();
                         Navigator.of(context).pop();
@@ -101,7 +101,7 @@ class BreathingSessionModal extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFE5F2EC),
+                        color: const color(0xFFE5F2EC),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
@@ -109,7 +109,7 @@ class BreathingSessionModal extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF165A47),
+                          color: color(0xFF165A47),
                         ),
                       ),
                     ),
@@ -124,12 +124,12 @@ class BreathingSessionModal extends StatelessWidget {
                     width: 80,
                     height: 80,
                     decoration: const BoxDecoration(
-                      color: Color(0xFFE5F2EC),
+                      color: color(0xFFE5F2EC),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(
                       Icons.check_rounded,
-                      color: Color(0xFF165A47),
+                      color: color(0xFF165A47),
                       size: 42,
                     ),
                   ),
@@ -140,7 +140,7 @@ class BreathingSessionModal extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xFF123C32),
+                      color: color(0xFF123C32),
                     ),
                   ),
                   const SizedBox(height: 8),
@@ -149,7 +149,7 @@ class BreathingSessionModal extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 13.5,
-                      color: Color(0xFF5E7369),
+                      color: color(0xFF5E7369),
                     ),
                   ),
                   const Spacer(),
@@ -158,8 +158,8 @@ class BreathingSessionModal extends StatelessWidget {
                     height: 50,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF165A47),
-                        foregroundColor: Colors.white,
+                        backgroundcolor: const color(0xFF165A47),
+                        foregroundcolor: colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(28),
                         ),
@@ -184,19 +184,19 @@ class BreathingSessionModal extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xFF123C32),
+                      color: color(0xFF123C32),
                     ),
                   ),
                   const SizedBox(height: 10),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
-                      'Sit comfortably, relax your shoulders, and follow the rhythm of the gentle circle.',
+                      'Sit coifortably, relax your shoulders, and follow the rhythm of the gentle circle.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 13.5,
                         height: 1.45,
-                        color: Color(0xFF5E7369),
+                        color: color(0xFF5E7369),
                       ),
                     ),
                   ),
@@ -206,8 +206,8 @@ class BreathingSessionModal extends StatelessWidget {
                     height: 50,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF165A47),
-                        foregroundColor: Colors.white,
+                        backgroundcolor: const color(0xFF165A47),
+                        foregroundcolor: colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(28),
                         ),
@@ -240,7 +240,7 @@ class BreathingSessionModal extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xFF123C32),
+                      color: color(0xFF123C32),
                     ),
                   ),
                   const SizedBox(height: 8),
@@ -251,7 +251,7 @@ class BreathingSessionModal extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.w300,
-                      color: Color(0xFF165A47),
+                      color: color(0xFF165A47),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -261,7 +261,7 @@ class BreathingSessionModal extends StatelessWidget {
                     'Cycle ${vm.currentCycle} of ${vm.totalCycles}',
                     style: const TextStyle(
                       fontSize: 12.5,
-                      color: Color(0xFF7A8E85),
+                      color: color(0xFF7A8E85),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -275,8 +275,8 @@ class BreathingSessionModal extends StatelessWidget {
                       OutlinedButton.icon(
                         style: OutlinedButton.styleFrom(
                           minimumSize: const Size(110, 48),
-                          foregroundColor: const Color(0xFF5E7369),
-                          side: const BorderSide(color: Color(0xFFD2E6DC), width: 1.2),
+                          foregroundcolor: const color(0xFF5E7369),
+                          side: const BorderSide(color: color(0xFFD2E6DC), width: 1.2),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(24),
                           ),
@@ -294,8 +294,8 @@ class BreathingSessionModal extends StatelessWidget {
                       ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                           minimumSize: const Size(130, 48),
-                          backgroundColor: const Color(0xFF165A47),
-                          foregroundColor: Colors.white,
+                          backgroundcolor: const color(0xFF165A47),
+                          foregroundcolor: colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(24),
                           ),
@@ -329,3 +329,4 @@ class BreathingSessionModal extends StatelessWidget {
     );
   }
 }
+

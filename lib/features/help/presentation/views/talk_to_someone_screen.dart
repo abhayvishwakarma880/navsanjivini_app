@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 
@@ -12,11 +12,11 @@ class TalkToSomeoneScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: Colors.white,
+        backgroundcolor: colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Row(
           children: [
-            const Icon(Icons.phone_in_talk_rounded, color: Color(0xFF165A47), size: 22),
+            const Icon(Icons.phone_in_talk_rounded, color: color(0xFF165A47), size: 22),
             const SizedBox(width: 8),
             Expanded(
               child: Text(
@@ -24,7 +24,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 16.5,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF123C32),
+                  color: color(0xFF123C32),
                 ),
               ),
             ),
@@ -39,7 +39,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF165A47),
+                color: color(0xFF165A47),
               ),
             ),
             const SizedBox(height: 8),
@@ -47,7 +47,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
               'This number has been copied to your clipboard so you can easily paste or dial it from your phone dialer.',
               style: TextStyle(
                 fontSize: 13,
-                color: Color(0xFF5E7369),
+                color: color(0xFF5E7369),
                 height: 1.4,
               ),
             ),
@@ -58,13 +58,13 @@ class TalkToSomeoneScreen extends StatelessWidget {
             onPressed: () => Navigator.of(ctx).pop(),
             child: const Text(
               'Cancel',
-              style: TextStyle(color: Color(0xFF5E7369), fontWeight: FontWeight.w600),
+              style: TextStyle(color: color(0xFF5E7369), fontWeight: FontWeight.w600),
             ),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF165A47),
-              foregroundColor: Colors.white,
+              backgroundcolor: const color(0xFF165A47),
+              foregroundcolor: colors.white,
               minimumSize: const Size(100, 42),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             ),
@@ -137,13 +137,13 @@ class TalkToSomeoneScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF7FCF9),
+        backgroundcolor: const color(0xFFF7FCF9),
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: Color(0xFF123C32)),
+          icon: const Icon(Icons.arrow_back_rounded, color: color(0xFF123C32)),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -151,7 +151,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
-            color: Color(0xFF123C32),
+            color: color(0xFF123C32),
             letterSpacing: -0.2,
           ),
         ),
@@ -165,20 +165,20 @@ class TalkToSomeoneScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
               decoration: BoxDecoration(
-                color: const Color(0xFFE5F2EC),
+                color: const color(0xFFE5F2EC),
                 borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: const Color(0xFFD2E6DC)),
+                border: Border.all(color: const color(0xFFD2E6DC)),
               ),
               child: const Row(
                 children: [
-                  Icon(Icons.verified_user_outlined, color: Color(0xFF165A47), size: 24),
+                  Icon(Icons.verified_user_outlined, color: color(0xFF165A47), size: 24),
                   SizedBox(width: 12),
                   Expanded(
                     child: Text(
                       'All helplines listed below are verified, confidential, and run by qualified clinical organizations across India.',
                       style: TextStyle(
                         fontSize: 12.8,
-                        color: Color(0xFF165A47),
+                        color: color(0xFF165A47),
                         height: 1.4,
                         fontWeight: FontWeight.w500,
                       ),
@@ -197,9 +197,9 @@ class TalkToSomeoneScreen extends StatelessWidget {
                 margin: const EdgeInsets.only(bottom: 14),
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: colors.white,
                   borderRadius: BorderRadius.circular(18),
-                  border: Border.all(color: const Color(0xFFE4EDE7), width: 1.1),
+                  border: Border.all(color: const color(0xFFE4EDE7), width: 1.1),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -217,7 +217,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700,
-                                  color: Color(0xFF123C32),
+                                  color: color(0xFF123C32),
                                 ),
                               ),
                               const SizedBox(height: 2),
@@ -225,7 +225,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
                                 item['sub'] as String,
                                 style: const TextStyle(
                                   fontSize: 12,
-                                  color: Color(0xFF5E7369),
+                                  color: color(0xFF5E7369),
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -236,7 +236,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFE5F2EC),
+                              color: const color(0xFFE5F2EC),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: const Text(
@@ -244,7 +244,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 11,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFF165A47),
+                                color: color(0xFF165A47),
                               ),
                             ),
                           ),
@@ -255,7 +255,7 @@ class TalkToSomeoneScreen extends StatelessWidget {
                       item['desc'] as String,
                       style: const TextStyle(
                         fontSize: 12.8,
-                        color: Color(0xFF4D6D63),
+                        color: color(0xFF4D6D63),
                         height: 1.4,
                       ),
                     ),
@@ -278,8 +278,8 @@ class TalkToSomeoneScreen extends StatelessWidget {
                       height: 44,
                       child: ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF165A47),
-                          foregroundColor: Colors.white,
+                          backgroundcolor: const color(0xFF165A47),
+                          foregroundcolor: colors.white,
                           elevation: 0,
                           minimumSize: const Size(double.infinity, 44),
                           shape: RoundedRectangleBorder(
@@ -313,21 +313,21 @@ class TalkToSomeoneScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
       decoration: BoxDecoration(
-        color: const Color(0xFFF7FCF9),
+        color: const color(0xFFF7FCF9),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFE4EDE7)),
+        border: Border.all(color: const color(0xFFE4EDE7)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, size: 13, color: const Color(0xFF5E7369)),
+          Icon(icon, size: 13, color: const color(0xFF5E7369)),
           const SizedBox(width: 5),
           Text(
             text,
             style: const TextStyle(
               fontSize: 11.5,
               fontWeight: FontWeight.w500,
-              color: Color(0xFF5E7369),
+              color: color(0xFF5E7369),
             ),
           ),
         ],
@@ -335,3 +335,4 @@ class TalkToSomeoneScreen extends StatelessWidget {
     );
   }
 }
+

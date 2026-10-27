@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -23,11 +23,11 @@ class MoodSelector extends StatelessWidget {
       children: MoodType.values.map((mood) {
         final isSelected = selectedMood == mood;
         return Material(
-          color: isSelected ? AppColors.primaryContainer : AppColors.surface,
+          color: isSelected ? Appcolors.primaryContainer : Appcolors.surface,
           shape: RoundedRectangleBorder(
             borderRadius: AppRadius.radiusLg,
             side: BorderSide(
-              color: isSelected ? AppColors.primary : AppColors.border,
+              color: isSelected ? Appcolors.primary : Appcolors.border,
               width: isSelected ? 2 : 1,
             ),
           ),
@@ -50,7 +50,7 @@ class MoodSelector extends StatelessWidget {
                   Text(
                     mood.label,
                     style: AppTextStyles.labelMedium.copyWith(
-                      color: isSelected ? AppColors.primaryDark : AppColors.textPrimary,
+                      color: isSelected ? Appcolors.primaryDark : Appcolors.textPrimary,
                       fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
                     ),
                   ),
@@ -63,3 +63,4 @@ class MoodSelector extends StatelessWidget {
     );
   }
 }
+

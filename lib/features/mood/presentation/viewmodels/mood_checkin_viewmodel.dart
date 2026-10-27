@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import '../../domain/entities/mood_entry.dart';
 import '../../domain/repositories/mood_repository.dart';
 
@@ -91,3 +91,4 @@ class MoodCheckinViewModel extends ChangeNotifier {
     notifyListeners();
   }
 }
+

@@ -1,4 +1,4 @@
-class GuideArticle {
+﻿class GuideArticle {
   final String id;
   final String title;
   final String summary;
@@ -13,3 +13,4 @@ class GuideArticle {
     required this.readingTimeMinutes,
   });
 }
+

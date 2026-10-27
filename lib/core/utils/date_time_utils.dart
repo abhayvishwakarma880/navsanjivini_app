@@ -1,4 +1,4 @@
-/// Safe date formatting and time helpers for mood logs and journals.
+﻿/// Safe date formatting and time helpers for mood logs and journals.
 abstract final class DateTimeUtils {
   static String formatShortDate(DateTime dateTime) {
     final year = dateTime.year.toString();
@@ -67,9 +67,9 @@ abstract final class DateTimeUtils {
     final dateBase = '$monthStr ${dt.day}, ${dt.year}';
 
     if (isToday) {
-      return '$dateBase • TODAY';
+      return '$dateBase â€¢ TODAY';
     } else if (isYesterday) {
-      return '$dateBase • YESTERDAY';
+      return '$dateBase â€¢ YESTERDAY';
     }
     return dateBase;
   }
@@ -82,7 +82,7 @@ abstract final class DateTimeUtils {
         dt.day == now.subtract(const Duration(days: 1)).day;
 
     if (isToday) {
-      return 'TODAY • ${formatAmPmTime(dt)}';
+      return 'TODAY â€¢ ${formatAmPmTime(dt)}';
     } else if (isYesterday) {
       return 'YESTERDAY';
     } else {
@@ -107,3 +107,4 @@ abstract final class DateTimeUtils {
     }
   }
 }
+

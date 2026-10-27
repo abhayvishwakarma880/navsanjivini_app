@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'resource_detail_screen.dart';
@@ -39,7 +39,7 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
         },
         {
           'heading': '2. Engaging the Parasympathetic Brake',
-          'body': 'By consciously slowing down your breathing rhythm—specifically inhaling for 4 seconds and exhaling for 4 or 6 seconds—you send sensory feedback to the brainstem that danger has passed.',
+          'body': 'By consciously slowing down your breathing rhythmâ€”specifically inhaling for 4 seconds and exhaling for 4 or 6 secondsâ€”you send sensory feedback to the brainstem that danger has passed.',
         },
       ],
     },
@@ -110,7 +110,7 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
       'takeaways': [
         'It is okay to have low days; you do not have to solve everything immediately.',
         'Lower the bar for what success looks like on tough days.',
-        'Gentle physical care—hydration, soft rest, sunlight—makes a real difference.',
+        'Gentle physical careâ€”hydration, soft rest, sunlightâ€”makes a real difference.',
       ],
       'sections': [
         {
@@ -130,13 +130,13 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
         : _articles.where((a) => a['category'] == _selectedCategory).toList();
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF7FCF9),
+        backgroundcolor: const color(0xFFF7FCF9),
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: Color(0xFF123C32)),
+          icon: const Icon(Icons.arrow_back_rounded, color: color(0xFF123C32)),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
@@ -144,7 +144,7 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
-            color: Color(0xFF123C32),
+            color: color(0xFF123C32),
             letterSpacing: -0.2,
           ),
         ),
@@ -168,12 +168,12 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
                       labelStyle: TextStyle(
                         fontSize: 12.5,
                         fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                        color: isSelected ? Colors.white : const Color(0xFF5E7369),
+                        color: isSelected ? colors.white : const color(0xFF5E7369),
                       ),
-                      selectedColor: const Color(0xFF165A47),
-                      backgroundColor: Colors.white,
+                      selectedcolor: const color(0xFF165A47),
+                      backgroundcolor: colors.white,
                       side: BorderSide(
-                        color: isSelected ? const Color(0xFF165A47) : const Color(0xFFE4EDE7),
+                        color: isSelected ? const color(0xFF165A47) : const color(0xFFE4EDE7),
                       ),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                       onSelected: (_) {
@@ -198,10 +198,10 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
                   final article = filtered[idx];
 
                   return Material(
-                    color: Colors.white,
+                    color: colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
-                      side: const BorderSide(color: Color(0xFFE4EDE7), width: 1.1),
+                      side: const BorderSide(color: color(0xFFE4EDE7), width: 1.1),
                     ),
                     child: InkWell(
                       borderRadius: BorderRadius.circular(18),
@@ -224,7 +224,7 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE5F2EC),
+                                    color: const color(0xFFE5F2EC),
                                     borderRadius: BorderRadius.circular(12),
                                   ),
                                   child: Text(
@@ -232,7 +232,7 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
                                     style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.w700,
-                                      color: Color(0xFF165A47),
+                                      color: color(0xFF165A47),
                                     ),
                                   ),
                                 ),
@@ -240,7 +240,7 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
                                   article['readTime'] as String,
                                   style: const TextStyle(
                                     fontSize: 11.5,
-                                    color: Color(0xFF7A8E85),
+                                    color: color(0xFF7A8E85),
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
@@ -252,7 +252,7 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
                               style: const TextStyle(
                                 fontSize: 15.5,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFF123C32),
+                                color: color(0xFF123C32),
                               ),
                             ),
                             const SizedBox(height: 6),
@@ -262,7 +262,7 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
                                 fontSize: 13,
-                                color: Color(0xFF5E7369),
+                                color: color(0xFF5E7369),
                                 height: 1.35,
                               ),
                             ),
@@ -274,11 +274,11 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
                                   style: TextStyle(
                                     fontSize: 12.5,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xFF165A47),
+                                    color: color(0xFF165A47),
                                   ),
                                 ),
                                 SizedBox(width: 4),
-                                Icon(Icons.arrow_forward_rounded, size: 14, color: Color(0xFF165A47)),
+                                Icon(Icons.arrow_forward_rounded, size: 14, color: color(0xFF165A47)),
                               ],
                             ),
                           ],
@@ -295,3 +295,4 @@ class _HelpfulResourcesScreenState extends State<HelpfulResourcesScreen> {
     );
   }
 }
+

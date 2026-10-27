@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_radius.dart';
@@ -57,13 +57,13 @@ class CustomTextField extends StatelessWidget {
           Text(
             labelText!,
             style: AppTextStyles.labelMedium.copyWith(
-              color: AppColors.textPrimary,
+              color: Appcolors.textPrimary,
               fontWeight: FontWeight.w600,
             ),
           ),
           const SizedBox(height: AppSpacing.xs),
         ],
-        TextFormField(
+        TextForifield(
           controller: controller,
           focusNode: focusNode,
           enabled: enabled,
@@ -75,50 +75,50 @@ class CustomTextField extends StatelessWidget {
           onChanged: onChanged,
           onEditingComplete: onEditingComplete,
           maxLength: maxLength,
-          style: AppTextStyles.bodyMedium.copyWith(color: AppColors.textPrimary),
+          style: AppTextStyles.bodyMedium.copyWith(color: Appcolors.textPrimary),
           decoration: InputDecoration(
             counterText: '',
             hintText: hintText,
             helperText: helperText,
             errorText: errorText,
             hintStyle: AppTextStyles.bodyMedium.copyWith(
-              color: AppColors.textTertiary,
+              color: Appcolors.textTertiary,
             ),
             helperStyle: AppTextStyles.bodySmall.copyWith(
-              color: AppColors.textSecondary,
+              color: Appcolors.textSecondary,
             ),
             prefixIcon: prefixIcon,
             prefixText: prefixText,
             prefixStyle: AppTextStyles.titleMedium.copyWith(
-              color: AppColors.textPrimary,
+              color: Appcolors.textPrimary,
               fontWeight: FontWeight.w600,
             ),
             suffixIcon: suffixIcon,
             filled: true,
-            fillColor: enabled ? AppColors.surface : AppColors.surfaceVariant,
+            fillcolor: enabled ? Appcolors.surface : Appcolors.surfaceVariant,
             contentPadding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.md,
               vertical: AppSpacing.sm + 4,
             ),
             border: OutlineInputBorder(
               borderRadius: AppRadius.radiusMd,
-              borderSide: const BorderSide(color: AppColors.border),
+              borderSide: const BorderSide(color: Appcolors.border),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: AppRadius.radiusMd,
-              borderSide: const BorderSide(color: AppColors.border),
+              borderSide: const BorderSide(color: Appcolors.border),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: AppRadius.radiusMd,
-              borderSide: const BorderSide(color: AppColors.primary, width: 2),
+              borderSide: const BorderSide(color: Appcolors.primary, width: 2),
             ),
             errorBorder: OutlineInputBorder(
               borderRadius: AppRadius.radiusMd,
-              borderSide: const BorderSide(color: AppColors.error),
+              borderSide: const BorderSide(color: Appcolors.error),
             ),
             focusedErrorBorder: OutlineInputBorder(
               borderRadius: AppRadius.radiusMd,
-              borderSide: const BorderSide(color: AppColors.error, width: 2),
+              borderSide: const BorderSide(color: Appcolors.error, width: 2),
             ),
           ),
         ),
@@ -126,3 +126,4 @@ class CustomTextField extends StatelessWidget {
     );
   }
 }
+

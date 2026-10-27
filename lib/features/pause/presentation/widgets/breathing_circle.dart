@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import '../viewmodels/pause_viewmodel.dart';
 
@@ -28,9 +28,9 @@ class BreathingCircle extends StatelessWidget {
         height: phase == BreathPhase.inhale ? 220 : 160,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: AppColors.primaryContainer.withAlpha(200),
+          color: Appcolors.primaryContainer.withAlpha(200),
           border: Border.all(
-            color: AppColors.primary,
+            color: Appcolors.primary,
             width: 3,
           ),
         ),
@@ -38,7 +38,7 @@ class BreathingCircle extends StatelessWidget {
         child: Text(
           isActive ? phaseText : 'Tap to start',
           style: const TextStyle(
-            color: AppColors.primaryDark,
+            color: Appcolors.primaryDark,
             fontWeight: FontWeight.w600,
             fontSize: 16,
           ),
@@ -48,3 +48,4 @@ class BreathingCircle extends StatelessWidget {
     );
   }
 }
+

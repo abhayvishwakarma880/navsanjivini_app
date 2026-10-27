@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_radius.dart';
 import 'package:app/core/theme/app_spacing.dart';
@@ -14,10 +14,10 @@ class GuideCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.surface,
+      color: Appcolors.surface,
       shape: RoundedRectangleBorder(
         borderRadius: AppRadius.radiusLg,
-        side: const BorderSide(color: AppColors.border),
+        side: const BorderSide(color: Appcolors.border),
       ),
       child: InkWell(
         onTap: onTap,
@@ -30,13 +30,13 @@ class GuideCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: AppColors.primaryContainer,
+                  color: Appcolors.primaryContainer,
                   borderRadius: AppRadius.radiusSm,
                 ),
                 child: Text(
                   article.category,
                   style: AppTextStyles.labelSmall.copyWith(
-                    color: AppColors.primaryDark,
+                    color: Appcolors.primaryDark,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -53,7 +53,7 @@ class GuideCard extends StatelessWidget {
               const SizedBox(height: AppSpacing.xs),
               Text(
                 '${article.readingTimeMinutes} min read',
-                style: AppTextStyles.labelSmall.copyWith(color: AppColors.textTertiary),
+                style: AppTextStyles.labelSmall.copyWith(color: Appcolors.textTertiary),
               ),
             ],
           ),
@@ -62,3 +62,4 @@ class GuideCard extends StatelessWidget {
     );
   }
 }
+

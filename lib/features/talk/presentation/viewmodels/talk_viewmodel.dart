@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import '../../domain/entities/talk_message.dart';
 import '../../domain/repositories/talk_repository.dart';
 
@@ -22,7 +22,7 @@ class TalkViewModel extends ChangeNotifier {
     _messages.addAll([
       TalkMessage(
         id: 'msg_1',
-        text: "Hi there 🌿 I'm here to listen. What's been on your mind today?",
+        text: "Hi there ðŸŒ¿ I'm here to listen. What's been on your mind today?",
         sender: MessageSender.ai,
         timestamp: DateTime.now().subtract(const Duration(minutes: 3)),
       ),
@@ -111,7 +111,7 @@ class TalkViewModel extends ChangeNotifier {
         lower.contains('low') ||
         lower.contains('lonely') ||
         lower.contains('hurt')) {
-      return "Whatever you are feeling right now is completely okay to feel. You don't have to carry it alone. I'm right here with you—take all the time you need.";
+      return "Whatever you are feeling right now is completely okay to feel. You don't have to carry it alone. I'm right here with youâ€”take all the time you need.";
     } else if (lower.contains('vent') ||
         lower.contains('angry') ||
         lower.contains('frustrat') ||
@@ -139,7 +139,7 @@ class TalkViewModel extends ChangeNotifier {
     _messages.add(
       TalkMessage(
         id: DateTime.now().millisecondsSinceEpoch.toString(),
-        text: "Hi there 🌿 I'm here to listen. What's been on your mind today?",
+        text: "Hi there ðŸŒ¿ I'm here to listen. What's been on your mind today?",
         sender: MessageSender.ai,
         timestamp: DateTime.now(),
       ),
@@ -147,3 +147,4 @@ class TalkViewModel extends ChangeNotifier {
     notifyListeners();
   }
 }
+

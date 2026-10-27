@@ -1,13 +1,13 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/core/localization/language_scope.dart';
 
 enum TodayMood {
-  great(label: 'Great', emoji: '😊'),
-  okay(label: 'Okay', emoji: '😐'),
-  low(label: 'Low', emoji: '😔'),
-  anxious(label: 'Anxious', emoji: '😰'),
-  overwhelmed(label: 'Overwhelmed', emoji: '😫');
+  great(label: 'Great', emoji: 'ðŸ˜Š'),
+  okay(label: 'Okay', emoji: 'ðŸ˜'),
+  low(label: 'Low', emoji: 'ðŸ˜”'),
+  anxious(label: 'Anxious', emoji: 'ðŸ˜°'),
+  overwhelmed(label: 'Overwhelmed', emoji: 'ðŸ˜«');
 
   final String label;
   final String emoji;
@@ -17,7 +17,7 @@ enum TodayMood {
 
 /// Screen: Home / Today Dashboard (Tab 1)
 /// Exact layout matching the Navsanjivini design blueprint and visual reference:
-/// 1. Top Header: Time-of-day greeting ("Good morning 🌿"), subtitle, circular profile button.
+/// 1. Top Header: Time-of-day greeting ("Good morning ðŸŒ¿"), subtitle, circular profile button.
 /// 2. Daily Mood Check-in Card (Primary Action): 5 Mood options (Great, Okay, Low, Anxious, Overwhelmed) + supportive response flow.
 /// 3. Take a small pause shortcut: "A minute to breathe and reset."
 /// 4. "What would help right now?": 4 clean cards (Talk it out, Explore, My Journal, Find support).
@@ -72,15 +72,15 @@ class _HomeScreenState extends State<HomeScreen> {
   String _getSupportiveMessage(TodayMood mood) {
     return switch (mood) {
       TodayMood.great =>
-        'Wonderful to hear. Savor this positive feeling and take it with you today. 🌿',
+        'Wonderful to hear. Savor this positive feeling and take it with you today. ðŸŒ¿',
       TodayMood.okay =>
-        'Thank you for checking in. Steady, quiet days are just as meaningful. 🌿',
+        'Thank you for checking in. Steady, quiet days are just as meaningful. ðŸŒ¿',
       TodayMood.low =>
-        'We hear you. Be gentle with yourself today. You don\'t have to carry everything all at once. 🌿',
+        'We hear you. Be gentle with yourself today. You don\'t have to carry everything all at once. ðŸŒ¿',
       TodayMood.anxious =>
-        'Take a slow breath. You are safe in this moment, and it\'s okay to pause right now. 🌿',
+        'Take a slow breath. You are safe in this moment, and it\'s okay to pause right now. ðŸŒ¿',
       TodayMood.overwhelmed =>
-        'It is completely okay to slow down. One small step at a time is more than enough. 🌿',
+        'It is completely okay to slow down. One small step at a time is more than enough. ðŸŒ¿',
     };
   }
 
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final greeting = _getTimeGreeting(strings);
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7FCF9),
+      backgroundcolor: const color(0xFFF7FCF9),
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 4),
 
               // ==========================================
-              // ① TOP HEADER
+              // â‘  TOP HEADER
               // ==========================================
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: const TextStyle(
                             fontSize: 23,
                             fontWeight: FontWeight.w800,
-                            color: Color(0xFF1D3C33),
+                            color: color(0xFF1D3C33),
                             letterSpacing: -0.4,
                           ),
                         ),
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: const TextStyle(
                             fontSize: 13.5,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xFF5E7369),
+                            color: color(0xFF5E7369),
                           ),
                         ),
                       ],
@@ -146,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   // Top-Right Circular Profile Button
                   Material(
-                    color: const Color(0xFFE2EFE9),
+                    color: const color(0xFFE2EFE9),
                     shape: const CircleBorder(),
                     child: InkWell(
                       customBorder: const CircleBorder(),
@@ -157,14 +157,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: const Color(0xFF0F5B46).withAlpha(35),
+                            color: const color(0xFF0F5B46).withAlpha(35),
                             width: 1.2,
                           ),
                         ),
                         child: const Center(
                           child: Icon(
                             Icons.person_outline_rounded,
-                            color: Color(0xFF0F5B46),
+                            color: color(0xFF0F5B46),
                             size: 22,
                           ),
                         ),
@@ -176,26 +176,26 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 16),
 
               // ==========================================
-              // ② DAILY MOOD CHECK-IN CARD (Primary Action)
+              // â‘¡ DAILY MOOD CHECK-IN CARD (Primary Action)
               // ==========================================
               _buildMoodCheckinCard(strings),
               const SizedBox(height: 14),
 
               // ==========================================
-              // ③ TAKE A SMALL PAUSE CARD
+              // â‘¢ TAKE A SMALL PAUSE CARD
               // ==========================================
               _buildTakePauseCard(strings),
               const SizedBox(height: 18),
 
               // ==========================================
-              // ④ WHAT WOULD HELP RIGHT NOW?
+              // â‘£ WHAT WOULD HELP RIGHT NOW?
               // ==========================================
               Text(
                 strings.whatWouldHelpRightNow,
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF0C4D38),
+                  color: color(0xFF0C4D38),
                   letterSpacing: -0.2,
                 ),
               ),
@@ -204,7 +204,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 16),
 
               // ==========================================
-              // ⑤ A GENTLE THOUGHT
+              // â‘¤ A GENTLE THOUGHT
               // ==========================================
               _buildGentleThoughtCard(strings),
               const SizedBox(height: 16),
@@ -215,21 +215,21 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /// ② Daily Mood Check-in Card
+  /// â‘¡ Daily Mood Check-in Card
   Widget _buildMoodCheckinCard(dynamic strings) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFFEBF5F0), // Soft mint container
+        color: const color(0xFFEBF5F0), // Soft mint container
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: const Color(0xFFD6EAE0),
+          color: const color(0xFFD6EAE0),
           width: 1.2,
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF0F5B46).withAlpha(12),
+            color: const color(0xFF0F5B46).withAlpha(12),
             blurRadius: 16,
             offset: const Offset(0, 4),
           ),
@@ -243,7 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: const TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w600,
-              color: Color(0xFF247D6B),
+              color: color(0xFF247D6B),
             ),
           ),
           const SizedBox(height: 4),
@@ -252,7 +252,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: const TextStyle(
               fontSize: 16.5,
               fontWeight: FontWeight.w700,
-              color: Color(0xFF0C4D38),
+              color: color(0xFF0C4D38),
             ),
           ),
           const SizedBox(height: 14),
@@ -273,13 +273,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child: Material(
-                    color: isSelected ? const Color(0xFFD5ECE0) : Colors.white,
+                    color: isSelected ? const color(0xFFD5ECE0) : colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                       side: BorderSide(
                         color: isSelected
-                            ? const Color(0xFF0F5B46)
-                            : const Color(0xFFDCECE4),
+                            ? const color(0xFF0F5B46)
+                            : const color(0xFFDCECE4),
                         width: isSelected ? 2 : 1,
                       ),
                     ),
@@ -305,8 +305,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontSize: 11,
                                 fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                                 color: isSelected
-                                    ? const Color(0xFF0C4D38)
-                                    : const Color(0xFF1D3C33),
+                                    ? const color(0xFF0C4D38)
+                                    : const color(0xFF1D3C33),
                               ),
                             ),
                           ],
@@ -326,16 +326,16 @@ class _HomeScreenState extends State<HomeScreen> {
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
-                color: Colors.white.withAlpha(200),
+                color: colors.white.withAlpha(200),
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF0F5B46).withAlpha(35)),
+                border: Border.all(color: const color(0xFF0F5B46).withAlpha(35)),
               ),
               child: Row(
                 children: [
                   const Icon(
                     Icons.favorite_rounded,
                     size: 14,
-                    color: Color(0xFF0F5B46),
+                    color: color(0xFF0F5B46),
                   ),
                   const SizedBox(width: 8),
                   Expanded(
@@ -343,7 +343,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       _supportiveResponse!,
                       style: const TextStyle(
                         fontSize: 11.5,
-                        color: Color(0xFF1D3C33),
+                        color: color(0xFF1D3C33),
                         height: 1.35,
                       ),
                     ),
@@ -354,23 +354,23 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 12),
           ],
 
-          // Action Button: "Check in with your mood →"
+          // Action Button: "Check in with your mood â†’"
           Container(
             width: double.infinity,
             height: 48,
             decoration: BoxDecoration(
-              color: const Color(0xFF0F5B46),
+              color: const color(0xFF0F5B46),
               borderRadius: BorderRadius.circular(24),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF0F5B46).withAlpha(45),
+                  color: const color(0xFF0F5B46).withAlpha(45),
                   blurRadius: 14,
                   offset: const Offset(0, 6),
                 ),
               ],
             ),
             child: Material(
-              color: Colors.transparent,
+              color: colors.transparent,
               child: InkWell(
                 borderRadius: BorderRadius.circular(24),
                 onTap: _submitMoodCheckin,
@@ -380,7 +380,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: const TextStyle(
                       fontSize: 14.5,
                       fontWeight: FontWeight.w700,
-                      color: Colors.white,
+                      color: colors.white,
                       letterSpacing: 0.2,
                     ),
                   ),
@@ -393,16 +393,16 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /// ③ Take a small pause Card
+  /// â‘¢ Take a small pause Card
   Widget _buildTakePauseCard(dynamic strings) {
     return Material(
-      color: Colors.white,
+      color: colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18),
-        side: const BorderSide(color: Color(0xFFE4EDE7), width: 1.2),
+        side: const BorderSide(color: color(0xFFE4EDE7), width: 1.2),
       ),
       elevation: 0,
-      shadowColor: Colors.black.withAlpha(8),
+      shadowcolor: colors.black.withAlpha(8),
       child: InkWell(
         borderRadius: BorderRadius.circular(18),
         onTap: widget.onNavigateToPause,
@@ -414,13 +414,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 42,
                 height: 42,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFE2F0EA),
+                  color: const color(0xFFE2F0EA),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: const Center(
                   child: Icon(
                     Icons.air_rounded,
-                    color: Color(0xFF0F5B46),
+                    color: color(0xFF0F5B46),
                     size: 22,
                   ),
                 ),
@@ -435,7 +435,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF1D3C33),
+                        color: color(0xFF1D3C33),
                       ),
                     ),
                     const SizedBox(height: 2),
@@ -443,7 +443,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       strings.takeSmallPauseSubtitle,
                       style: const TextStyle(
                         fontSize: 12,
-                        color: Color(0xFF5E7369),
+                        color: color(0xFF5E7369),
                       ),
                     ),
                   ],
@@ -451,7 +451,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const Icon(
                 Icons.chevron_right_rounded,
-                color: Color(0xFF7A9489),
+                color: color(0xFF7A9489),
                 size: 22,
               ),
             ],
@@ -461,7 +461,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /// ④ 4 Action Prompt Cards (2x2 Grid)
+  /// â‘£ 4 Action Prompt Cards (2x2 Grid)
   Widget _buildHelpActionGrid(dynamic strings) {
     return Column(
       children: [
@@ -516,18 +516,18 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /// ⑤ A gentle thought Card
+  /// â‘¤ A gentle thought Card
   Widget _buildGentleThoughtCard(dynamic strings) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: colors.white,
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: const Color(0xFFE5EDE8), width: 1.2),
+        border: Border.all(color: const color(0xFFE5EDE8), width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withAlpha(5),
+            color: colors.black.withAlpha(5),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -541,7 +541,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: const TextStyle(
               fontSize: 12.5,
               fontWeight: FontWeight.w700,
-              color: Color(0xFF247D6B),
+              color: color(0xFF247D6B),
             ),
           ),
           const SizedBox(height: 6),
@@ -550,7 +550,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: const TextStyle(
               fontSize: 13.5,
               fontWeight: FontWeight.w500,
-              color: Color(0xFF1D3C33),
+              color: color(0xFF1D3C33),
               height: 1.4,
             ),
           ),
@@ -576,10 +576,10 @@ class _HelpActionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: const BorderSide(color: Color(0xFFE5EDE8), width: 1.2),
+        side: const BorderSide(color: color(0xFFE5EDE8), width: 1.2),
       ),
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
@@ -591,7 +591,7 @@ class _HelpActionCard extends StatelessWidget {
             children: [
               Icon(
                 icon,
-                color: const Color(0xFF0F5B46),
+                color: const color(0xFF0F5B46),
                 size: 22,
               ),
               const SizedBox(height: 10),
@@ -602,7 +602,7 @@ class _HelpActionCard extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 14.5,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF1D3C33),
+                  color: color(0xFF1D3C33),
                 ),
               ),
               const SizedBox(height: 2),
@@ -612,7 +612,7 @@ class _HelpActionCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 11.5,
-                  color: Color(0xFF5E7369),
+                  color: color(0xFF5E7369),
                 ),
               ),
             ],
@@ -622,3 +622,4 @@ class _HelpActionCard extends StatelessWidget {
     );
   }
 }
+

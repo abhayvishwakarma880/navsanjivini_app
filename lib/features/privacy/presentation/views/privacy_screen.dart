@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_spacing.dart';
 import 'package:app/core/theme/app_text_styles.dart';
@@ -28,7 +28,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
       listenable: _viewModel,
       builder: (context, _) {
         return Scaffold(
-          backgroundColor: AppColors.background,
+          backgroundcolor: Appcolors.background,
           appBar: AppBar(
             title: const Text('Privacy & Consent'),
           ),
@@ -40,7 +40,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                 const SizedBox(height: AppSpacing.xs),
                 Text(
                   'You own your well-being data. You have full freedom to export or erase your data at any time.',
-                  style: AppTextStyles.bodyMedium.copyWith(color: AppColors.textSecondary),
+                  style: AppTextStyles.bodyMedium.copyWith(color: Appcolors.textSecondary),
                 ),
                 const SizedBox(height: AppSpacing.lg),
                 ConsentToggleCard(
@@ -69,3 +69,4 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
     );
   }
 }
+

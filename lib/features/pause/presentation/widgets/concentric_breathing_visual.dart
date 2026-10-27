@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
 /// Concentric breathing rings visual matching the exact reference screenshot:
 /// - 3 translucent outer mint ripple rings
@@ -34,7 +34,7 @@ class ConcentricBreathingVisual extends StatelessWidget {
                 height: size,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFFC7E8DC).withAlpha(140),
+                  color: const color(0xFFC7E8DC).withAlpha(140),
                 ),
               ),
 
@@ -44,7 +44,7 @@ class ConcentricBreathingVisual extends StatelessWidget {
                 height: size * 0.78,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFFA3D9C4).withAlpha(170),
+                  color: const color(0xFFA3D9C4).withAlpha(170),
                 ),
               ),
 
@@ -54,7 +54,7 @@ class ConcentricBreathingVisual extends StatelessWidget {
                 height: size * 0.58,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFF67B799).withAlpha(190),
+                  color: const color(0xFF67B799).withAlpha(190),
                 ),
               ),
 
@@ -64,11 +64,11 @@ class ConcentricBreathingVisual extends StatelessWidget {
                 height: size * 0.40,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFF165A47),
+                  color: const color(0xFF165A47),
                   boxShadow: showShadow
                       ? [
                           BoxShadow(
-                            color: const Color(0xFF165A47).withAlpha(60),
+                            color: const color(0xFF165A47).withAlpha(60),
                             blurRadius: 14,
                             spreadRadius: 2,
                             offset: const Offset(0, 4),
@@ -79,7 +79,7 @@ class ConcentricBreathingVisual extends StatelessWidget {
                 child: Center(
                   child: Icon(
                     Icons.eco_rounded,
-                    color: Colors.white,
+                    color: colors.white,
                     size: size * 0.22,
                   ),
                 ),
@@ -91,3 +91,4 @@ class ConcentricBreathingVisual extends StatelessWidget {
     );
   }
 }
+

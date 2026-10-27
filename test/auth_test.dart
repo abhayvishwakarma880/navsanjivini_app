@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
-import 'package:app/features/auth/data/repositories/mock_auth_repository.dart';
-import 'package:app/features/auth/domain/models/auth_result.dart';
-import 'package:app/features/auth/presentation/viewmodels/auth_viewmodel.dart';
-import 'package:app/features/auth/presentation/views/auth_screen.dart';
+import 'package:app/user/repositories/mock_auth_repository.dart';
+import 'package:app/user/models/auth_result.dart';
+import 'package:app/user/viewmodels/auth_viewmodel.dart';
+import 'package:app/user/views/auth_screen.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 
@@ -134,3 +134,4 @@ void main() {
     });
   });
 }
+

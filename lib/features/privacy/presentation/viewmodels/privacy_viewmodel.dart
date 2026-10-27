@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 
 class PrivacyViewModel extends ChangeNotifier {
   bool _aiDataRetentionConsent = false;
@@ -22,3 +22,4 @@ class PrivacyViewModel extends ChangeNotifier {
     notifyListeners();
   }
 }
+

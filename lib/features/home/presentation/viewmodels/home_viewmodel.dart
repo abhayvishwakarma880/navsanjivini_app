@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import 'package:app/core/utils/date_time_utils.dart';
 
 class HomeViewModel extends ChangeNotifier {
@@ -26,3 +26,4 @@ class HomeViewModel extends ChangeNotifier {
     notifyListeners();
   }
 }
+

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
@@ -39,7 +39,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // 1. Header
-    expect(find.text('Take a pause 🌿'), findsOneWidget);
+    expect(find.text('Take a pause ðŸŒ¿'), findsOneWidget);
     expect(find.text('A little space just for you.'), findsOneWidget);
     expect(find.byIcon(Icons.eco_rounded), findsWidgets);
 
@@ -48,8 +48,8 @@ void main() {
     expect(find.text("Let's slow things down."), findsOneWidget);
     expect(find.text("You don't have to solve everything right now."), findsOneWidget);
     expect(find.text('Mindful breathing'), findsOneWidget);
-    expect(find.text('1 minute • Gentle breathing'), findsOneWidget);
-    expect(find.text('Start breathing exercise →'), findsOneWidget);
+    expect(find.text('1 minute â€¢ Gentle breathing'), findsOneWidget);
+    expect(find.text('Start breathing exercise â†’'), findsOneWidget);
 
     // 3. Choose your pause Section
     expect(find.text('Choose your pause'), findsOneWidget);
@@ -78,7 +78,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // Tap button to launch modal
-    await tester.tap(find.text('Start breathing exercise →'));
+    await tester.tap(find.text('Start breathing exercise â†’'));
     await tester.pumpAndSettle();
 
     // Verify modal is open with ready screen
@@ -131,7 +131,7 @@ void main() {
     // Verify 5-4-3-2-1 sheet is open
     expect(find.text('5-4-3-2-1 Grounding'), findsOneWidget);
     expect(find.text('5 things you can see'), findsOneWidget);
-    expect(find.text('Next step →'), findsOneWidget);
+    expect(find.text('Next step â†’'), findsOneWidget);
   });
 
   testWidgets('Tapping Relax card opens body relaxation sheet',
@@ -153,7 +153,7 @@ void main() {
     // Verify Quick Body Relaxation sheet is open
     expect(find.text('Quick Body Relaxation'), findsOneWidget);
     expect(find.text('Drop your shoulders'), findsOneWidget);
-    expect(find.text('Next →'), findsOneWidget);
+    expect(find.text('Next â†’'), findsOneWidget);
   });
 
   test('PauseViewModel manages breathing timer, phases, and controls accurately', () {
@@ -188,3 +188,4 @@ void main() {
     vm.dispose();
   });
 }
+

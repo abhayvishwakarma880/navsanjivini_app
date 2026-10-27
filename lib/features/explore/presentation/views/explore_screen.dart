@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/app_spacing.dart';
 import '../viewmodels/explore_viewmodel.dart';
@@ -12,7 +12,7 @@ class ExploreScreen extends StatelessWidget {
     final viewModel = ExploreViewModel();
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundcolor: Appcolors.background,
       appBar: AppBar(
         title: const Text('Explore Self-Help Library'),
       ),
@@ -35,3 +35,4 @@ class ExploreScreen extends StatelessWidget {
     );
   }
 }
+

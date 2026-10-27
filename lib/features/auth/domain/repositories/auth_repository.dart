@@ -1,4 +1,4 @@
-import '../models/auth_result.dart';
+﻿import '../models/auth_result.dart';
 import '../models/auth_user.dart';
 
 /// Contract interface for Authentication.
@@ -38,3 +38,4 @@ abstract class AuthRepository {
   /// Logout and clear session.
   Future<void> logout();
 }
+

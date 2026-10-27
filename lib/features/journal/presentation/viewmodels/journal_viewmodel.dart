@@ -68,7 +68,7 @@ class JournalViewModel extends ChangeNotifier {
 
   void _seedInitialMockEntries() {
     final now = DateTime.now();
-    final today1030 = DateTime(now.year, now.month, now.day, 10, 30);
+    final earlierToday = now.subtract(const Duration(hours: 3));
     final yesterday = now.subtract(const Duration(days: 1));
     final yesterdayTime = DateTime(yesterday.year, yesterday.month, yesterday.day, 16, 45);
 
@@ -78,8 +78,8 @@ class JournalViewModel extends ChangeNotifier {
         title: 'A small step forward',
         body: 'Today was a little difficult, but I took some time for myself...',
         mood: 'calm',
-        createdAt: today1030,
-        updatedAt: today1030,
+        createdAt: earlierToday,
+        updatedAt: earlierToday,
       ),
       JournalEntry(
         id: 'mock_2',

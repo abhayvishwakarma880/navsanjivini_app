@@ -46,3 +46,4 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+APP_ANALYSIS_AND_SYSTEM_DESIGN.md

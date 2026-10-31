@@ -1,4 +1,4 @@
-﻿/// Domain failures converted from exceptions to be handled cleanly in presentation.
+/// Domain failures converted from exceptions to be handled cleanly in presentation.
 abstract class Failure {
   final String message;
   final int? code;
@@ -27,4 +27,3 @@ class StorageFailure extends Failure {
 class AuthFailure extends Failure {
   const AuthFailure({required super.message, super.code});
 }
-

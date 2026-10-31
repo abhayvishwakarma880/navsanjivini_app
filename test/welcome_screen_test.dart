@@ -1,10 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
 import 'package:app/core/theme/app_theme.dart';
-import 'package:app/common/views/welcome_screen.dart';
+import 'package:app/common/features/onboarding/presentation/views/welcome_screen.dart';
 
 void main() {
   testWidgets('WelcomeScreen renders exact reference UI elements accurately', (tester) async {
@@ -49,4 +49,3 @@ void main() {
     expect(continueTapped, isTrue);
   });
 }
-

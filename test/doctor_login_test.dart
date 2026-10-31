@@ -1,12 +1,12 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
 import 'package:app/core/theme/app_theme.dart';
-import 'package:app/doctor/repositories/mock_doctor_auth_repository.dart';
-import 'package:app/doctor/viewmodels/doctor_auth_viewmodel.dart';
-import 'package:app/doctor/views/doctor_login_screen.dart';
+import 'package:app/doctor/features/auth/data/repositories/mock_doctor_auth_repository.dart';
+import 'package:app/doctor/features/auth/presentation/viewmodels/doctor_auth_viewmodel.dart';
+import 'package:app/doctor/features/auth/presentation/views/doctor_login_screen.dart';
 
 void main() {
   late InMemoryStorageService storageService;

@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_radius.dart';
 import '../theme/app_spacing.dart';
@@ -8,7 +8,7 @@ class CustomCard extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
   final VoidCallback? onTap;
-  final color? backgroundcolor;
+  final Color? backgroundColor;
   final BorderSide? border;
 
   const CustomCard({
@@ -16,7 +16,7 @@ class CustomCard extends StatelessWidget {
     required this.child,
     this.padding,
     this.onTap,
-    this.backgroundcolor,
+    this.backgroundColor,
     this.border,
   });
 
@@ -28,10 +28,10 @@ class CustomCard extends StatelessWidget {
     );
 
     return Material(
-      color: backgroundcolor ?? Appcolors.surface,
+      color: backgroundColor ?? AppColors.surface,
       shape: RoundedRectangleBorder(
         borderRadius: AppRadius.radiusLg,
-        side: border ?? const BorderSide(color: Appcolors.border, width: 1),
+        side: border ?? const BorderSide(color: AppColors.border, width: 1),
       ),
       clipBehavior: Clip.antiAlias,
       child: onTap != null
@@ -44,4 +44,3 @@ class CustomCard extends StatelessWidget {
     );
   }
 }
-

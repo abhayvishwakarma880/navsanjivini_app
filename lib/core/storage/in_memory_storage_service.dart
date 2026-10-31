@@ -1,4 +1,4 @@
-﻿import 'storage_service.dart';
+import 'storage_service.dart';
 
 /// In-memory implementation of [StorageService] useful for testing and preview fallback.
 class InMemoryStorageService implements StorageService {
@@ -28,4 +28,3 @@ class InMemoryStorageService implements StorageService {
   @override
   Future<void> setString(String key, String value) async => _store[key] = value;
 }
-

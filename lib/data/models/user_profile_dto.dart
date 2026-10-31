@@ -1,4 +1,4 @@
-﻿/// Data Transfer Object representing user profile and preference state.
+/// Data Transfer Object representing user profile and preference state.
 class UserProfileDto {
   final String id;
   final String language;
@@ -36,4 +36,3 @@ class UserProfileDto {
     );
   }
 }
-

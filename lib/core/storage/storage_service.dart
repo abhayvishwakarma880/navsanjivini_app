@@ -1,4 +1,4 @@
-﻿/// Storage abstraction layer for local preferences and cache.
+/// Storage abstraction layer for local preferences and cache.
 /// Allows swapping SharedPreferences or FlutterSecureStorage without changing features.
 abstract class StorageService {
   Future<void> setString(String key, String value);
@@ -13,4 +13,3 @@ abstract class StorageService {
   Future<void> remove(String key);
   Future<void> clear();
 }
-

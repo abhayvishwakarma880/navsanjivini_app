@@ -1,7 +1,7 @@
-﻿/// Supported languages for Navsanjivini.
+/// Supported languages for Navsanjivini.
 enum AppLanguage {
   english(code: 'en', displayName: 'English', nativeName: 'English'),
-  hindi(code: 'hi', displayName: 'Hindi', nativeName: 'à¤¹à¤¿à¤‚à¤¦à¥€'),
+  hindi(code: 'hi', displayName: 'Hindi', nativeName: 'हिंदी'),
   hinglish(code: 'hi_en', displayName: 'Hinglish', nativeName: 'Hinglish');
 
   final String code;
@@ -23,4 +23,3 @@ enum AppLanguage {
     );
   }
 }
-

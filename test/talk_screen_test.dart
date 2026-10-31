@@ -1,10 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
 import 'package:app/core/theme/app_theme.dart';
-import 'package:app/features/talk/presentation/views/talk_screen.dart';
+import 'package:app/user/features/talk/presentation/views/talk_screen.dart';
 
 void main() {
   late InMemoryStorageService storage;
@@ -48,7 +48,7 @@ void main() {
     expect(find.text('No pressure to find the perfect words.'), findsOneWidget);
 
     // Verify initial chat conversation matching image
-    expect(find.text("Hi there ðŸŒ¿ I'm here to listen. What's been on your mind today?"), findsOneWidget);
+    expect(find.text("Hi there 🌿 I'm here to listen. What's been on your mind today?"), findsOneWidget);
     expect(find.text("I've been feeling a little overwhelmed lately."), findsOneWidget);
     expect(find.text("That sounds like a lot to carry. Would you like to talk about what's been feeling overwhelming?"), findsOneWidget);
 
@@ -116,4 +116,3 @@ void main() {
     expect(find.textContaining('When anxiety shows up'), findsOneWidget);
   });
 }
-

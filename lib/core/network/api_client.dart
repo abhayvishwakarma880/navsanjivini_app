@@ -1,4 +1,4 @@
-﻿/// Abstract API client contract for network requests.
+/// Abstract API client contract for network requests.
 /// Centralizes headers, authentication token attachment, and serialization.
 abstract class ApiClient {
   Future<Map<String, dynamic>> get(
@@ -27,4 +27,3 @@ abstract class ApiClient {
     Map<String, String>? headers,
   });
 }
-

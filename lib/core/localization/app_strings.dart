@@ -1,4 +1,4 @@
-﻿/// Contract for all localized strings across Navsanjivini.
+/// Contract for all localized strings across Navsanjivini.
 abstract class AppStrings {
   // App General
   String get appName;

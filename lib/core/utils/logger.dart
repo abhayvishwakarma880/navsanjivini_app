@@ -1,4 +1,4 @@
-﻿import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart';
 
 /// App debug logger that only logs during debug mode.
 abstract final class AppLogger {
@@ -28,4 +28,3 @@ abstract final class AppLogger {
     if (stackTrace != null) debugPrint('StackTrace: $stackTrace');
   }
 }
-

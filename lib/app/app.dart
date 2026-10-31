@@ -1,35 +1,36 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
 import 'package:app/core/storage/storage_service.dart';
 import 'package:app/core/theme/app_theme.dart';
 
-// Common module
-import '../common/views/eligibility_screen.dart';
-import '../common/views/language_selection_screen.dart';
-import '../common/views/welcome_screen.dart';
+// Common module (shared by User & Doctor)
+import '../common/features/onboarding/presentation/views/eligibility_screen.dart';
+import '../common/features/onboarding/presentation/views/language_selection_screen.dart';
+import '../common/features/onboarding/presentation/views/welcome_screen.dart';
 
 // Doctor module
-import '../doctor/repositories/doctor_auth_repository.dart';
-import '../doctor/repositories/mock_doctor_auth_repository.dart';
-import '../doctor/viewmodels/doctor_auth_viewmodel.dart';
-import '../doctor/views/doctor_login_screen.dart';
+import '../doctor/features/auth/data/repositories/mock_doctor_auth_repository.dart';
+import '../doctor/features/auth/domain/repositories/doctor_auth_repository.dart';
+import '../doctor/features/auth/presentation/viewmodels/doctor_auth_viewmodel.dart';
+import '../doctor/features/auth/presentation/views/doctor_login_screen.dart';
 
 // User module
-import '../user/repositories/auth_repository.dart';
-import '../user/repositories/mock_auth_repository.dart';
-import '../user/viewmodels/auth_viewmodel.dart';
-import '../user/views/auth_screen.dart';
-import '../user/views/explore_screen.dart';
-import '../user/views/help_screen.dart';
-import '../user/views/main_shell_screen.dart';
-import '../user/views/mood_checkin_screen.dart';
-import '../user/views/pause_screen.dart';
-import '../user/views/privacy_screen.dart';
-import '../user/views/profile_screen.dart';
-import '../user/views/settings_screen.dart';
-import '../user/views/talk_screen.dart';
+import '../user/features/auth/data/repositories/mock_auth_repository.dart';
+import '../user/features/auth/domain/repositories/auth_repository.dart';
+import '../user/features/auth/presentation/viewmodels/auth_viewmodel.dart';
+import '../user/features/auth/presentation/views/auth_screen.dart';
+
+import '../user/features/explore/presentation/views/explore_screen.dart';
+import '../user/features/help/presentation/views/help_screen.dart';
+import '../user/features/home/presentation/views/main_shell_screen.dart';
+import '../user/features/mood/presentation/views/mood_checkin_screen.dart';
+import '../user/features/pause/presentation/views/pause_screen.dart';
+import '../user/features/privacy/presentation/views/privacy_screen.dart';
+import '../user/features/profile/presentation/views/profile_screen.dart';
+import '../user/features/settings/presentation/views/settings_screen.dart';
+import '../user/features/talk/presentation/views/talk_screen.dart';
 
 import 'router.dart';
 

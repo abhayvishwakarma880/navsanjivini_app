@@ -1,4 +1,4 @@
-﻿import 'en_strings.dart';
+import 'en_strings.dart';
 
 /// Hinglish translations (Romanized Hindi) - Extends EnStrings for automatic fallback
 class HinglishStrings extends EnStrings {
@@ -6,7 +6,7 @@ class HinglishStrings extends EnStrings {
   String get appName => 'Navsanjivini';
 
   @override
-  String get namasteGreeting => 'Namaste ðŸ™';
+  String get namasteGreeting => 'Namaste 🙏';
 
   @override
   String get continueBtn => 'Aage Badhein';
@@ -234,19 +234,19 @@ class HinglishStrings extends EnStrings {
   String get appSubtitleTagline => 'A little space for yourself';
 
   @override
-  String get helloThere => 'Good morning ðŸŒ¿';
+  String get helloThere => 'Good morning 🌿';
 
   @override
   String get howAreYouFeeling => 'Aaj aap kaisa feel kar rahe hain?';
 
   @override
-  String get goodMorningGreeting => 'Good morning ðŸŒ¿';
+  String get goodMorningGreeting => 'Good morning 🌿';
 
   @override
-  String get goodAfternoonGreeting => 'Good afternoon ðŸŒ¿';
+  String get goodAfternoonGreeting => 'Good afternoon 🌿';
 
   @override
-  String get goodEveningGreeting => 'Good evening ðŸŒ¿';
+  String get goodEveningGreeting => 'Good evening 🌿';
 
   @override
   String get aMomentForYourself => 'Apne liye ek moment';
@@ -261,7 +261,7 @@ class HinglishStrings extends EnStrings {
   String get noRightOrWrongWay => 'Feelings sahi ya galat nahi hoti.';
 
   @override
-  String get checkInWithMood => 'Check in with your mood â†’';
+  String get checkInWithMood => 'Check in with your mood →';
 
   @override
   String get moodGreat => 'Great';
@@ -318,7 +318,7 @@ class HinglishStrings extends EnStrings {
   String get findSupportSubtitle => 'Trusted help options';
 
   @override
-  String get gentleThoughtTitle => 'A gentle thought ðŸŒ±';
+  String get gentleThoughtTitle => 'A gentle thought 🌱';
 
   @override
   String get gentleThoughtQuote => 'Difficult days par bhi small steps bohot count hote hain.';
@@ -355,7 +355,7 @@ class HinglishStrings extends EnStrings {
   String get talkDisclaimer => 'A supportive space, not a substitute for professional care.';
 
   @override
-  String get talkInitialGreeting => "Hi there ðŸŒ¿ Main sunne ke liye yahan hoon. Aaj aapke mind mein kya chal raha hai?";
+  String get talkInitialGreeting => "Hi there 🌿 Main sunne ke liye yahan hoon. Aaj aapke mind mein kya chal raha hai?";
 
   @override
   String get talkInitialUser => "Main thoda overwhelmed feel kar raha hoon.";
@@ -365,7 +365,7 @@ class HinglishStrings extends EnStrings {
 
   // Pause Screen
   @override
-  String get pauseHeaderTitle => 'Take a pause ðŸŒ¿';
+  String get pauseHeaderTitle => 'Take a pause 🌿';
 
   @override
   String get pauseHeaderSubtitle => 'A little space just for you.';
@@ -383,10 +383,10 @@ class HinglishStrings extends EnStrings {
   String get pauseMindfulBreathingTitle => 'Mindful breathing';
 
   @override
-  String get pauseMindfulBreathingSubtitle => '1 minute â€¢ Gentle breathing';
+  String get pauseMindfulBreathingSubtitle => '1 minute • Gentle breathing';
 
   @override
-  String get pauseStartBreathingButton => 'Start breathing exercise â†’';
+  String get pauseStartBreathingButton => 'Start breathing exercise →';
 
   @override
   String get pauseChooseTitle => 'Choose your pause';
@@ -441,7 +441,7 @@ class HinglishStrings extends EnStrings {
 
   // Journal Screen Blueprint
   @override
-  String get journalHeaderTitle => 'My Journal ðŸŒ¿';
+  String get journalHeaderTitle => 'My Journal 🌿';
 
   @override
   String get journalHeaderSubtitle => 'A little space for your thoughts.';
@@ -540,7 +540,7 @@ class HinglishStrings extends EnStrings {
 
   // Help Screen Blueprint
   @override
-  String get helpHeaderTitle => "You're not alone ðŸŒ¿";
+  String get helpHeaderTitle => "You're not alone 🌿";
 
   @override
   String get helpHeaderSubtitle => 'Support available hai jab bhi aapko zaroorat ho.';
@@ -583,7 +583,7 @@ class HinglishStrings extends EnStrings {
       'Agar aap ya koi aur immediate danger me hai, toh local emergency services ya trusted person se contact karein.';
 
   @override
-  String get helpUrgentButton => 'View urgent support options â†’';
+  String get helpUrgentButton => 'View urgent support options →';
 
   @override
   String get helpUrgentModalTitle => 'Urgent Support & Crisis Lines';
@@ -600,7 +600,7 @@ class HinglishStrings extends EnStrings {
   String get helpCallAction => 'Call now';
 
   @override
-  String get helpTollFree => 'Toll-free â€¢ 24/7';
+  String get helpTollFree => 'Toll-free • 24/7';
 
   // Profile Screen
   @override

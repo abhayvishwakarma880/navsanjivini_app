@@ -1,4 +1,4 @@
-﻿import 'app_strings.dart';
+import 'app_strings.dart';
 
 /// English translations (Base/Default implementation)
 class EnStrings implements AppStrings {
@@ -6,7 +6,7 @@ class EnStrings implements AppStrings {
   String get appName => 'Navsanjivini';
 
   @override
-  String get namasteGreeting => 'Namaste ðŸ™';
+  String get namasteGreeting => 'Namaste 🙏';
 
   @override
   String get continueBtn => 'Continue';
@@ -234,19 +234,19 @@ class EnStrings implements AppStrings {
   String get appSubtitleTagline => 'A little space for yourself';
 
   @override
-  String get helloThere => 'Good morning ðŸŒ¿';
+  String get helloThere => 'Good morning 🌿';
 
   @override
   String get howAreYouFeeling => 'How are you feeling today?';
 
   @override
-  String get goodMorningGreeting => 'Good morning ðŸŒ¿';
+  String get goodMorningGreeting => 'Good morning 🌿';
 
   @override
-  String get goodAfternoonGreeting => 'Good afternoon ðŸŒ¿';
+  String get goodAfternoonGreeting => 'Good afternoon 🌿';
 
   @override
-  String get goodEveningGreeting => 'Good evening ðŸŒ¿';
+  String get goodEveningGreeting => 'Good evening 🌿';
 
   @override
   String get aMomentForYourself => 'A moment for yourself';
@@ -261,7 +261,7 @@ class EnStrings implements AppStrings {
   String get noRightOrWrongWay => 'There is no right or wrong way to feel.';
 
   @override
-  String get checkInWithMood => 'Check in with your mood â†’';
+  String get checkInWithMood => 'Check in with your mood →';
 
   @override
   String get moodGreat => 'Great';
@@ -318,7 +318,7 @@ class EnStrings implements AppStrings {
   String get findSupportSubtitle => 'Trusted help options';
 
   @override
-  String get gentleThoughtTitle => 'A gentle thought ðŸŒ±';
+  String get gentleThoughtTitle => 'A gentle thought 🌱';
 
   @override
   String get gentleThoughtQuote => 'Small steps count, even on difficult days.';
@@ -355,7 +355,7 @@ class EnStrings implements AppStrings {
   String get talkDisclaimer => 'A supportive space, not a substitute for professional care.';
 
   @override
-  String get talkInitialGreeting => "Hi there ðŸŒ¿ I'm here to listen. What's been on your mind today?";
+  String get talkInitialGreeting => "Hi there 🌿 I'm here to listen. What's been on your mind today?";
 
   @override
   String get talkInitialUser => "I've been feeling a little overwhelmed lately.";
@@ -365,7 +365,7 @@ class EnStrings implements AppStrings {
 
   // Pause Screen
   @override
-  String get pauseHeaderTitle => 'Take a pause ðŸŒ¿';
+  String get pauseHeaderTitle => 'Take a pause 🌿';
 
   @override
   String get pauseHeaderSubtitle => 'A little space just for you.';
@@ -383,10 +383,10 @@ class EnStrings implements AppStrings {
   String get pauseMindfulBreathingTitle => 'Mindful breathing';
 
   @override
-  String get pauseMindfulBreathingSubtitle => '1 minute â€¢ Gentle breathing';
+  String get pauseMindfulBreathingSubtitle => '1 minute • Gentle breathing';
 
   @override
-  String get pauseStartBreathingButton => 'Start breathing exercise â†’';
+  String get pauseStartBreathingButton => 'Start breathing exercise →';
 
   @override
   String get pauseChooseTitle => 'Choose your pause';
@@ -441,7 +441,7 @@ class EnStrings implements AppStrings {
 
   // Journal Screen Blueprint
   @override
-  String get journalHeaderTitle => 'My Journal ðŸŒ¿';
+  String get journalHeaderTitle => 'My Journal 🌿';
 
   @override
   String get journalHeaderSubtitle => 'A little space for your thoughts.';
@@ -540,7 +540,7 @@ class EnStrings implements AppStrings {
 
   // Help Screen Blueprint
   @override
-  String get helpHeaderTitle => "You're not alone ðŸŒ¿";
+  String get helpHeaderTitle => "You're not alone 🌿";
 
   @override
   String get helpHeaderSubtitle => 'Support is available when you need it.';
@@ -583,7 +583,7 @@ class EnStrings implements AppStrings {
       'If you or someone else is in immediate danger, contact local emergency services or a trusted person who can help.';
 
   @override
-  String get helpUrgentButton => 'View urgent support options â†’';
+  String get helpUrgentButton => 'View urgent support options →';
 
   @override
   String get helpUrgentModalTitle => 'Urgent Support & Crisis Lines';
@@ -600,7 +600,7 @@ class EnStrings implements AppStrings {
   String get helpCallAction => 'Call now';
 
   @override
-  String get helpTollFree => 'Toll-free â€¢ 24/7';
+  String get helpTollFree => 'Toll-free • 24/7';
 
   // Features Cards
   @override
@@ -725,7 +725,7 @@ class EnStrings implements AppStrings {
   String get settingsTitle => 'Settings';
 
   @override
-  String get languageSettingTitle => 'Language / à¤­à¤¾à¤·à¤¾';
+  String get languageSettingTitle => 'Language / भाषा';
 
   @override
   String get privacyPolicyTitle => 'Privacy & Security';

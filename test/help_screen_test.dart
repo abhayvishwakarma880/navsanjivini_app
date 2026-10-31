@@ -1,10 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
 import 'package:app/core/theme/app_theme.dart';
-import 'package:app/user/views/help_screen.dart';
+import 'package:app/user/features/help/presentation/views/help_screen.dart';
 
 void main() {
   late InMemoryStorageService storage;
@@ -38,7 +38,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // 1. Header
-    expect(find.text("You're not alone ðŸŒ¿"), findsOneWidget);
+    expect(find.text("You're not alone 🌿"), findsOneWidget);
     expect(find.text('Support is available when you need it.'), findsOneWidget);
     expect(find.byIcon(Icons.volunteer_activism_rounded), findsOneWidget);
 
@@ -61,7 +61,7 @@ void main() {
       find.text('If you or someone else is in immediate danger, contact local emergency services or a trusted person who can help.'),
       findsOneWidget,
     );
-    expect(find.text('View urgent support options â†’'), findsOneWidget);
+    expect(find.text('View urgent support options →'), findsOneWidget);
   });
 
   testWidgets('Tapping Talk to someone navigates to verified helplines directory',
@@ -172,7 +172,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // Tap View urgent support options
-    await tester.tap(find.text('View urgent support options â†’'));
+    await tester.tap(find.text('View urgent support options →'));
     await tester.pumpAndSettle();
 
     // Verify modal elements
@@ -187,4 +187,3 @@ void main() {
     await tester.pumpAndSettle();
   });
 }
-

@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_spacing.dart';
 import '../theme/app_text_styles.dart';
@@ -16,7 +16,7 @@ class LoadingIndicator extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const CircularProgressIndicator(
-            valuecolor: AlwaysStoppedAnimation<color>(Appcolors.primary),
+            valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
             strokeWidth: 3,
           ),
           if (message != null) ...[
@@ -24,7 +24,7 @@ class LoadingIndicator extends StatelessWidget {
             Text(
               message!,
               style: AppTextStyles.bodyMedium.copyWith(
-                color: Appcolors.textSecondary,
+                color: AppColors.textSecondary,
               ),
               textAlign: TextAlign.center,
             ),
@@ -34,4 +34,3 @@ class LoadingIndicator extends StatelessWidget {
     );
   }
 }
-

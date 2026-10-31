@@ -1,4 +1,4 @@
-﻿/// Centralized API endpoint paths.
+/// Centralized API endpoint paths.
 /// Decoupled from backend implementation so contracts remain clean.
 abstract final class ApiEndpoints {
   static const String baseUrl = 'https://api.navsanjivini.com/v1';
@@ -24,4 +24,3 @@ abstract final class ApiEndpoints {
   static const String deleteAccount = '/user/delete-account';
   static const String exportData = '/user/export-data';
 }
-

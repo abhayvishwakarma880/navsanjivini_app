@@ -1,12 +1,12 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:app/core/localization/language_controller.dart';
 import 'package:app/core/localization/language_scope.dart';
 import 'package:app/core/storage/in_memory_storage_service.dart';
 import 'package:app/core/theme/app_theme.dart';
-import 'package:app/user/views/home_screen.dart';
-import 'package:app/user/views/main_shell_screen.dart';
-import 'package:app/user/views/profile_screen.dart';
+import 'package:app/user/features/home/presentation/views/home_screen.dart';
+import 'package:app/user/features/home/presentation/views/main_shell_screen.dart';
+import 'package:app/user/features/profile/presentation/views/profile_screen.dart';
 
 void main() {
   late InMemoryStorageService storage;
@@ -132,7 +132,7 @@ void main() {
 
       // Top Greeting & Subtitle
       expect(find.text('How are you feeling today?'), findsOneWidget);
-      expect(find.textContaining('ðŸŒ¿'), findsWidgets);
+      expect(find.textContaining('🌿'), findsWidgets);
 
       // Mood Check-in Card (5 Moods)
       expect(find.text('A moment for yourself'), findsOneWidget);
@@ -142,7 +142,7 @@ void main() {
       expect(find.text('Low'), findsOneWidget);
       expect(find.text('Anxious'), findsOneWidget);
       expect(find.text('Overwhelmed'), findsOneWidget);
-      expect(find.text('Check in with your mood â†’'), findsOneWidget);
+      expect(find.text('Check in with your mood →'), findsOneWidget);
 
       // Select 'Great' mood -> shows supportive response
       await tester.tap(find.text('Great'));
@@ -163,11 +163,11 @@ void main() {
       expect(find.text('Find support'), findsOneWidget);
 
       // A gentle thought
-      expect(find.text('A gentle thought ðŸŒ±'), findsOneWidget);
+      expect(find.text('A gentle thought 🌱'), findsOneWidget);
       expect(find.text('Small steps count, even on difficult days.'), findsOneWidget);
 
       // Test Mood Checkin tap
-      await tester.tap(find.text('Check in with your mood â†’'));
+      await tester.tap(find.text('Check in with your mood →'));
       expect(moodTapped, isTrue);
 
       // Test Profile icon tap
@@ -232,4 +232,3 @@ void main() {
     });
   });
 }
-

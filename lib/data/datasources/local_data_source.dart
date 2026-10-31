@@ -1,4 +1,4 @@
-﻿import 'package:app/core/storage/storage_service.dart';
+import 'package:app/core/storage/storage_service.dart';
 
 /// Base contract for feature local data sources.
 abstract class BaseLocalDataSource {
@@ -6,4 +6,3 @@ abstract class BaseLocalDataSource {
 
   const BaseLocalDataSource(this.storageService);
 }
-

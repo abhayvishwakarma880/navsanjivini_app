@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'app_colors.dart';
 import 'app_radius.dart';
 import 'app_spacing.dart';
@@ -11,41 +11,41 @@ abstract final class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      primarycolor: Appcolors.primary,
-      scaffoldBackgroundcolor: Appcolors.background,
-      colorScheme: const colorScheme(
+      primaryColor: AppColors.primary,
+      scaffoldBackgroundColor: AppColors.background,
+      colorScheme: const ColorScheme(
         brightness: Brightness.light,
-        primary: Appcolors.primary,
-        onPrimary: Appcolors.onPrimary,
-        primaryContainer: Appcolors.primaryContainer,
-        onPrimaryContainer: Appcolors.primaryDark,
-        secondary: Appcolors.primaryLight,
-        onSecondary: colors.white,
-        error: Appcolors.error,
-        onError: colors.white,
-        surface: Appcolors.surface,
-        onSurface: Appcolors.textPrimary,
-        outline: Appcolors.border,
+        primary: AppColors.primary,
+        onPrimary: AppColors.onPrimary,
+        primaryContainer: AppColors.primaryContainer,
+        onPrimaryContainer: AppColors.primaryDark,
+        secondary: AppColors.primaryLight,
+        onSecondary: Colors.white,
+        error: AppColors.error,
+        onError: Colors.white,
+        surface: AppColors.surface,
+        onSurface: AppColors.textPrimary,
+        outline: AppColors.border,
       ),
 
       // App Bar Theme
       appBarTheme: const AppBarTheme(
-        backgroundcolor: Appcolors.background,
-        foregroundcolor: Appcolors.textPrimary,
+        backgroundColor: AppColors.background,
+        foregroundColor: AppColors.textPrimary,
         elevation: 0,
         scrolledUnderElevation: 0.5,
         centerTitle: false,
         titleTextStyle: AppTextStyles.headlineSmall,
-        iconTheme: IconThemeData(color: Appcolors.textPrimary),
+        iconTheme: IconThemeData(color: AppColors.textPrimary),
       ),
 
       // Card Theme
       cardTheme: CardThemeData(
-        color: Appcolors.surface,
+        color: AppColors.surface,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: AppRadius.radiusLg,
-          side: const BorderSide(color: Appcolors.border, width: 1),
+          side: const BorderSide(color: AppColors.border, width: 1),
         ),
         margin: EdgeInsets.zero,
       ),
@@ -53,8 +53,8 @@ abstract final class AppTheme {
       // Elevated Button Theme (Primary Action)
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundcolor: Appcolors.primary,
-          foregroundcolor: Appcolors.onPrimary,
+          backgroundColor: AppColors.primary,
+          foregroundColor: AppColors.onPrimary,
           elevation: 0,
           minimumSize: const Size(double.infinity, 50),
           padding: AppSpacing.buttonPadding,
@@ -62,7 +62,7 @@ abstract final class AppTheme {
             borderRadius: AppRadius.radiusMd,
           ),
           textStyle: AppTextStyles.labelLarge.copyWith(
-            color: Appcolors.onPrimary,
+            color: AppColors.onPrimary,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -71,15 +71,15 @@ abstract final class AppTheme {
       // Outlined Button Theme (Secondary Action)
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundcolor: Appcolors.primary,
-          side: const BorderSide(color: Appcolors.primary, width: 1.5),
+          foregroundColor: AppColors.primary,
+          side: const BorderSide(color: AppColors.primary, width: 1.5),
           minimumSize: const Size(double.infinity, 50),
           padding: AppSpacing.buttonPadding,
           shape: RoundedRectangleBorder(
             borderRadius: AppRadius.radiusMd,
           ),
           textStyle: AppTextStyles.labelLarge.copyWith(
-            color: Appcolors.primary,
+            color: AppColors.primary,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -88,7 +88,7 @@ abstract final class AppTheme {
       // Text Button Theme
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          foregroundcolor: Appcolors.primary,
+          foregroundColor: AppColors.primary,
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.md,
             vertical: AppSpacing.xs,
@@ -103,37 +103,36 @@ abstract final class AppTheme {
       // Input Decoration Theme (Text fields)
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillcolor: Appcolors.surface,
+        fillColor: AppColors.surface,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.md,
           vertical: AppSpacing.sm,
         ),
         border: OutlineInputBorder(
           borderRadius: AppRadius.radiusMd,
-          borderSide: const BorderSide(color: Appcolors.border),
+          borderSide: const BorderSide(color: AppColors.border),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: AppRadius.radiusMd,
-          borderSide: const BorderSide(color: Appcolors.border),
+          borderSide: const BorderSide(color: AppColors.border),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: AppRadius.radiusMd,
-          borderSide: const BorderSide(color: Appcolors.primary, width: 1.8),
+          borderSide: const BorderSide(color: AppColors.primary, width: 1.8),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: AppRadius.radiusMd,
-          borderSide: const BorderSide(color: Appcolors.error),
+          borderSide: const BorderSide(color: AppColors.error),
         ),
-        hintStyle: AppTextStyles.bodyMedium.copyWith(color: Appcolors.textTertiary),
+        hintStyle: AppTextStyles.bodyMedium.copyWith(color: AppColors.textTertiary),
       ),
 
       // Divider Theme
       dividerTheme: const DividerThemeData(
-        color: Appcolors.divider,
+        color: AppColors.divider,
         thickness: 1,
         space: 1,
       ),
     );
   }
 }
-

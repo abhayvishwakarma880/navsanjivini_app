@@ -1,4 +1,4 @@
-﻿import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:app/app/app.dart';
 
 void main() {
@@ -10,4 +10,3 @@ void main() {
     expect(find.text('Navsanjivini'), findsOneWidget);
   });
 }
-

@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 /// Centralized border radius tokens for cards, buttons, dialogs and chips.
 abstract final class AppRadius {
@@ -18,4 +18,3 @@ abstract final class AppRadius {
   static const BorderRadius radiusXxl = BorderRadius.all(Radius.circular(xxl));
   static const BorderRadius radiusFull = BorderRadius.all(Radius.circular(full));
 }
-

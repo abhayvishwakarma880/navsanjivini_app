@@ -1,4 +1,4 @@
-﻿import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart';
 import 'package:app/core/constants/app_constants.dart';
 import 'package:app/core/storage/storage_service.dart';
 import 'app_languages.dart';
@@ -55,4 +55,3 @@ class LanguageController extends ChangeNotifier {
     }
   }
 }
-

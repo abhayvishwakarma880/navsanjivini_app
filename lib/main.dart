@@ -1,4 +1,4 @@
-﻿import 'dart:ui';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'app/app.dart';
@@ -27,7 +27,7 @@ void main() async {
   try {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
-        statusBarcolor: colors.transparent,
+        statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
       ),
     );
@@ -61,4 +61,3 @@ void main() async {
     ),
   );
 }
-
